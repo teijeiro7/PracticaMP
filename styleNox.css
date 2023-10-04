@@ -1,0 +1,86 @@
+body {
+    background-color: #b93b3b;
+}
+
+.fotoNox {
+    width: 200px;
+    background-color: white;
+}
+
+.divNox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #divML10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagenML10 {
+    width: 300px;
+    height: auto;
+    background-color: white;
+}
+
+.parrafoML10 {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: auto;
+}
+ */
+
+#divML10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Alinea los elementos horizontalmente al centro */
+    margin-top: 20px;
+    /* Ajusta el espacio entre los divs */
+    text-align: center;
+    /* Alinea el texto en el centro */
+}
+
+.imagenML10 {
+    width: 300px;
+    height: auto;
+    background-color: white;
+    margin: 0 auto;
+    /* Centra horizontalmente la imagen */
+}
+
+.parrafoML10 {
+    font-size: 18px;
+    color: white;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    /* Centra horizontalmente el párrafo */
+}
+
+#divPalaTapia2024 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+.imagenPalaTapia2024 {
+    width: 300px;
+    height: auto;
+    background-color: white;
+}
+
+.parrafoPalaTapia {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: auto;
+}

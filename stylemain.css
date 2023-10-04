@@ -1,0 +1,30 @@
+
+* {
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.logoinicio{
+    width: 125px;
+    height: 125px;
+}
+
+header {
+    
+    background-color: gray;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
