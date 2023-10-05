@@ -2,19 +2,18 @@ body {
     background-color: #b93b3b;
 }
 
-/* ESTO PERTENCE AL HEADER */
 * {
-    
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.logoinicio{
+.logoinicio {
     width: 125px;
     height: 125px;
 }
 
 header {
-    
+
     background-color: black;
 }
 
@@ -23,7 +22,7 @@ header {
     justify-content: space-around;
     align-items: center;
     flex-direction: row-reverse;
-    
+
 }
 
 header a {
@@ -59,7 +58,6 @@ header a {
     width: 300px;
     height: auto;
     background-color: white;
-    margin: 0 auto;
 }
 
 .parrafoPala {
@@ -68,9 +66,30 @@ header a {
     width: 300px;
     height: auto;
     margin: 0 auto;
+    text-align: center;
+    padding: 20px:
 }
 
-.row {
+.fila {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+}
+
+.botonComprar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.logoinicio {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+}
+
+.fotoComprar {
+    width: 70px;
+    height: auto;
+    padding: 5px;
 }

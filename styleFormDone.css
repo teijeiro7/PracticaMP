@@ -1,0 +1,53 @@
+body {
+    background-color: green;
+}
+
+.textoPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: xx-large;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.textoEnvio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}
+
+.botonForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+}
+
+.botonForm {
+    width: auto;
+    height: auto;
+}
+
+.botonForm a {
+    color: black;
+    font-style: oblique;
+    font-size: x-large;
+}
+
+.divBotonForm {
+    text-align: center;
+    margin: 20px;
+    width: auto;
+    height: auto;
+}
