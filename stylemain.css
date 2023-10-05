@@ -11,7 +11,7 @@
 
 header {
     
-    background-color: gray;
+    background-color: black;
 }
 
 .menu {
@@ -22,9 +22,26 @@ header {
     
 }
 
-a {
+header a {
     color: white;
     text-decoration: none;
 }
+
+.container_body {
+    display: flex;
+    height: 300px;
+    justify-content: space-around ;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container_body img {
+    margin: 40px 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
 
 

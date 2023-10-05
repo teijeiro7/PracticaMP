@@ -2,6 +2,36 @@ body {
     background-color: #b93b3b;
 }
 
+/* ESTO PERTENCE AL HEADER */
+* {
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.logoinicio{
+    width: 125px;
+    height: 125px;
+}
+
+header {
+    
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HASTA AQUI VA EL HEADER */
 .fotoNox {
     width: 200px;
     background-color: white;
