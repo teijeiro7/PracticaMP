@@ -2,36 +2,16 @@ body {
     background-color: #b93b3b;
 }
 
-* {
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
 .logoinicio {
     width: 50px;
     height: 50px;
     border-radius: 30px;
 }
 
-header {
-
-    background-color: black;
+.bodyNox {
+    background-color: red;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding: 5px;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-/* HASTA AQUI VA EL HEADER */
 .fotoNox {
     width: 200px;
     background-color: white;
@@ -49,10 +29,6 @@ header a {
     justify-content: left;
     align-items: left;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .imagenPala {
