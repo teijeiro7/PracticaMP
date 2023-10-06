@@ -1,0 +1,21 @@
+.form_container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid black;
+    text-align: center;
+}
+
+label {
+    display: block;
+   
+}
+
+.boton_subir input {
+    background-color: green ;
+}
+
+.boton_cancelar input {
+    background-color: red;
+
+}
