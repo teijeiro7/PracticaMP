@@ -54,7 +54,8 @@ a {
     justify-content: center;
     align-items: center;
     height: 200px;
-    border: 2px solid black;
+    border: 5px solid wheat;
+    margin: 20px 20px;
 }
 
 .imagenInicio {

@@ -4,18 +4,23 @@
     padding: 20px;
     border: 5px solid black;
     text-align: center;
+
 }
 
 label {
     display: block;
+    margin: 5px;
    
 }
 
-.boton_subir input {
-    background-color: green ;
+.botones {
+    
 }
-
-.boton_cancelar input {
+.botones input {
+    background-color: lime ;
+    margin: 15px;
+}
+.botones button {
     background-color: red;
-
 }
+
