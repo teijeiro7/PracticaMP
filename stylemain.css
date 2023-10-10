@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #ff914d;
+    background-color: #C0B283;
 }
 
 .logoinicio {
@@ -68,7 +68,6 @@ a {
 
 .textoTituloInicio {
     text-align: center;
-    /* Alinea el texto en el centro */
 }
 
 .boton:hover {
@@ -84,12 +83,22 @@ a {
     transition: box-shadow 0.3s ease;
 }
 
-.crear_marca  {
+.crear_marca {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.foto_añadir{
+.foto_añadir {
     height: 250px;
+}
+
+.fotoHead {
+    background-color: white;
+}
+
+.tituloEncabezado {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-shadow: 5px 7px 4px rgba(0, 0, 0, 0.5);
 }
