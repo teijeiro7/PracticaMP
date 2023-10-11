@@ -18,7 +18,7 @@ body {
     margin: 20px;
 }
 
-.divNox {
+.noxHeader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,7 @@ body {
     justify-content: left;
     align-items: left;
     flex-direction: column;
+    margin-right: 50px;
 }
 
 .imagenPala {
@@ -53,16 +54,29 @@ body {
     padding: 20px;
 }
 
-.botonComprar {
-    display: block;
-    margin: 0 auto;
-    border-radius: 30px;
-}
-
-
 
 .fotoComprar {
     width: 70px;
     height: auto;
     padding: 5px;
+}
+
+.divNox {
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.formCrearPala {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    text-align: left;
+    border-radius: 50px;
+    padding: 10px;
+    width: 400px;
+    height: auto;
 }

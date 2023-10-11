@@ -1,6 +1,6 @@
 * {
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -53,7 +53,7 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: auto;
     border: 5px solid wheat;
     margin: 20px 20px;
 }
@@ -68,6 +68,14 @@ a {
 
 .textoTituloInicio {
     text-align: center;
+}
+
+.textoTituloInicio h1 {
+    font-family: 'Anton', sans-serif;
+}
+
+.textoTituloInicio h3 {
+    font-family: 'Anton', sans-serif;
 }
 
 .boton:hover {
@@ -98,6 +106,7 @@ a {
 }
 
 .tituloEncabezado {
+    font-size: 40px;
     font-family: 'Anton', sans-serif;
     text-align: center;
     text-shadow: 5px 7px 4px rgba(0, 0, 0, 0.5);
