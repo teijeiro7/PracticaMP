@@ -55,20 +55,16 @@
   /* background-color: white; */
 }
 
+
 .formCrearPala {
-  display: flex;
-  justify-content: left;
-  align-items: left;
   border: 5px solid black;
-  text-align: left;
-  border-radius: 40px;
-  padding: 10px;
-  width: 350px;
+  border-radius: 50px;
   height: auto;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
+  padding: 20px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .etiquetas {
@@ -146,4 +142,16 @@
 
 .divBotonesFormCrearPalaCancelar a {
   color: black;
+}
+
+.contenidoForm {
+  text-align: left;
+}
+
+.botonesForm {
+  text-align: center;
+}
+
+.structureDiv {
+  margin: 20px;
 }
