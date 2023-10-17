@@ -3,14 +3,15 @@
 
 <head>
     <title id="Principal title">Nox</title>
-    <link rel="icon" href="WPS.png" type="image/png">
+    <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png">
     <link rel="stylesheet" href="styleNox.css">
     <link rel="stylesheet" href="../css/styleindex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 </head>
 
 <body class="bodyNox">
     <div class="noxHeader">
-        <img class="fotoNox" src="NOX.png">
+        <img class="fotoNox" src="../Images/NOX.png">
     </div>
     <header>
         <div class="menu">
@@ -34,78 +35,99 @@
 
         </div>
     </header>
-
     <div>
         <div class="divNox">
             <div class="pala">
-                <div><img src="https://i.pinimg.com/originals/69/52/58/6952585cd053643156e01f21944a2c0a.png" class="imagenPala"></div>
-                <p class="parrafoPala">
-                    AT10 Luxury GENIUS 18K Alum 2024 by Agustín Tapia
-                </p>
-            </div>
-            <div id="divML10">
-                <div><img src="https://i.pinimg.com/originals/3d/e8/a9/3de8a9df8c1741e5162b158d2101522b.png" class="imagenPala"></a></div>
-                <p class="parrafoPala">
-                    ML10 PRO CUP LUXURY MIGUEL LAMPERTI
-                </p>
-            </div>
-            <div id="divML10">
-                <div><img src="https://i.pinimg.com/originals/d5/13/a8/d513a8555555f67aa4dc1e01b9c3063b.png" class="imagenPala"></div>
-                <p class="parrafoPala">
-                    X-ONE 2023
-                </p>
+                <div><img src="../Images/at10.png" class="imagenPala"></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        AT10 LUXURY GENIUS 18K ALUM 2024 BY AGUSTÍN TAPIA
+                    </p>
+                    <p class="precioPala">179.95€</p>
+                </div>
             </div>
             <div class="pala">
-                <div><img src="https://i.pinimg.com/originals/d0/4f/d9/d04fd9ee5eca334cf27501712aafd2a4.png" class="imagenPala"></div>
-                <p class="parrafoPala">
-                    EQUATION World Padel Tour Edition 2023
-                </p>
+                <div><img src="../Images/ml10.png" class="imagenPala"></a></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        ML10 PRO CUP LUXURY MIGUEL LAMPERTI
+                    </p>
+                    <p class="precioPala">139.95€</p>
+                </div>
             </div>
-            <div id="divML10">
-                <div><img src="https://i.pinimg.com/originals/7f/43/67/7f436732eb986dbb7dd9783e6358fa30.png" class="imagenPala"></div>
-                <p class="parrafoPala">
-                    Pack AT.2 Genius LTD 2023 - Agustín Tapia LIMITED EDITION
-                </p>
+            <div class="pala">
+                <div><img src="../Images/x-one 2023.png" class="imagenPala"></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        X-ONE 2023
+                    </p>
+                    <p class="precioPala">149.95€</p>
+                </div>
             </div>
-            <div id="divML10">
-                <div><img src="https://i.pinimg.com/originals/6f/31/d3/6f31d32454aa65ace1b04f3534153ade.png" class="imagenPala"></div>
-                <p class="parrafoPala">
-                    ML10 PRO CUP Silver 2023
-                </p>
+            <div class="pala">
+                <div><img src="../Images/equation.png" class="imagenPala"></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        EQUATION WORLD PADEL TOUR EDITION 2023
+                    </p>
+                    <p class="precioPala">109.95€</p>
+                </div>
             </div>
-        </div>
-
-        <div class="formCrearPala">
-            <form>
-                <div>
-                    <label>Nombre de la pala</label>
-                    <input type="text" required>
+            <div class="pala">
+                <div><img src="../Images/pack.png" class="imagenPala"></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        PACK AT.2 GENIUS LTD 2023 - AGUSTÍN TAPIA LIMITED EDITION
+                    </p>
+                    <p class="precioPala">199.95€</p>
                 </div>
-                <div>
-                    <label>Gama</label>
-                    <input type="text" required>
+            </div>
+            <div class="pala">
+                <div><img src="../Images/ml10 silver.png" class="imagenPala"></div>
+                <div class="textPrice">
+                    <p class="parrafoPala">
+                        ML10 PRO CUP SILVER 2023
+                    </p>
+                    <p class="precioPala">119.95€</p>
                 </div>
-                <div>
-                    <label>Talla</label>
-                    <input type="text" required>
-                </div>
-                <div>
-                    <label>Estructura</label>
-                    <input type="text" required>
-                </div>
-                <div>
-                    <label>Precio</label>
-                    <input type="number" required>
-                </div>
-                <div>
-                    <label>Color Principal</label>
-                    <input type="color" required>
-                </div>
-                <div>
-                    <label>Color Secundario</label>
-                    <input type="color" required>
-                </div>
-            </form>
+            </div>
+            <div class="formCrearPala">
+                <form class="contenidoForm">
+                    <h2 class="tituloCrearPala">Crea Tu Propia Pala</h2>
+                    <div>
+                        <label class="labelStyle">Nombre de la pala</label>
+                        <input class="etiquetas" type="text" placeholder="Escribe aqui" required>
+                    </div>
+                    <div>
+                        <label class="labelStyle">Gama</label>
+                        <input type="text" placeholder="Escribe aqui" required class="etiquetas">
+                    </div>
+                    <div>
+                        <label class="labelStyle">Talla</label>
+                        <input type="text" placeholder="Escribe aqui" required class="etiquetas">
+                    </div>
+                    <div>
+                        <label class="labelStyle">Estructura</label>
+                        <input type="text" placeholder="Escribe aqui" required class="etiquetas">
+                    </div>
+                    <div>
+                        <label class="labelStyle">Precio</label>
+                        <input type="number" placeholder="Escribe aqui" required class="etiquetas">
+                    </div>
+                    <div>
+                        <label class="labelStyle">Color Principal</label>
+                        <input type="color" required class="etiquetaColor">
+                    </div>
+                    <div>
+                        <label class="labelStyle">Color Secundario</label>
+                        <input type="color" required class="etiquetaColor">
+                    </div>
+                    <div>
+                        <input class="divBotonesFormCrearPalaSubir" type="submit" value="Subir" />
+                        <button class="divBotonesFormCrearPalaCancelar"><a href="nox.html">Cancelar</a></button>
+                    </div>
+                </form>
+            </div>
         </div>
 </body>
 
