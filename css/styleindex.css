@@ -19,7 +19,7 @@ header {
 
 header div div {
   border: 2px solid black;
-  
+
 }
 
 .menu {
@@ -114,4 +114,53 @@ a {
   font-family: "Anton", sans-serif;
   text-align: center;
   text-shadow: 5px 7px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  max-width: 1500px;
+  background-color: black;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menuHorizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menuHorizontal>li>a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menuVertical>li:hover {
+  background-color: #c0b283;
+}
+
+.menuVertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menuHorizontal li:hover .menuVertical {
+  display: block;
+}
+
+.menuVertical li:hover {
+  background-color: #c0b283;
+}
+
+.menuVertical li a {
+  display: block;
+  color: white;
+  padding: 15px 15px 15px 20px;
+  text-decoration: none;
 }

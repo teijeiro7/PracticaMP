@@ -3,8 +3,7 @@
 
 <head>
     <title id="Principal title">Nox</title>
-    <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-        type="image/png">
+    <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png">
     <link rel="stylesheet" href="styleNox.css">
     <link rel="stylesheet" href="../css/styleindex.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
@@ -14,44 +13,32 @@
     <div class="noxHeader">
         <img class="fotoNox" src="../Images/NOX.png">
     </div>
+
     <header>
-        <div class="menu">
-            <div class="logo__inicio">
-                <a href="../index.html">
-                    <img class="logoinicio"
-                        src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-                        alt="inicio" /></a>
-            </div>
-            <div class="boton__NOX">
-                <a href="nox.html">NOX</a>
-            </div>
-            <div class="boton__SIUX">
-                <a href="nox.html">SIUX</a>
-            </div>
-            <div class="boton__BULLPADEL">
-                <a href="nox.html">BULLPADEL</a>
-            </div>
-            <div class="boton__KUIKMA">
-                <a href="nox.html">KUIKMA</a>
-            </div>
-            <div class="boton__BABOLAT">
-                <a href="nox.html">BABOLAT</a>
-            </div>
-            <div class="boton__ADIDASPADEL">
-                <a href="nox.html">ADIDAS PADEL</a>
-            </div>
-            <div class="boton__STARVIE">
-                <a href="nox.html">STARVIE</a>
-            </div>
-            <div class="boton__HEAD">
-                <a href="nox.html">HEAD</a>
-            </div>
-        </div>
+        <nav>
+            <ul class="menuHorizontal">
+                <li><a href="../index.html"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a></li>
+                <li>
+                    <a href="#">MARCAS</a>
+                    <ul class="menuVertical">
+                        <li><a href="../Nox/nox.html">NOX</a></li>
+                        <li><a href="../Nox/nox.html">SIUX</a></li>
+                        <li><a href="../Nox/nox.html">BULLPADEL</a></li>
+                        <li><a href="../Nox/nox.html">KUIKMA</a></li>
+                        <li><a href="../Nox/nox.html">BABOLAT</a></li>
+                        <li><a href="../Nox/nox.html">ADIDAS</a></li>
+                        <li><a href="../Nox/nox.html">STARVIE</a></li>
+                        <li><a href="../Nox/nox.html">HEAD</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div>
+
+    <div class="divPalas">
         <div class="divNox">
             <div class="pala">
-                <div><img src="../Images/at10.png" class="imagenPala"></div>
+                <div><a href="../Nox/At10/at10.html"><img src="../Images/at10.png" class="imagenPala"></a></div>
                 <div class="textPrice">
                     <p class="parrafoPala">
                         AT10 LUXURY GENIUS 18K ALUM 2024 BY AGUSTÍN TAPIA
@@ -109,7 +96,7 @@
                     <h2 class="tituloCrearPala">Crea Tu Propia Pala</h2>
                     <div class="structureDiv">
                         <label class="labelStyle">Nombre de la pala</label>
-                        <select name="Opciones" required> 
+                        <select name="Opciones" required>
                             <option value="">Selecciona la pala</option>
                             <option value="">AT10 LUXURY GENIUS</option>
                             <option value="">ML10 PRO CUP LUXURY</option>
@@ -134,20 +121,20 @@
                             <option value="">Opciones</option>
                             <option value="">Adulto</option>
                             <option value="">Niño</option>
-                            
+
                         </select>
                     </div>
                     <div class="structureDiv">
                         <label class="labelStyle">Estructura</label>
-                        <input type="text" placeholder="Escribe aqui" required >
+                        <input type="text" placeholder="Escribe aqui" required>
                     </div>
                     <div class="structureDiv">
                         <label class="labelStyle">Precio</label>
-                        <input type="number" placeholder="Escribe aqui" required >
+                        <input type="number" placeholder="Escribe aqui" required>
                     </div>
                     <div class="structureDiv">
                         <label class="labelStyle">Color Principal</label>
-                        <input type="color" required >
+                        <input type="color" required>
                     </div>
                     <div class="structureDiv">
                         <label class="labelStyle">Color Secundario</label>
