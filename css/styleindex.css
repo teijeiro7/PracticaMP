@@ -3,6 +3,8 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+
+
 body {
   background-color: #c0b283;
   width: 100%;
@@ -80,9 +82,6 @@ a {
   color: black;
 }
 
-
-
-
 .boton:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -120,7 +119,9 @@ a {
 nav {
   background-color: black;
   font-size: 20px;
-  margin-top: 0px;
+  display: inline-block;
+  width: 100%;
+  height: auto;
 }
 
 .menuHorizontal {
@@ -128,7 +129,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 95px;
+  height: 55px;
 }
 
 .menuHorizontal>li>a {
