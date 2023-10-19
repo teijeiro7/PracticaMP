@@ -1,6 +1,7 @@
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 3px solid black;
 }
 
 
@@ -36,7 +37,7 @@ a {
 
 .container_body {
   display: flex;
-  height: 300px;
+  height: auto;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
