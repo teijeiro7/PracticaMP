@@ -1,8 +1,7 @@
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 0px;
-  /* border: 3px solid black; */
+  border: 3px solid black;
 }
 
 
@@ -124,8 +123,6 @@ nav {
   display: inline-block;
   width: 100%;
   height: auto;
-  position: fixed;
-  margin: 0px;
 }
 
 .menuHorizontal {
@@ -168,8 +165,4 @@ nav {
   color: white;
   padding: 15px 15px 15px 20px;
   text-decoration: none;
-}
-
-.espaciado {
-  padding: 5%;
 }

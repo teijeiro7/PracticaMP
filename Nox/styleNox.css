@@ -43,6 +43,7 @@
 
 .divNox {
   display: flex;
+  flex-wrap: wrap;
   height: auto;
   width: 1800px;
   justify-content: center;
