@@ -1,3 +1,7 @@
+* {
+    padding: 0px;
+}
+
 .imagenPala {
     background-color: white;
     border: 3px solid black;
@@ -17,7 +21,7 @@
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .textPrice {
