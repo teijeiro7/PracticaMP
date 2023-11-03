@@ -8,7 +8,7 @@
 
 
 body {
-  background-color: #c0b283;
+  background-color: rgb(159, 169, 214);
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -104,7 +104,8 @@ a {
 }
 
 .foto_añadir {
-  height: 250px;
+  width: 50px;
+  height: 50px;
 }
 
 .fotoHead {
@@ -144,7 +145,7 @@ nav {
 }
 
 .menuVertical>li:hover {
-  background-color: #c0b283;
+  background-color: #4d82bc;
 }
 
 .menuVertical {
@@ -160,16 +161,45 @@ nav {
 }
 
 .menuVertical li:hover {
-  background-color: #c0b283;
+  background-color: #4d82bc;
 }
 
 .menuVertical li a {
   display: block;
   color: white;
-  padding: 15px 15px 15px 20px;
+  padding: 10px 10px 10px 15px;
   text-decoration: none;
 }
 
 .espaciado {
-  padding: 5%;
+  padding-top: 5%;
+  margin-bottom: 3%;
+}
+
+.tituloInicio div {
+  margin: 0px;
+}
+
+.signoSuma {
+  width: 500px;
+  height: 50px;
+}
+
+
+.logoInicio {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.linkSuma {
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+
+.navIzq {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-content: center;
 }

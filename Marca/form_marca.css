@@ -4,6 +4,14 @@
   padding: 20px;
   border: 5px solid black;
   text-align: center;
+  margin-top: 100px;
+}
+
+body {
+  background-color: rgb(159, 169, 214);
+  width: 100%;
+  height: 100%;
+  margin: 0px;
 }
 
 
@@ -26,4 +34,60 @@ label {
   font-family: "Anton", sans-serif;
   text-align: center;
   text-shadow: 5px 7px 4px rgba(255, 255, 255, 0.5);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menuHorizontalMarca {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+}
+
+.menuHorizontalMarca>li>a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menuVerticalMarca>li:hover {
+  background-color: #4d82bc;
+}
+
+.menuVerticalMarca {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menuHorizontalMarca li:hover .menuVerticalMarca {
+  display: block;
+}
+
+.menuVerticalMarca li:hover {
+  background-color: #4d82bc;
+}
+
+.menuVerticalMarca li a {
+  display: block;
+  color: white;
+  padding: 10px 10px 10px 15px;
+  text-decoration: none;
+}
+
+.cancelar {
+  padding: 5px;
+}
+
+.subir {
+  padding: 5px;
 }
