@@ -203,3 +203,20 @@ nav {
   text-align: center;
   align-content: center;
 }
+
+.signoMas {
+  color: white;
+  font-size: 100px;
+  border: 2px solid black;
+  padding: 41px;
+  border-radius: 15px;
+  : ;
+  -webkit-border-radius: 15px;
+  : ;
+  -moz-border-radius: 15px;
+  : ;
+  -ms-border-radius: 15px;
+  : ;
+  -o-border-radius: 15px;
+  : ;
+}
