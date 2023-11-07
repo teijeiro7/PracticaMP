@@ -1,10 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
 .form_container {
-  width: 300px;
-  margin: 20px auto;
+  width: 400px;
+  background-color: #feded2;
   padding: 20px;
-  border: 5px solid black;
+  margin: auto;
+  border-radius: 4px;
+  font-family: 'calibri';
+  border: 5px solid #fec3b1;
   text-align: center;
   margin-top: 100px;
+  box-shadow: 7px 13px 37px #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.form_container h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 100%;
+  background-color: #feded2;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #fec3b1;
+  font-family: 'calibri';
+  font-size: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.botonRegistrar {
+  width: 100%;
+  background-color: #5dc460;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.botonCancelar {
+  width: 100%;
+  background-color: #df4d49;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
 }
 
 body {
@@ -12,28 +64,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0px;
-}
-
-
-label {
-  display: block;
-  margin: 5px;
-}
-
-.botones input {
-  background-color: lime;
-  margin: 15px;
-}
-
-.botones button {
-  background-color: red;
-}
-
-.tituloEncabezado {
-  font-size: 40px;
-  font-family: "Anton", sans-serif;
-  text-align: center;
-  text-shadow: 5px 7px 4px rgba(255, 255, 255, 0.5);
 }
 
 nav {
@@ -82,12 +112,4 @@ nav {
   color: white;
   padding: 10px 10px 10px 15px;
   text-decoration: none;
-}
-
-.cancelar {
-  padding: 5px;
-}
-
-.subir {
-  padding: 5px;
 }

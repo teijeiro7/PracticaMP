@@ -40,37 +40,20 @@
       <li>
         <h1 class="tituloEncabezado">World Padel Store</h1>
       </li>
-      <li><a href="../index.html"><img class="logoinicio"
-            src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a></li>
+      <li><a href="../index.html"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a></li>
     </ul>
   </nav>
 
   <div class="form_container">
     <form>
-      <div class="nombre_marca">
-        <label for="nombre_marca">Introduzca el nombre de su marca</label>
-        <input type="text" id="nombre_marca" name="USUARIO" placeholder="Escribe aqui" required />
-      </div>
-      <div class="email_director">
-        <label for="email_director">Mail del director</label>
-        <input type="email" id="email_director" placeholder="Escribe aqui" required />
-      </div>
-      <div class="contraseña">
-        <label for="contraseña">Contraseña</label>
-        <input type="password" id="contraseña" placeholder="Escribe aqui" required />
-      </div>
-      <div class="url_logo">
-        <label for="logo_marca">Introduzca la URL del logo</label>
-        <input type="text" id="url_logo" placeholder="Escribe aqui" required />
-      </div>
-      <div class="color_marca">
-        <label for="color_marca">Color principal de la marca</label>
-        <input type="color" id="color_marca" required />
-      </div>
-      <div class="botones">
-        <input class="subir" type="submit" value="Subir" />
-        <button class="cancelar"><a href="../index.html">Cancelar</a></button>
-      </div>
+      <h4>Formulario de creación de marca</h4>
+      <input class="form" type="text" name="marca" id="marca" placeholder="Ingrese el nombre de su marca aquí" required />
+      <input class="form" type="text" name="mailDirector" id="mailDirector" placeholder="Ingrese el mail" required />
+      <input class="form" type="text" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" required />
+      <input class="form" type="text" name="urlLogo" id="url" placeholder="Ingrese el url de su marca aquí" required />
+      <input class="form" type="color" name="colorMarca" id="colorMarca" placeholder="Ingrese el url de su marca aquí" required />
+      <input class="botonRegistrar" type="submit" value="Registrar">
+      <button class="botonCancelar"><a href="../index.html">Cancelar</a></button>
     </form>
   </div>
 </body>
