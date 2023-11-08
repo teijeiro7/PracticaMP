@@ -79,7 +79,10 @@ nav {
   display: inline-block;
   width: 100%;
   height: auto;
-  position: fixed;
+  position: sticky;  
+  top:0;
+  left: 0;
+  z-index: 100;
   margin: 0px;
 }
 

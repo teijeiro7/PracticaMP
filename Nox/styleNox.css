@@ -23,6 +23,45 @@
 }
 
 
+.padre {
+  padding: 70px;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+
+.boton_editar {
+  background-color: var(--fondo-input);
+  color: var(--letra-form);
+  padding: 5px;
+  width: 45%;
+}
+
+.boton_eliminar {
+  background-color: var(--fondo-input);
+  color: var(--letra-form);
+  padding: 5px;
+  width: 45%;
+}
+
+.imagenLogoNox {
+  height: 250px;
+  padding: 10px;
+}
+
+.textoNox {
+  padding: 20px;
+}
+
 .pala {
   display: flex;
   justify-content: left;
@@ -42,16 +81,15 @@
 .divPalas {
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
 }
 
 .divNox {
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  width: 1800px;
+  width: 90%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   background-color: #f9635c;
   margin: 20px;
   margin-top: 100px;
@@ -59,17 +97,6 @@
 }
 
 .formCrearPala {
-  /* border: 5px solid black;
-  border-radius: 50px;
-  height: auto;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: white; */
-  /* -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px; */
-
   width: 400px;
   background-color: var(--fondo-form);
   padding: 20px;
@@ -166,10 +193,6 @@
 }
 
 .divBotonesFormCrearPalaSubir {
-  /* background-color: green;
-  color: white;
-  padding: 5px; */
-  /* width: 100%; */
   background-color: #080808;
   border: none;
   padding: 12px;
@@ -180,9 +203,6 @@
 }
 
 .divBotonesFormCrearPalaCancelar {
-  /* background-color: white;
-  padding: 5px; */
-  /* width: 100%; */
   background-color: #080808;
   border: none;
   padding: 12px;
@@ -250,24 +270,3 @@ button a {
   text-decoration: none;
 }
 
-.content {
-  width: 1500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.imagenLogoNox {
-  width: auto;
-  height: 250px;
-}
-
-.textoNox {
-  padding: 20px;
-}
-
-.padre {
-  padding: 70px;
-  flex-direction: column;
-}
