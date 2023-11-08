@@ -2,16 +2,18 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-top: 200px;
+}
+
 .form_container {
   width: 400px;
   background-color: #feded2;
   padding: 20px;
   margin: auto;
   border-radius: 4px;
-  font-family: 'calibri';
   border: 5px solid #fec3b1;
   text-align: center;
-  margin-top: 100px;
   box-shadow: 7px 13px 37px #000;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -22,21 +24,17 @@
 .form_container h4 {
   font-size: 22px;
   margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form {
   width: 100%;
   background-color: #feded2;
   padding: 15px;
-  border-radius: 4px;
   margin-bottom: 16px;
   border: 1px solid #fec3b1;
   font-family: 'calibri';
   font-size: 18px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
 }
 
 .botonRegistrar {
@@ -59,57 +57,8 @@
   font-size: 16px;
 }
 
-body {
-  background-color: rgb(159, 169, 214);
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-}
-
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.menuHorizontalMarca {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 55px;
-}
-
-.menuHorizontalMarca>li>a {
-  display: block;
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.menuVerticalMarca>li:hover {
-  background-color: #4d82bc;
-}
-
-.menuVerticalMarca {
-  position: absolute;
-  display: none;
-  list-style: none;
-  width: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.menuHorizontalMarca li:hover .menuVerticalMarca {
-  display: block;
-}
-
-.menuVerticalMarca li:hover {
-  background-color: #4d82bc;
-}
-
-.menuVerticalMarca li a {
-  display: block;
-  color: white;
-  padding: 10px 10px 10px 15px;
-  text-decoration: none;
 }
