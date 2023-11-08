@@ -204,3 +204,25 @@
   padding: 10px 10px 10px 15px;
   text-decoration: none;
 }
+
+.content {
+  width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.imagenLogoNox {
+  width: auto;
+  height: 250px;
+}
+
+.textoNox {
+  padding: 20px;
+}
+
+.padre {
+  padding: 70px;
+  flex-direction: column;
+}
