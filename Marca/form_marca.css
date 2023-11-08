@@ -1,62 +1,74 @@
+@import url("../css/colores.css");
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin-top: 200px;
+  margin-top: 125px;
 }
 
 .form_container {
   width: 400px;
-  background-color: #feded2;
+  background-color: var(--fondo-form);
   padding: 20px;
-  margin: auto;
-  border-radius: 4px;
-  border: 5px solid #fec3b1;
+  margin: auto ;
+  border-radius: 20px;
+  border: 5px solid black ;
   text-align: center;
   box-shadow: 7px 13px 37px #000;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+  /* -webkit-border-radius: 4px; */
+  /* -moz-border-radius: 4px;
   -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  -o-border-radius: 4px; */
 }
 
 .form_container h4 {
   font-size: 22px;
   margin-bottom: 20px;
   font-family: 'Roboto', sans-serif;
+  color: var(--letra-form);
 }
 
 .form {
   width: 100%;
-  background-color: #feded2;
+  background-color: var(--fondo-input);
   padding: 15px;
   margin-bottom: 16px;
-  border: 1px solid #fec3b1;
+  border-bottom: 4px solid var(--border-form);
+  border-left: 4px solid var(--border-form);
+  border-radius: 5px;
   font-family: 'calibri';
   font-size: 18px;
+  color: var(--letra-form);
 }
+
 
 .botonRegistrar {
   width: 100%;
-  background-color: #5dc460;
+  background-color: #080808;
   border: none;
   padding: 12px;
-  color: white;
+  color: #11fa00;
   margin: 16px 0;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .botonCancelar {
   width: 100%;
-  background-color: #df4d49;
+  background-color: #080808;
   border: none;
   padding: 12px;
-  color: white;
   margin: 16px 0;
   font-size: 16px;
+  border-radius: 5px;
+  
 }
 
+button a {
+  text-decoration: none;
+  color: #fa0000;
+}
 nav {
   position: fixed;
   top: 0;
