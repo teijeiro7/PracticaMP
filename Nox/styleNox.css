@@ -1,6 +1,6 @@
 @import url(../css/colores.css);
 
-body{
+body {
   background-color: var(--color-nox);
 }
 
@@ -45,7 +45,7 @@ body {
   align-items: center;
   width: 100%;
   margin-top: 10px;
-  
+
 }
 
 
@@ -119,16 +119,23 @@ body {
 }
 
 .formCrearPala {
-  width: 400px;
+  width: 90%;
   background-color: var(--fondo-form);
   padding: 20px;
-  margin: auto;
   margin-bottom: 30px;
   border-radius: 20px;
   border: 5px solid black;
   text-align: center;
   box-shadow: 7px 13px 37px #000;
+  align-items: center;
+}
 
+.divFormPala {
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .formCrearPala h2 {
@@ -139,13 +146,18 @@ body {
 
 .structureDiv {
   background-color: var(--fondo-input);
-  padding: 15px;
+  padding: 20px;
   border-bottom: 4px solid var(--color-nox);
   border-left: 4px solid var(--color-nox);
   border-radius: 5px;
   font-family: 'calibri';
   font-size: 18px;
   color: var(--letra-form);
+  text-align: center;
+}
+
+.structureDiv label {
+  padding-right: 10px;
 }
 
 .etiquetas {
@@ -212,6 +224,7 @@ body {
   font-family: "Anton", sans-serif;
   text-align: center;
   text-shadow: 5px 7px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 
 .divBotonesFormCrearPalaSubir {
@@ -222,6 +235,7 @@ body {
   margin: 16px 0;
   font-size: 16px;
   border-radius: 5px;
+
 }
 
 .divBotonesFormCrearPalaCancelar {
@@ -239,15 +253,21 @@ button a {
 }
 
 .contenidoForm {
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .botonesForm {
   text-align: center;
+  width: 100%;
 }
 
 .structureDiv {
-  margin: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menuHorizontalNox {
