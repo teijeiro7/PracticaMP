@@ -1,11 +1,19 @@
 @import url(../css/colores.css);
 
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: var(--color-nox);
+  margin: 0;
 }
 
 
-.tituloEncabezado {
+/* .tituloEncabezado {
   font-size: 40px;
   font-family: "Anton", sans-serif;
   text-align: center;
@@ -13,11 +21,10 @@ body {
   color: white;
   padding-left: 160px;
   padding-right: 160px;
-}
+} */
 
 
 body {
-  background-color: var(--color-nox);
   margin: 0 auto;
 }
 
@@ -51,6 +58,12 @@ body {
 
 .content span {
   font-family: 'Roboto', sans-serif;
+}
+
+.textoNox h1,
+.textoNox p,
+.textoNox input {
+  margin: 8px;
 }
 
 .boton_editar {
@@ -115,6 +128,7 @@ body {
 .labelStyle {
   font-weight: bold;
   text-decoration: underline;
+  padding: 5px;
 }
 
 .textPrice {
@@ -199,6 +213,7 @@ body {
   margin: 20px;
   width: 100%;
 }
+
 .formCrearPala {
   width: 90%;
   background-color: var(--fondo-form);
@@ -221,6 +236,7 @@ body {
 .structureDiv {
   background-color: var(--fondo-input);
   padding: 20px;
+  margin: 10px;
   border-bottom: 4px solid var(--color-nox);
   border-left: 4px solid var(--color-nox);
   border-radius: 5px;
