@@ -48,8 +48,6 @@ body {
   width: 100%;
   background-color: #080808;
   border: none;
-  padding: 12px;
-  margin: 16px 0;
   font-size: 16px;
   color: #11fa00;
   border-radius: 5px;
@@ -58,4 +56,14 @@ body {
 button a {
   text-decoration: none;
   color: #fa0000;
+}
+
+.confirmButton {
+  display: flex;
+}
+
+.confirmButton input,
+.confirmButton button {
+  padding: 12px;
+  margin: 5px;
 }
