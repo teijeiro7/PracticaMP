@@ -4,12 +4,10 @@
 
 - Nombre: Cristian
 - Apellidos: Teijeiro Parga
-- DNI: 53994138M
 
 ### Alumno 2 
 - Nombre: Juan Manuel
 - Apellidos: Bustos Moya
-- DNI: 03192253Z
 
 ## Repositorio GitHub
 
