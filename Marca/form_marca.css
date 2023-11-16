@@ -1,4 +1,4 @@
-@import url("../css/colores.css");
+@import url("/css/colores.css");
 
 * {
   box-sizing: border-box;
@@ -13,9 +13,11 @@ body {
 }
 
 .form_container {
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
   margin-top: 20px;
-  width: 400px;
+  width: 350px;
   background-color: var(--fondo-form);
   padding: 20px;
   border-radius: 20px;
