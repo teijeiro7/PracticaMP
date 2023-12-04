@@ -1,0 +1,65 @@
+@import url(../css/colores.css);
+
+* {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+}
+
+.container_body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container_body img {
+    margin: 40px 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.tituloInicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid wheat;
+    margin: 20px;
+}
+
+.imagenInicio {
+    width: 100px;
+    margin: 15px;
+}
+
+.textoTituloInicio h1,
+.textoTituloInicio h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+}
+
+.fotoHead {
+    background-color: white;
+}
+
+.signoMas {
+    color: white;
+    font-size: 100px;
+    border: 2px solid black;
+    padding: 41px;
+    border-radius: 15px;
+}
+
+.espaciado {
+    padding-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
