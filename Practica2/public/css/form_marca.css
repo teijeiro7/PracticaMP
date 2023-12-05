@@ -69,3 +69,7 @@ button a {
   padding: 12px;
   margin: 5px;
 }
+
+#history {
+  height: 200px;
+}
