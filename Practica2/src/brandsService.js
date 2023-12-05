@@ -16,8 +16,8 @@ let babolat = new brand("Babolat", 1875, "Pierre Babolat", "https://www.zonadepa
 let adidas = new brand("Adidas", 2013, "Adi Dassler", "https://images-na.ssl-images-amazon.com/images/S/abs-image-upload-na/0/AmazonStores/A1RKKUPIHCS9HS/8f698bd583b2fa7aad66912c988d2a17.w800.h800.jpg", "Alejandro Galán");
 let starvie = new brand("Starvie", 2002, "Jorge Gómez de la Vega y Javier de la Chica", "https://www.elcorteingles.es/centroscomerciales/uploads/brand/logo/4903/STARVIE.png", "Javi Garrido");
 let head = new brand("Head", 1960, "Howard Head", "https://qph.cf2.quoracdn.net/main-qimg-4ea4ea5e998b3d2e4c77b88439ac9661", "Arturo Coello");
-let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "Fede Chingotto");
 let dunlop = new brand("Dunlop", 1909, "John Boyd Dunlop", "https://federacionnavarradepadel.com/wp-content/uploads/2022/08/485fc0213bd8b8df4ffe0264be4418a5.jpg", "Ramiro Moyano");
+let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "Fede Chingotto");
 
 let marcas = new Map();
     marcas.set("nox", nox);
