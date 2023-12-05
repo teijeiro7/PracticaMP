@@ -1,19 +1,31 @@
-const brands = {
-    nox: {
-        nombre: "Nox",
-        year: 2000,
-        image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEUCAgLfRDsAAADlRj2BKCOuNS5HFhPUQTjnRj14JSBlHxuqNC2LKiV9JiHMPjYJAwS3ODEZCQjDPDS9OjItDg2TLSdXGxh0JB8gCgmZLyk7ExAkDArbQzo1EQ9hHhpSGhZqIRxDFRIvDw0VBwc+ExGiMiuVBHQOAAAE2ElEQVR4nO2a6XaqMBRGJQGJEzI4FEW0g+//ijeJMmRgKNir7fp2f3QtJcOGkJycOJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARkMG8xPV9WmitUHLBRt3CLP8ZKuPf7TZ7QfVOBeVkY/6R+d7Cy23hP/LayVWa1ORTBkdAqP+9aQpcr00cNigClkoDeN6YRbMRQvky0tCneQaEeHn+kqJpdXQGQhlV0WRkC2lgyvzpOFM7Q1LPngT5HOh3TVGl+Jzcg603k8fasi75W9ITTAZU5V3G3Vz9R5RocKZKiosPIoPubh6cXawvYdjDLniGykFvVE13Q3JWfuCBWfp6DqFO/Vz+QD3mXY3gjfb1DTO0KFJMVBJPq4ir6jn4GtDnS0+heIxlA1QmkrjQ6y1R+OJde4daeiwSzHNx4PfQdk/rxwMx0CriWZ7+dDm3J3F71LQeOWZ17R+jTSk8X3aPo0SrBlOyNq4WSw+SK80m0nX3Nd7rc16DzR02G3w67Pgd6kZ2l5pSrfVQvhmvvFs2RgeaIbdC5dR9/xmmOrf9FgEGwy5Ymo43OcX/rd0jE7QfXP8oxrSdD9rZ6uPIHpbZMlCn+ZDt6Oq/arJkCsuzSHBvKNwPFrm7F1LgKcasrw7ftxlPQxpcOquadJoKNYC872mjnvrgbrO08yyzjcazjuDXR6aKYp2Q98aBGs1Rc2GvJmdYSgWR3MmVcKORxjyIhdlYNsM+9XTZijC0czyGMWcyTmV8RONLdH2WEPidxlmfTY+HYZ826Ov/fLC7CIXjIsf8ChfROwdTQ0wVG2shsEjDG0Lo+xksile5DxJO1saZLj8P4b8SYW2VZbedxbVNvHhhqv/ZMgtrlbFKhru0cxLG4o9p03Ruon4nYZccWWGNw3X/k5DMWsa8eDqTxmK6UbfKF3+mKEaQ4lrZ3/KkO/5NUGHXv+QoZm3EfQKmX6HoWWauT/E/oovbUiIa80csDgqk+G/2tC21XeqxJTYYqTzn4lLH2S4qVdj2VuQhU2QLdYyueiFYUApc39kb/EgQ7fVkJDE8g7WEsS3XTDr2l08z5BE9XXOMCSRnjZ1qiR//byCLdob+zHDTjaKgZHFOFm2v/KghvtclTQdS1oVn2S4fk/VnKCeiZqaKQzqX6znFQ4NopZu/4yh43fgML2Xar40N/3YdSJPE4/6gYVwP/XOJj7K8NuoOW9zx8Ti6X1Lz6MA4/lS59wzI/xEwyrWtKSDZaZUZBi9k+VFlFfk/c4tnmfIyv2CJXMhs92EROIo+H5iagxVtup19vQ8Q6eYLMzsU3EiOpODkwW7YkHUFLd2xRcxLH9iYGQQi1On6kT0fmJqnEA1HLC9hmF5vGlkgcuTw3oe37GfItqzw69gSMvIi7yr02R1+qu52E+CaWxZGNXf0/Q0dGtlWGE47Hc5vALHm5bpz1itZREJwY1HnUzFoelaqH8lSgH+Lpq9PYReRdi8rNTL5PUyt7QQcb1BLLb5Z7XLI/P6d9vbT5JIFK1N3j7ld+R8rRf5su4yFXoI6mWs9XyHrt60FWupCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAn8A+Ln1H6W4v4twAAAABJRU5ErkJggg=="
-    },
-    siux: {
-        nombre: "siux",
-        year: 2000,
-    },
-    adidas: {
-        nombre: "adidas",
-        year: 2010,
+class brand {
+    constructor(name, year, fundator, image) {
+        this.name = name;
+        this.year = year;
+        this.fundator = fundator;
+        this.image = image;
     }
 }
 
+let nox = new brand("Nox", 2009, "Jesus Ballvé", "https://www.setpointchile.cl/cdn/shop/collections/3.png?v=1675371060");
+let siux = new brand("Siux", 2012, "Antonio", "hbfyvgrbybvy");
+let bullpadel = new brand("Bullpadel", 1995, "Jorge García Caballero", "hbfyvgrbybvy");
+let kuikma = new brand("Kuikma", 2019, "Jorge García Caballero", "hbfyvgrbybvy");
+let babolat = new brand("Babolat", 1875, "Pierre Babolat", "hbfyvgrbybvy");
+let adidas = new brand("Adidas", 2013, "Juanma", "hbfyvgrbybvy");
+let starvie = new brand("Starvie", 2002, "Rafa", "hbfyvgrbybvy");
+let head = new brand("Head", 1960, "Rafa", "hbfyvgrbybvy");
 
-export default brands;
 
+let marcas = new Map();
+marcas.set("nox", nox);
+marcas.set("siux", siux);
+marcas.set("adidas", adidas);
+marcas.set("babolat", babolat);
+marcas.set("starvie", starvie);
+
+export function getBrand(brandName) {
+    return marcas.get(brandName);
+}
+
+export default marcas;
