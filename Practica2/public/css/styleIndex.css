@@ -12,6 +12,7 @@ body {
     background-color: var(--color-fondo);
 }
 
+
 .container_body {
     display: flex;
     justify-content: space-around;
@@ -62,4 +63,5 @@ body {
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
+    
 }
