@@ -3,7 +3,7 @@ import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
 import { __dirname } from '../dirname.js';
 import router from "../router.js";
-import brands from "../brands.js";
+import brands from "./brandsService.js";
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Use the router
 app.use(router);
-app.use(brands);
+/* app.use(brands); */ // No funciona
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
@@ -43,4 +43,5 @@ app.use((req, res) => {
 
 app.listen(4000, () => {
     console.log('Server is running on port 4000');
+    console.log("http://localhost:4000/");
 });

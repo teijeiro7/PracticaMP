@@ -1,4 +1,4 @@
-const marcas = {
+const brands = {
     nox: {
         nombre: "Nox",
         year: 2000,
@@ -15,5 +15,5 @@ const marcas = {
 }
 
 
-export default marcas;
+export default brands;
 
