@@ -29,7 +29,7 @@ body {
 .content {
   width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   border: 3px solid black;
   font-family: 'Roboto', sans-serif;
@@ -283,4 +283,9 @@ button a {
   width: 90%;
   display: flex;
   justify-content: flex-start;
+}
+
+.imagenLogoNox{
+  width: 200px;
+  height: 200px;
 }
