@@ -20,7 +20,6 @@ app.use(express.static(__dirname + '/public'));
 // Use the router
 app.use(router);
 
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
