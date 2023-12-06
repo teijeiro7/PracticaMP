@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title id="Principal title">WPS | {{name}}</title>
+    <title id="Principal title">WPS | {{brandName}}</title>
     <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
         type="image/png">
     <link rel="stylesheet" href="/css/styleNav.css">
@@ -34,7 +34,7 @@
                 </ul>
             </li>
             <li>
-                <h1 class="tituloEncabezado">{{name}}</h1>
+                <h1 class="tituloEncabezado">{{brandName}}</h1>
             </li>
             <li><a href="/"><img class="logoinicio"
                         src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
@@ -53,15 +53,15 @@
 
         <div class="content">
             <div>
-                <img class=imagenLogoNox src={{image}}>
+                <img class=imagenLogoNox src={{brandImage}}>
             </div>
 
             <div class="textoNox">
                 <h1>{{name}}</h1>
-                <p><span class="negrita"><b>Fundador: </b></span><span>{{fundator}}</span></p>
-                <p><span class="negrita"><b>Año de fundación: </b></span><span>{{year}}</span></p>
-                <p><span class="negrita"><b>Jugadores: </b><span></span>{{players}}</span></p>
-                <input class="boton_editar" type="submit" value="Editar">
+                <p><span class="negrita"><b>Fundador: </b></span><span>{{brandFundator}}</span></p>
+                <p><span class="negrita"><b>Año de fundación: </b></span><span>{{brandYear}}</span></p>
+                <p><span class="negrita"><b>Jugadores: </b><span></span>{{brandPlayers}}</span></p>
+                <a href="/marca/:brandName/edit"><input class="boton_editar" type="submit" value="Editar"></a>
                 <input class="boton_eliminar" type="submit" value="Eliminar">
             </div>
         </div>

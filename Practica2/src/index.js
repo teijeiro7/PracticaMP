@@ -32,9 +32,9 @@ app.get('/marca/:brandName', (req, res) => {
     res.sendFile(__dirname + '/views/marca.html');
 });
 
-app.get("/prueba", (req, res) => {
-    res.sendFile(__dirname + "/views/prueba.html");
-});
+app.get('/marca/{{brandName}}/edit', (req, res) => {
+    res.sendFile(__dirname + '/views/editBrand.html');
+ });
 
 app.use((req, res) => {
     res.status(404).send('404 Not Found');

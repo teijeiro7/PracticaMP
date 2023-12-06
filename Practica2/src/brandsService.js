@@ -1,10 +1,10 @@
 class brand {
-    constructor(name, year, fundator, image, players) {
-        this.name = name;
-        this.year = year;
-        this.fundator = fundator;
-        this.image = image;
-        this.players = players;
+    constructor(brandName, brandYear, brandFundator, brandImage, brandPlayers) {
+        this.brandName = brandName;
+        this.brandYear = brandYear;
+        this.brandFundator = brandFundator;
+        this.brandImage = brandImage;
+        this.brandPlayers = brandPlayers;
     }
 }
 
@@ -20,16 +20,16 @@ let dunlop = new brand("Dunlop", 1909, "John Boyd Dunlop", "https://federacionna
 let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "Fede Chingotto");
 
 let marcas = new Map();
-    marcas.set("nox", nox);
-    marcas.set("siux", siux);
-    marcas.set("bullpadel", bullpadel);
-    marcas.set("kuikma", kuikma);
-    marcas.set("babolat", babolat);
-    marcas.set("adidas", adidas);
-    marcas.set("starvie", starvie);
-    marcas.set("head", head);
-    marcas.set("dunlop", dunlop);
-    marcas.set("royal", royal);
+marcas.set("nox", nox);
+marcas.set("siux", siux);
+marcas.set("bullpadel", bullpadel);
+marcas.set("kuikma", kuikma);
+marcas.set("babolat", babolat);
+marcas.set("adidas", adidas);
+marcas.set("starvie", starvie);
+marcas.set("head", head);
+marcas.set("dunlop", dunlop);
+marcas.set("royal", royal);
 
 
 export function getBrand(brandName) {
