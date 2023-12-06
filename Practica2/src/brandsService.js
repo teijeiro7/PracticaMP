@@ -36,4 +36,15 @@ export function getBrand(brandName) {
     return marcas.get(brandName);
 }
 
+
+
+
+// export function eliminar(brandName) {
+//     result = marcas.brandName;
+//     console.log(result);
+//     return result;
+// }
+
+
+
 export default marcas;
