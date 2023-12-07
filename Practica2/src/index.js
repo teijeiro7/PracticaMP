@@ -20,21 +20,10 @@ app.use(express.static(__dirname + '/public'));
 // Use the router
 app.use(router);
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
-});
+app.get("index", router);
+app.get("form_marca", router);
+app.get("marca", router);
 
-app.get('/createYourBrand', (req, res) => {
-    res.sendFile(__dirname + '/views/form_marca.html');
-});
-
-app.get('/marca/:brandName', (req, res) => {
-    res.sendFile(__dirname + '/views/marca.html');
-});
-
-app.get('/marca/{{brandName}}/edit', (req, res) => {
-    res.sendFile(__dirname + '/views/editBrand.html');
- });
 
 app.use((req, res) => {
     res.status(404).send('404 Not Found');
