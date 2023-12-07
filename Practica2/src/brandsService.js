@@ -37,6 +37,27 @@ export function getBrand(brandName) {
 }
 
 
+export function editBrand(brandName, brandYear, brandFundator, brandImage, brandPlayers) {
+    marcas.get(brandName);
+    marcas.brandName = brandName;
+    marcas.brandYear = brandYear;
+    marcas.brandFundator = brandFundator;
+    marcas.brandImage = brandImage;
+    marcas.brandPlayers = brandPlayers;
+    return brand;
+}
+
+export function addBrand(brandName, brandYear, brandFundator, brandImage, brandPlayers) {
+    let brand = new brand(brandName, brandYear, brandFundator, brandImage, brandPlayers);
+    marcas.set(brandName, brand);
+    return brand;
+}
+
+export function deleteBrand(brandName) {
+    marcas.delete(brandName);
+    return marcas;
+}
+
 
 
 // export function eliminar(brandName) {
