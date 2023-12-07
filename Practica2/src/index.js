@@ -28,23 +28,13 @@ app.get('/createYourBrand', (req, res) => {
     res.sendFile(__dirname + '/views/form_marca.html');
 });
 
-app.get('/brandCreated', (req, res) => {
-    
-    res.sendFile(__dirname + '/views/brandCreated.html');
-});
-
 app.get('/marca/:brandName', (req, res) => {
     res.sendFile(__dirname + '/views/marca.html');
 });
 
-
-app.get('/marca/{{brandname}}/edit', (req, res) => {
+app.get('/marca/{{brandName}}/edit', (req, res) => {
     res.sendFile(__dirname + '/views/editBrand.html');
-});
- 
-app.get('/marca/{{brandName}}/delete', (req, res) => {
-    res.sendFile(__dirname + '/views/deleteBrand.html');
-});
+ });
 
 app.use((req, res) => {
     res.status(404).send('404 Not Found');

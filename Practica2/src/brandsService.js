@@ -1,4 +1,4 @@
-class brand {
+export class brand {
     constructor(brandName, brandYear, brandFundator, brandImage, brandPlayers) {
         this.brandName = brandName;
         this.brandYear = brandYear;
