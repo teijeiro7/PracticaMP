@@ -21,8 +21,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(router);
 
 app.get("index", router);
-app.get("form_marca", router);
 app.get("marca", router);
+app.get("form_marca", router);
 
 
 
