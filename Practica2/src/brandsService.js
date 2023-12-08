@@ -27,7 +27,7 @@ marcas.set("Adidas", adidas);
 marcas.set("Starvie", starvie);
 marcas.set("Head", head);
 marcas.set("Dunlop", dunlop);
-marcas.set("Royal", royal);
+marcas.set("Royal Padel", royal);
 
 
 export function getBrand(brandName) {

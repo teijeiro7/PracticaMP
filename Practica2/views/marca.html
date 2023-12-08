@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+    {{#marcaPrincipal}}
     <title id="Principal title">WPS | {{brandName}}</title>
+    {{/marcaPrincipal}}
     <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png">
     <link rel="stylesheet" href="/css/styleNav.css">
     <link rel="stylesheet" href="/css/styleNox.css">
@@ -14,16 +16,21 @@
 </head>
 
 <body>
+    
     <nav class="navPrincipal">
         <ul class="menuHorizontal">
             <li>
                 <i class="bi bi-list"><a href="#"></a></i>
                 <ul class="menuVertical">
+                {{#infoMarcas}}
                     <li><a href="/{{brandName}}">{{brandName}}</a></li>
+                {{/infoMarcas}}
                 </ul>
             </li>
             <li>
+                {{#marcaPrincipal}}
                 <h1 class="tituloEncabezado">{{brandName}}</h1>
+                {{/marcaPrincipal}}
             </li>
             <li>
                 <div class="navIzq">
@@ -31,6 +38,7 @@
                 </div>
             </li>
         </ul>
+    
     </nav>
 
     <div class="padre">
@@ -43,6 +51,8 @@
         </div>
 
         <div class="content">
+        {{#marcaPrincipal}}
+
             <div>
                 <img class=imagenLogoNox src={{brandImage}}>
             </div>
@@ -56,6 +66,7 @@
                 <button class="boton_eliminar" id="eliminar">Eliminar</button>
                 <!-- <input class="boton_eliminar" type="submit" value="Eliminar"> -->
             </div>
+        {{/marcaPrincipal}}
         </div>
 
         <div class="divPalas">
