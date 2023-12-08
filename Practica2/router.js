@@ -10,28 +10,19 @@ router.get('/', (req, res) => {
     const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla 
 
     res.render('index', { title: 'Main Page', infoMarcas: brandValues }); // renderizamos el contenido necesario para la página principal
-    
+
 });
 
+router.get('/formularioMarca', (req, res) => {
+    res.render('form_marca', { title: 'Form Page' }); //renderizamos el contenido necesario para el formulario
+});
 
 
 router.get('/:brandName', (req, res) => {
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
-    const lista = Array.from(marcas.values()); //asignamos a lista el valor de todas las marcas
-    res.render('marca', { title: 'Brand Page', marcaPrincipal: brandValues, infoMarcas: lista }); //renderizamos el contenido necesario para la marca seleccionada
-});
-
-// router.get('/createYourBrand', (req, res) => {
-    
-//         const filePath = path.join(__dirname, 'form_marca.html');
-//         res.sendFile(filePath);
-// });
-        
-  
-
-router.post('/form', (req, res) => {
-    addBrand(bName, bYear, bFundator, bImage, bPlayers);
-    res.redirect("/");
+    let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
+    console.log(brandValues.brandRackets);
+    res.render('marca', { marcaPrincipal: brandValues, palasPrincipal: palas }); //renderizamos el contenido necesario para la marca seleccionada
 });
 
 export default router;

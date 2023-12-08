@@ -16,15 +16,15 @@
 </head>
 
 <body>
-    
+
     <nav class="navPrincipal">
         <ul class="menuHorizontal">
             <li>
                 <i class="bi bi-list"><a href="#"></a></i>
                 <ul class="menuVertical">
-                {{#infoMarcas}}
+                    {{#infoMarcas}}
                     <li><a href="/{{brandName}}">{{brandName}}</a></li>
-                {{/infoMarcas}}
+                    {{/infoMarcas}}
                 </ul>
             </li>
             <li>
@@ -38,7 +38,7 @@
                 </div>
             </li>
         </ul>
-    
+
     </nav>
 
     <div class="padre">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="content">
-        {{#marcaPrincipal}}
+            {{#marcaPrincipal}}
 
             <div>
                 <img class=imagenLogoNox src={{brandImage}}>
@@ -66,21 +66,23 @@
                 <button class="boton_eliminar" id="eliminar">Eliminar</button>
                 <!-- <input class="boton_eliminar" type="submit" value="Eliminar"> -->
             </div>
-        {{/marcaPrincipal}}
+            {{/marcaPrincipal}}
         </div>
 
         <div class="divPalas">
             <div class="divNox">
+                {{#palasPrincipal}}
                 <div class="pala">
-                    <div><img src="/Images/at10.png" class="imagenPala"></div>
+                    <div><img src="{{racketImage}}" class="imagenPala"></div>
                     <div class="textPrice">
                         <p class="parrafoPala">
-                            AT10 LUXURY GENIUS 18K ALUM 2024 BY AGUSTÍN TAPIA
+                            {{racketName}}
                         </p>
-                        <p class="precioPala">179.95€</p>
+                        <p class="precioPala">{{racketPrice}}€</p>
                     </div>
                 </div>
-                <div class="pala">
+                {{/palasPrincipal}}
+                <!-- <div class="pala">
                     <div><img src="/Images/ml10.png" class="imagenPala"></div>
                     <div class="textPrice">
                         <p class="parrafoPala">
@@ -124,7 +126,7 @@
                         </p>
                         <p class="precioPala">119.95€</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="divFormPala">
@@ -176,7 +178,6 @@
                 </div>
             </div>
         </div>
-        <script src="/src/index.js"></script>
 </body>
 
 </html>
