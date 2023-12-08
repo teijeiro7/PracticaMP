@@ -26,11 +26,10 @@ router.get('/:brandName', (req, res) => {
 });
 
 router.get('/createYourBrand', (req, res) => {
-    const brandValues = Array.from(marcas.values());
+    // const brandValues = Array.from(marcas.values());
 
     res.render('form_marca', { // renderizamos el contenido necesario para el formulario
-        title: 'Main Page',
-        infoMarcas: brandValues,
+        
     });
 });
 
