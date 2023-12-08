@@ -3,7 +3,7 @@ import { __dirname } from './dirname.js';
 import marcas, { brand } from "./src/brandsService.js";
 import { addBrand } from './src/brandsService.js';
 import { getBrand } from './src/brandsService.js';
-import path from 'path';
+// import path from 'path';
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -21,11 +21,11 @@ router.get('/:brandName', (req, res) => {
     res.render('marca', { title: 'Brand Page', marcaPrincipal: brandValues, infoMarcas: lista }); //renderizamos el contenido necesario para la marca seleccionada
 });
 
-router.get('/createYourBrand', (req, res) => {
+// router.get('/createYourBrand', (req, res) => {
     
-        const filePath = path.join(__dirname, 'form_marca.html');
-        res.sendFile(filePath);
-});
+//         const filePath = path.join(__dirname, 'form_marca.html');
+//         res.sendFile(filePath);
+// });
         
   
 
