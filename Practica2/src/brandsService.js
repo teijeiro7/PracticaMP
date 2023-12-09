@@ -85,10 +85,5 @@ export function addBrand(brandName, brandYear, brandFounder, brandImage, brandPl
     marcas.set(brandName, brandInstance);
 }
 
-export function deleteBrand(brandName) {
-    marcas.delete(brandName);
-    return marcas;
-}
-
 
 export default marcas;

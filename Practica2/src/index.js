@@ -22,12 +22,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(router);
 
 app.get("/", router);
-app.get("formularioMarca", router);
+app.get("/formularioMarca", router);
 app.get("/newBrand", router);
 app.post("/newRacket", router);
-app.get(":brandName/edit", router);
+app.get("/:brandName/edit", router);
 app.post("/editBrand", router);
-app.get(":brandName", router);
+app.get("/:brandName", router);
+app.get("/:brandName/deleteBrand", router);
 
 
 
