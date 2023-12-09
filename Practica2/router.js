@@ -3,6 +3,7 @@ import { __dirname } from './dirname.js';
 import marcas, { addBrand, brand } from "./src/brandsService.js";
 import { getBrand } from './src/brandsService.js';
 import { addRacket } from './src/brandsService.js';
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -27,17 +28,19 @@ router.post('/newBrand', (req, res) => {
         players: req.body.plaMarca,
     })
     addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
+    
 });
 
 router.post('/newRacket', (req, res) => {
     res.render('marca', {
-        brandName: req.params.brandName,
         name: req.body.nombrePala,
-        precio: req.body.precioPala,
+        precio: req.body.precio,
         imagen: req.body.imagenPala,
     })
-    addRacket(req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
+    console.log(req.body.precio);
+    addRacket(req.body.nombrePala, req.body.precio, req.body.imagenPala);
 });
+
 
 
 
@@ -45,7 +48,10 @@ router.post('/newRacket', (req, res) => {
 router.get("/:brandName/edit", (req, res) => {
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
+
     res.render("form_marca", { ...brandValues, desplegable: infoDesplegable, title: "Edit:" }); //renderizamos el contenido necesario para la marca seleccionada
+    // addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
+    
 });
 
 router.get('/:brandName', (req, res) => {

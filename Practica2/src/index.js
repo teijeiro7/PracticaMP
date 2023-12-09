@@ -5,6 +5,7 @@ import { __dirname } from '../dirname.js';
 import router from "../router.js";
 
 
+
 const app = express();
 
 // Serve static files from the "public" directory
