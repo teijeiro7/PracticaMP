@@ -39,7 +39,7 @@
   </nav>
 
   <div class="form_container">
-    <form action="newBrand" method="post">
+    <form action="{{action}}" method="post">
       <h4>{{title}} {{brandName}}</h4>
       <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" required />
       <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" required />

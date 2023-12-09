@@ -57,8 +57,6 @@ marcas.set("Dunlop", dunlop);
 marcas.set("Royal Padel", royal);
 
 
-
-
 export function getBrand(brandName) {
     let brand = marcas.get(brandName);
     return {
