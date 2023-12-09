@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title id="Principal title">WPS | {{nombreMarca}}</title>
+    <title id="Principal title">WPS | {{brandName}}</title>
     <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png">
     <link rel="stylesheet" href="/css/styleNav.css">
     <link rel="stylesheet" href="/css/styleNox.css">
@@ -26,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                <h1 class="tituloEncabezado">{{nombreMarca}}</h1>
+                <h1 class="tituloEncabezado">{{brandName}}</h1>
             </li>
             <li>
                 <div class="navIzq">
@@ -47,7 +47,6 @@
         </div>
 
         <div class="content">
-            {{#marcaPrincipal}}
 
             <div>
                 <img class=imagenLogoNox src={{brandImage}}>
@@ -58,11 +57,10 @@
                 <p><span class="negrita"><b>Fundador: </b></span><span>{{brandFounder}}</span></p>
                 <p><span class="negrita"><b>Año de fundación: </b></span><span>{{brandYear}}</span></p>
                 <p><span class="negrita"><b>Jugadores: </b><span></span>{{brandPlayers}}</span></p>
-                <a href="/{{brandname}}/edit"><input class="boton_editar" type="submit" value="Editar"></a>
+                <a href="/{{brandName}}/edit"><input class="boton_editar" type="submit" value="Editar"></a>
                 <button class="boton_eliminar" id="eliminar">Eliminar</button>
                 <!-- <input class="boton_eliminar" type="submit" value="Eliminar"> -->
             </div>
-            {{/marcaPrincipal}}
         </div>
 
         <div class="divPalas">

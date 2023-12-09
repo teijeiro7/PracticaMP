@@ -52,8 +52,17 @@ marcas.set("Royal Padel", royal);
 
 
 export function getBrand(brandName) {
-    return marcas.get(brandName);
+    let brand = marcas.get(brandName);
+    return {
+        brandName: brand.brandName,
+        brandYear: brand.brandYear,
+        brandFounder: brand.brandFounder,
+        brandImage: brand.brandImage,
+        brandPlayers: brand.brandPlayers,
+        brandRackets: brand.brandRackets
+    };
 }
+
 
 export function editBrand(brandName, brandYear, brandFounder, brandImage, brandPlayers) {
     marcas.get(brandName);

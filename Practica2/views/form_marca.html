@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/styleNav.css" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
-  <title>WPS | Create your own brand</title>
+  <title>WPS | {{title}}</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,15 +40,15 @@
 
   <div class="form_container">
     <form action="newBrand" method="post">
-      <h4>Formulario de creación de marca</h4>
-      <input class="form" type="text" name="brandName" id="marca" placeholder=" Nombre de la marca " required />
-      <input class="form" type="number" name="brandYear" id="año" placeholder="Inserte año de creacion" required />
-      <input class="form" type="text" name="brandFounder" id="nombre" placeholder="Nombre del propietario" required />
-      <input class="form" type="url" name="brandImage" id="url" placeholder="Url del logo de la marca" required />
-      <input class="form" type="text" name="brandPlayers" id="colaborators" placeholder="Ingrese sus jugadores" />
+      <h4>{{title}} {{brandName}}</h4>
+      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" required />
+      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" required />
+      <input class="form" type="text" name="fundMarca" id="nombre" placeholder="Nombre del propietario" value="{{brandFounder}}" required />
+      <input class="form" type="url" name="imgMarca" id="url" placeholder="Url del logo de la marca" value="{{brandImage}}" required />
+      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" required />
       <div class="confirmButton">
         <input class="botonRegistrar" type="submit" value="Registrar" />
-        <a href="/"><button class="botonCancelar">Cancelar</button></a>
+        <a class="botonCancelar" href="/">Cancelar</a>
       </div>
     </form>
   </div>
