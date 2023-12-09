@@ -26,7 +26,7 @@ export class brand {
     }
 }
 
-let nox = new brand("Nox", 2009, "Jesus Ballvé", "https://www.setpointchile.cl/cdn/shop/collections/3.png?v=1675371060", " Miguel Lamperti, Agustín Tapia", [at10, ml10, xOne, equation, packat, tl10]);
+let nox = new brand("Nox", 2009, "Jesus Ballvé", "https://www.setpointchile.cl/cdn/shop/collections/3.png?v=1675371060", " Miguel Lamperti, Agustín Tapia, Tino Libaak, Leo Augsburger", [at10, ml10, xOne, equation, packat, tl10]);
 let siux = new brand("Siux", 2012, "Marcos Sánchez", "https://palasdepadel10.com/wp-content/uploads/2018/10/SIUX-palas-padel-300.jpg", "Franco Stupaczuk, Cristian Gutiérrez");
 let bullpadel = new brand("Bullpadel", 1995, "Jorge García Caballero", "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_256,pg_1,t_base_params,w_256/v1489071634/avatars/000/132/519/132519-original.jpg?1489071634", "Maxi Sanchez)");
 let babolat = new brand("Babolat", 1875, "Pierre Babolat", "https://www.zonadepadel.es/c/97-category_header_pic/palas-de-padel-babolat.jpg", "Juan Lebrón");

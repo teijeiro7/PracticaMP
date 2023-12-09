@@ -20,9 +20,10 @@ app.use(express.static(__dirname + '/public'));
 // Use the router
 app.use(router);
 
-app.get("index", router);
+app.get("/", router);
 app.get("formularioMarca", router);
-app.get("marca", router);
+app.get(":brandName", router);
+app.get("accionForm", router);
 
 
 

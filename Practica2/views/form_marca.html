@@ -22,9 +22,9 @@
       <li>
         <i class="bi bi-list"><a href="#"></a></i>
         <ul class="menuVertical">
-          {{#infoMarcas}}
-          <li><a href="/marca/{{brandName}}">{{brandName}}</a></li>
-          {{/infoMarcas}}
+          {{#values}}
+          <li><a href="/{{brandName}}">{{brandName}}</a></li>
+          {{/values}}
         </ul>
       </li>
       <li>
@@ -39,11 +39,11 @@
   </nav>
 
   <div class="form_container">
-    <form action="/form" method="post">
+    <form action="newBrand" method="post">
       <h4>Formulario de creación de marca</h4>
       <input class="form" type="text" name="brandName" id="marca" placeholder=" Nombre de la marca " required />
       <input class="form" type="number" name="brandYear" id="año" placeholder="Inserte año de creacion" required />
-      <input class="form" type="text" name="brandFundator" id="nombre" placeholder="Nombre del propietario" required />
+      <input class="form" type="text" name="brandFounder" id="nombre" placeholder="Nombre del propietario" required />
       <input class="form" type="url" name="brandImage" id="url" placeholder="Url del logo de la marca" required />
       <input class="form" type="text" name="brandPlayers" id="colaborators" placeholder="Ingrese sus jugadores" />
       <div class="confirmButton">

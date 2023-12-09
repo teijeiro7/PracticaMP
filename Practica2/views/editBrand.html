@@ -6,22 +6,14 @@
 </head>
 
 <body>
-    <script src="./index.js"></script>
     <nav class="navPrincipal">
         <ul class="menuHorizontal">
             <li>
                 <i class="bi bi-list"><a href="#"></a></i>
                 <ul class="menuVertical">
-                    <li><a href="/marca/nox">NOX</a></li>
-                    <li><a href="/marca/siux">SIUX</a></li>
-                    <li><a href="/marca/bullpadel">BULLPADEL</a></li>
-                    <li><a href="/marca/kuikma">KUIKMA</a></li>
-                    <li><a href="/marca/babolat">BABOLAT</a></li>
-                    <li><a href="/marca/adidas">ADIDAS</a></li>
-                    <li><a href="/marca/starvie">STARVIE</a></li>
-                    <li><a href="/marca/head">HEAD</a></li>
-                    <li><a href="/marca/dunlop">DUNLOP</a></li>
-                    <li><a href="/marca/royal">ROYAL</a></li>
+                    {{#infoMarcas}}
+                    <li><a href="/{{brandName}}">{{brandName}}</a></li>
+                    {{/infoMarcas}}
                 </ul>
             </li>
             <li>
@@ -29,17 +21,15 @@
             </li>
             <li>
                 <div class="navIzq">
-                    <a href="/"><img class="logoinicio"
-                            src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-                            alt="inicio"></a>
+                    <a href="/"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a>
                 </div>
             </li>
         </ul>
     </nav>
 
-    <div class = "editDivForm">
+    <div class="editDivForm">
         <form class="editForm">
-            <h4>Edita la marca {{brandName}}</h4>        
+            <h4>Edita la marca {{brandName}}</h4>
         </form>
     </div>
 </body>
