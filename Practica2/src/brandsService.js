@@ -14,8 +14,6 @@ let packat = new racket("Pack AT Genius LTD 2024 - Agustín Tapia LIMITED EDITIO
 let tl10 = new racket("TL10 Future 2024. La pala de Tino Libaak", 244.95, "https://noxsport.es/cdn/shop/products/tl10-future-2024-la-pala-de-tino-libaak-209699.jpg?v=1695158836&width=650");
 
 let noxRackets = [at10, ml10, xOne, equation, packat, tl10];
-let brandRackets = []
-brandRackets.push
 
 export function addRacket(brandName, racketName, racketPrice, racketImage) {
     let racketInstance = new racket(racketName, racketPrice, racketImage);
@@ -83,7 +81,7 @@ export function editBrand(brandName, brandYear, brandFounder, brandImage, brandP
 }
 
 export function addBrand(brandName, brandYear, brandFounder, brandImage, brandPlayers) {
-    let brandInstance = new brand(brandName, brandYear, brandFounder, brandImage, brandPlayers);
+    let brandInstance = new brand(brandName, brandYear, brandFounder, brandImage, brandPlayers, []);
     marcas.set(brandName, brandInstance);
     console.log(marcas);
     return brandInstance;
