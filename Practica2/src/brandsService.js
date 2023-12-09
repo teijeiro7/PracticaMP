@@ -13,13 +13,16 @@ let equation = new racket("EQUATION Advanced", 149.95, "https://noxsport.es/cdn/
 let packat = new racket("Pack AT Genius LTD 2024 - Agustín Tapia LIMITED EDITION", 399.00, "https://noxsport.es/cdn/shop/products/pack-at-genius-ltd-2024-agustin-tapia-limited-edition-packpatltdd-8436603195805-186079.jpg?v=1699437978&width=650");
 let tl10 = new racket("TL10 Future 2024. La pala de Tino Libaak", 244.95, "https://noxsport.es/cdn/shop/products/tl10-future-2024-la-pala-de-tino-libaak-209699.jpg?v=1695158836&width=650");
 
+let noxRackets = [at10, ml10, xOne, equation, packat, tl10];
 let brandRackets = []
 brandRackets.push
+
 export function addRacket(racketName, racketPrice, racketImage) {
+    console.log(racketName, racketPrice, racketImage);
     let racketInstance = new racket(racketName, racketPrice, racketImage);
-    
-    console.log(rackets);
-    return brandInstance;
+    brandRackets.push(racketInstance);
+    console.log(racketInstance);
+    console.log(brandRackets);
 }
 
 
@@ -34,15 +37,15 @@ export class brand {
     }
 }
 
-let nox = new brand("Nox", 2009, "Jesus Ballvé", "https://www.setpointchile.cl/cdn/shop/collections/3.png?v=1675371060", " Miguel Lamperti, Agustín Tapia, Tino Libaak, Leo Augsburger", [at10, ml10, xOne, equation, packat, tl10]);
-let siux = new brand("Siux", 2012, "Marcos Sánchez", "https://palasdepadel10.com/wp-content/uploads/2018/10/SIUX-palas-padel-300.jpg", "Franco Stupaczuk, Cristian Gutiérrez");
-let bullpadel = new brand("Bullpadel", 1995, "Jorge García Caballero", "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_256,pg_1,t_base_params,w_256/v1489071634/avatars/000/132/519/132519-original.jpg?1489071634", "Maxi Sanchez)");
-let babolat = new brand("Babolat", 1875, "Pierre Babolat", "https://www.zonadepadel.es/c/97-category_header_pic/palas-de-padel-babolat.jpg", "Juan Lebrón");
-let adidas = new brand("Adidas", 2013, "Adi Dassler", "https://images-na.ssl-images-amazon.com/images/S/abs-image-upload-na/0/AmazonStores/A1RKKUPIHCS9HS/8f698bd583b2fa7aad66912c988d2a17.w800.h800.jpg", "Alejandro Galán");
-let starvie = new brand("Starvie", 2002, "Jorge Gómez de la Vega y Javier de la Chica", "https://www.elcorteingles.es/centroscomerciales/uploads/brand/logo/4903/STARVIE.png", "Javi Garrido");
-let head = new brand("Head", 1960, "Howard Head", "https://fraguru.com/mdimg/dizajneri/o.4945.jpg", "Arturo Coello");
-let dunlop = new brand("Dunlop", 1909, "John Boyd Dunlop", "https://federacionnavarradepadel.com/wp-content/uploads/2022/08/485fc0213bd8b8df4ffe0264be4418a5.jpg", "Ramiro Moyano");
-let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "Fede Chingotto");
+let nox = new brand("Nox", 2009, "Jesus Ballvé", "https://www.setpointchile.cl/cdn/shop/collections/3.png?v=1675371060", " Miguel Lamperti, Agustín Tapia, Tino Libaak, Leo Augsburger", noxRackets/* [at10, ml10, xOne, equation, packat, tl10] */);
+let siux = new brand("Siux", 2012, "Marcos Sánchez", "https://palasdepadel10.com/wp-content/uploads/2018/10/SIUX-palas-padel-300.jpg", "Franco Stupaczuk, Cristian Gutiérrez", brandRackets);
+let bullpadel = new brand("Bullpadel", 1995, "Jorge García Caballero", "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_256,pg_1,t_base_params,w_256/v1489071634/avatars/000/132/519/132519-original.jpg?1489071634", "Maxi Sanchez", brandRackets);
+let babolat = new brand("Babolat", 1875, "Pierre Babolat", "https://www.zonadepadel.es/c/97-category_header_pic/palas-de-padel-babolat.jpg", "Juan Lebrón", brandRackets);
+let adidas = new brand("Adidas", 2013, "Adi Dassler", "https://images-na.ssl-images-amazon.com/images/S/abs-image-upload-na/0/AmazonStores/A1RKKUPIHCS9HS/8f698bd583b2fa7aad66912c988d2a17.w800.h800.jpg", "Alejandro Galán", brandRackets);
+let starvie = new brand("Starvie", 2002, "Jorge Gómez de la Vega y Javier de la Chica", "https://www.elcorteingles.es/centroscomerciales/uploads/brand/logo/4903/STARVIE.png", "Javi Garrido", brandRackets);
+let head = new brand("Head", 1960, "Howard Head", "https://fraguru.com/mdimg/dizajneri/o.4945.jpg", "Arturo Coello", brandRackets);
+let dunlop = new brand("Dunlop", 1909, "John Boyd Dunlop", "https://federacionnavarradepadel.com/wp-content/uploads/2022/08/485fc0213bd8b8df4ffe0264be4418a5.jpg", "Ramiro Moyano", brandRackets);
+let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "Fede Chingotto", brandRackets);
 
 
 let marcas = new Map();

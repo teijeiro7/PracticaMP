@@ -22,7 +22,8 @@ app.use(router);
 
 app.get("/", router);
 app.get("formularioMarca", router);
-app.get("/accionForm", router);
+app.get("/newBrand", router);
+app.get("/newRacket", router);
 app.get(":brandName/edit", router);
 app.get(":brandName", router);
 

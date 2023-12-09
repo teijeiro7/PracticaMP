@@ -2,7 +2,7 @@ import express from 'express';
 import { __dirname } from './dirname.js';
 import marcas, { addBrand, brand } from "./src/brandsService.js";
 import { getBrand } from './src/brandsService.js';
-import { addRacket} from './src/brandsService.js';
+import { addRacket } from './src/brandsService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -30,12 +30,12 @@ router.post('/newBrand', (req, res) => {
 });
 
 router.post('/newRacket', (req, res) => {
-    res.render('marca',{
+    res.render('marca', {
         name: req.body.nombrePala,
-        imagen: req.body.imagenPala,
         precio: req.body.precioPala,
+        imagen: req.body.imagenPala,
     })
-    addRacket(req.bodynombrePala, req.body.imagenPala, req.body.precioPala);
+    addRacket(req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
 });
 
 
