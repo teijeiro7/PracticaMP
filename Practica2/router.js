@@ -31,6 +31,7 @@ router.post('/newBrand', (req, res) => {
 
 router.post('/newRacket', (req, res) => {
     res.render('marca', {
+        brandName: req.params.brandName,
         name: req.body.nombrePala,
         precio: req.body.precioPala,
         imagen: req.body.imagenPala,
