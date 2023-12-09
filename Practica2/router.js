@@ -19,30 +19,15 @@ router.get('/formularioMarca', (req, res) => {
 });
 
 router.post('/newBrand', (req, res) => {
-    console.log(req.body.nombreMarca);
-    res.render('marca', {
-        name: req.body.nombreMarca,
-        year: req.body.anoMarca,
-        founder: req.body.fundMarca,
-        image: req.body.imgMarca,
-        players: req.body.plaMarca,
-    })
     addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
-    
+    res.redirect(`/${req.body.nombreMarca}`);
 });
 
 router.post('/newRacket', (req, res) => {
-    res.render('marca', {
-        name: req.body.nombrePala,
-        precio: req.body.precio,
-        imagen: req.body.imagenPala,
-    })
-    console.log(req.body.precio);
-    addRacket(req.body.nombrePala, req.body.precio, req.body.imagenPala);
+    let marcaPrincipal = req.query.name;
+    addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
+    res.redirect(`/${marcaPrincipal}`);
 });
-
-
-
 
 
 router.get("/:brandName/edit", (req, res) => {
@@ -51,7 +36,7 @@ router.get("/:brandName/edit", (req, res) => {
 
     res.render("form_marca", { ...brandValues, desplegable: infoDesplegable, title: "Edit:" }); //renderizamos el contenido necesario para la marca seleccionada
     // addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
-    
+
 });
 
 router.get('/:brandName', (req, res) => {
