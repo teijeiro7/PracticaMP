@@ -80,23 +80,23 @@
 
             <div class="divFormPala">
                 <div class="formCrearPala">
-                    <form class="contenidoForm">
+                    <form action="newRacket" method="post" class="contenidoForm">
                         <h2 class="tituloCrearPala">Añade una nueva pala</h2>
                         <div class="structureDiv">
                             <label class="labelStyle">Nombre de la pala</label>
-                            <input class="cuadroTexto" type="text" placeholder="Escribe aqui" required>
-                        </div>
-                        <div class="structureDiv">
-                            <label class="labelStyle">Imagen</label>
-                            <input class="cuadroTexto" type="text" placeholder="Escribe aqui" required>
+                            <input class="cuadroTexto" type="text" name="nombrePala" placeholder="Escribe aqui" required>
                         </div>
                         <div class="structureDiv">
                             <label class="labelStyle">Precio</label>
-                            <input class="cuadroTexto" type="number" placeholder="Escribe aqui" required>
+                            <input class="cuadroTexto" type="number" name=" precioPala" placeholder="Escribe aqui" required>
+                        </div>
+                        <div class="structureDiv">
+                            <label class="labelStyle">Imagen</label>
+                            <input class="cuadroTexto" type="text" name="imagenPala" placeholder="Escribe aqui" required>
                         </div>
                         <div class="botonesForm">
                             <input class="divBotonesFormCrearPalaSubir" type="submit" value="Subir" />
-                            <button class="divBotonesFormCrearPalaCancelar"><a href="/">Cancelar</a></button>
+                            <a href="/" class="divBotonesFormCrearPalaCancelar">Cancelar</a>
                         </div>
                     </form>
                 </div>

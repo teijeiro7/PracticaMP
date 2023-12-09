@@ -1,8 +1,8 @@
 import express from 'express';
 import { __dirname } from './dirname.js';
-import marcas from "./src/brandsService.js";
+import marcas, { addBrand, brand } from "./src/brandsService.js";
 import { getBrand } from './src/brandsService.js';
-
+import { addRacket} from './src/brandsService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -17,16 +17,28 @@ router.get('/formularioMarca', (req, res) => {
     res.render('form_marca', { title: 'Create your Own Brand', values: brandValues }); //renderizamos el contenido necesario para el formulario
 });
 
-router.post('/accionForm', (req, res) => {
+router.post('/newBrand', (req, res) => {
     console.log(req.body.nombreMarca);
-    res.render("newBrand", {
+    res.render('marca', {
         name: req.body.nombreMarca,
         year: req.body.anoMarca,
         founder: req.body.fundMarca,
         image: req.body.imgMarca,
         players: req.body.plaMarca,
     })
+    addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
 });
+
+router.post('/newRacket', (req, res) => {
+    res.render('marca',{
+        name: req.body.nombrePala,
+        imagen: req.body.imagenPala,
+        precio: req.body.precioPala,
+    })
+    addRacket(req.bodynombrePala, req.body.imagenPala, req.body.precioPala);
+});
+
+
 
 
 router.get("/:brandName/edit", (req, res) => {
