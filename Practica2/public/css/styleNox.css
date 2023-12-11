@@ -3,6 +3,7 @@
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 25px;
   padding: 0;
   margin: 0;
 }
@@ -29,6 +30,7 @@ body {
 .content {
   width: 90%;
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: start;
   align-items: center;
   border: 3px solid black;
@@ -37,11 +39,12 @@ body {
 }
 
 .negrita {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .content p {
   font-family: 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
 .content span {
@@ -97,6 +100,10 @@ body {
   border: 3px solid black;
 }
 
+.divNox p {
+  font-size: 22px;
+}
+
 .pala {
   display: flex;
   justify-content: left;
@@ -104,7 +111,11 @@ body {
   flex-direction: column;
   padding: 50px;
   width: auto;
+  margin: 2px;
   height: 350px;
+}
+.precioPala {
+  font-size:30px ;
 }
 
 .imagenPala {
@@ -128,12 +139,11 @@ body {
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
-}
+}º
 
 .parrafoPala {
   color: black;
   text-align: center;
-  font-size: small;
   padding: 5px;
 }
 
@@ -190,11 +200,13 @@ body {
 .divBotonesFormCrearPalaCancelar {
   background-color: #080808;
   border: none;
+  text-decoration: none;
   padding: 12px;
   margin: 16px 0;
   font-size: 16px;
   border-radius: 5px;
 }
+
 
 /* DIV FORM */
 
@@ -220,7 +232,6 @@ body {
 
 
 .formCrearPala h2 {
-  font-size: 22px;
   font-family: 'Roboto', sans-serif;
   color: var(--letra-form);
 }
