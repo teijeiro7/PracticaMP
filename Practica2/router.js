@@ -81,6 +81,7 @@ router.post("/editBrand", (req, res) => {
     brandValues.brandYear = req.body.anoMarca;
     brandValues.brandFounder = req.body.fundMarca;
     brandValues.brandImage = req.body.imgMarca;
+    brandValues.brandWeb = req.body.webMarca;
     brandValues.brandPlayers = req.body.plaMarca;
     marcas.set(req.body.nombreMarca, brandValues);
     res.redirect(`/${req.body.nombreMarca}`);
@@ -90,7 +91,6 @@ router.get("/:brandName/edit", (req, res) => {
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     res.render("form_marca", { ...brandValues, desplegable: infoDesplegable, title: "Edit:", action: `/editBrand?name=${req.params.brandName}` }); //renderizamos el contenido necesario para la marca seleccionada
-    console.log(req.params.brandName);
 });
 
 
