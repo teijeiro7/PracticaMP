@@ -54,9 +54,10 @@
 
             <div class="textoNox">
                 <h1>{{brandName}}</h1>
-                <p><span class="negrita"><b>Fundador: </b></span><span>{{brandFounder}}</span></p>
-                <p><span class="negrita"><b>Año de fundación: </b></span><span>{{brandYear}}</span></p>
+                <p><span class="negrita"><b>Fundador: </b></span><span class="contenido">{{brandFounder}}</span></p>
+                <p><span class="negrita"><b>Año de fundación: </b></span><span class="contenido">{{brandYear}}</span></p>
                 <p><span class="negrita"><b>Jugadores: </b><span></span>{{brandPlayers}}</span></p>
+                <p><span class="negrita"><b>Página web: </b></span><a class="contenido" href="{{brandWeb}}">{{brandWeb}}</a></p>
                 <a href="/{{brandName}}/edit?name={{brandName}}"><input class="boton_editar" type="submit" value="Editar"></a>
                 <a href="/{{brandName}}/confirmDelete?name={{brandName}}"><button class="boton_eliminar" id="eliminar">Eliminar</button></a>
             </div>
@@ -66,14 +67,23 @@
             <div class="divNox">
                 {{#palasPrincipal}}
                 <div class="pala">
-                    <div><img src="{{racketImage}}" class="imagenPala"></div>
-                    <div class="textPrice">
-                        <p class="parrafoPala"> {{racketName}}</p>
-                        <p class="precioPala">{{racketPrice}}€</p>
+                    <div class="responsivePalas">
+                        <div><img src="{{racketImage}}" class="imagenPala"></div>
+                        <div class="textPrice">
+                            <p class="parrafoPala"> {{racketName}}</p>
+                            <p class="precioPala">{{racketPrice}}€</p>
+                        </div>
                     </div>
+
                 </div>
                 {{/palasPrincipal}}
             </div>
+
+            {{#error}}
+            <div class="divError">
+                <h4 class="errorText">{{error}}</h4>
+            </div>
+            {{/error}}
 
             <div class="divFormPala">
                 <div class="formCrearPala">
@@ -81,15 +91,15 @@
                         <h2 class="tituloCrearPala">Añade una nueva pala</h2>
                         <div class="structureDiv">
                             <label class="labelStyle">Nombre de la pala</label>
-                            <input class="cuadroTexto" type="text" name="nombrePala" placeholder="Escribe aqui" required>
+                            <input class="cuadroTexto" type="text" name="nombrePala" placeholder="Escribe aqui">
                         </div>
                         <div class="structureDiv">
                             <label class="labelStyle">Precio</label>
-                            <input class="cuadroTexto" type="number" name="precioPala" placeholder="Escribe aqui" required>
+                            <input class="cuadroTexto" type="number" name="precioPala" placeholder="Escribe aqui">
                         </div>
                         <div class="structureDiv">
                             <label class="labelStyle">Imagen</label>
-                            <input class="cuadroTexto" type="text" name="imagenPala" placeholder="Escribe aqui" required>
+                            <input class="cuadroTexto" type="text" name="imagenPala" placeholder="Escribe aqui">
                         </div>
                         <div class="botonesForm">
                             <input class="divBotonesFormCrearPalaSubir" type="submit" value="Subir" />

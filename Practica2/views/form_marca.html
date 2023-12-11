@@ -38,14 +38,21 @@
     </ul>
   </nav>
 
+  {{#error}}
+  <div class="divError">
+    <h4 class="errorText">{{error}}</h4>
+  </div>
+  {{/error}}
+
   <div class="form_container">
     <form action="{{action}}" method="post">
       <h4>{{title}} {{brandName}}</h4>
-      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" required />
-      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" required />
-      <input class="form" type="text" name="fundMarca" id="nombre" placeholder="Nombre del propietario" value="{{brandFounder}}" required />
-      <input class="form" type="url" name="imgMarca" id="url" placeholder="Url del logo de la marca" value="{{brandImage}}" required />
-      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" required />
+      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" />
+      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" />
+      <input class="form" type="text" name="fundMarca" id="nombre" placeholder="Nombre del propietario" value="{{brandFounder}}" />
+      <input class="form" type="url" name="imgMarca" id="imagen" placeholder="Url del logo de la marca" value="{{brandImage}}" />
+      <input class="form" type="url" name="webMarca" id="web" placeholder="Url de la página de la marca" value="{{brandLink}}" />
+      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" />
       <div class="confirmButton">
         <input class="botonRegistrar" type="submit" value="Registrar" />
         <a class="botonCancelar" href="/">Cancelar</a>

@@ -3,7 +3,6 @@
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 25px;
   padding: 0;
   margin: 0;
 }
@@ -39,12 +38,12 @@ body {
 }
 
 .negrita {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .content p {
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .content span {
@@ -98,29 +97,29 @@ body {
   margin: 20px;
   margin-top: 100px;
   border: 3px solid black;
+  height: 100%;
 }
 
-.divNox p {
-  font-size: 22px;
-}
 
 .pala {
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   flex-direction: column;
   padding: 50px;
   width: auto;
   margin: 2px;
-  height: 350px;
+  height: auto;
 }
+
 .precioPala {
-  font-size:30px ;
+  font-size: 2 0px;
 }
 
 .imagenPala {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background-color: white;
   border: 2px solid black;
 }
@@ -132,19 +131,23 @@ body {
 }
 
 .textPrice {
-  width: 300px;
+  width: 250px;
   height: auto;
   background-color: #e4dfdf;
   border: 2px solid black;
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
-}º
+}
 
 .parrafoPala {
   color: black;
   text-align: center;
   padding: 5px;
+}
+
+.parrafoPala p {
+  font-size: 15px;
 }
 
 .precioPala {
@@ -286,7 +289,7 @@ button a {
   background-color: var(--fondo-form);
   border: 1px solid black;
   display: flex;
-  width: 70px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -296,7 +299,29 @@ button a {
   justify-content: flex-start;
 }
 
-.imagenLogoNox{
+.imagenLogoNox {
   width: 200px;
   height: 200px;
+}
+
+.responsivePalas {
+  width: 100%;
+}
+
+.divError {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff0000;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+}
+
+.contenido {
+  text-decoration: none;
+  color: #000;
 }

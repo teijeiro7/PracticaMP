@@ -18,15 +18,60 @@ router.get('/formularioMarca', (req, res) => {
     res.render('form_marca', { title: 'Create your Own Brand', values: brandValues, action: "newBrand" }); //renderizamos el contenido necesario para el formulario
 });
 
+
 router.post('/newBrand', (req, res) => {
-    addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.plaMarca);
-    res.redirect(`/${req.body.nombreMarca}`);
+    let errorMessage = '';
+
+    if (!req.body.nombreMarca) {
+        errorMessage += 'Nombre de la marca no proporcionado. ';
+    }
+    if (!req.body.anoMarca) {
+        errorMessage += 'Año de la marca no proporcionado. ';
+    }
+    if (!req.body.fundMarca) {
+        errorMessage += 'Fundación de la marca no proporcionada. ';
+    }
+    if (!req.body.imgMarca) {
+        errorMessage += 'Imagen de la marca no proporcionada. ';
+    }
+    if (!req.body.webMarca) {
+        errorMessage += 'Web de la marca no proporcionada. ';
+    }
+    if (!req.body.plaMarca) {
+        errorMessage += 'Plataforma de la marca no proporcionada. ';
+    }
+
+    if (errorMessage) {
+        res.render('form_marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}` })
+    } else {
+        addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.webMarca, req.body.plaMarca);
+        res.redirect(`/${req.body.nombreMarca}`);
+    }
 });
 
 router.post('/newRacket', (req, res) => {
+    let brandValues = getBrand(req.query.name); //asignamos a brandValues el valor de la marca que queremos mostrar
+    let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
+    let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
     let marcaPrincipal = req.query.name;
-    addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
-    res.redirect(`/${marcaPrincipal}`);
+    let errorMessage = '';
+
+    if (!req.body.nombrePala) {
+        errorMessage += 'Nombre de la pala no proporcionado. ';
+    }
+    if (!req.body.precioPala) {
+        errorMessage += 'Precio de la pala no proporcionado. ';
+    }
+    if (!req.body.imagenPala) {
+        errorMessage += 'Imagen de la pala no proporcionada. ';
+    }
+    if (errorMessage) {
+        res.render('marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}`, ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas })
+    } else {
+        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
+        res.redirect(`/${marcaPrincipal}`);
+    }
+
 });
 
 router.post("/editBrand", (req, res) => {

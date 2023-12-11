@@ -54,6 +54,7 @@ nav {
 i {
     color: beige;
     font-size: 30px;
+    width: 100%;
 }
 
 .logoinicio {
@@ -62,13 +63,21 @@ i {
 }
 
 .tituloEncabezado {
-    font-size: 40px;
+    font-size: 30px;
     font-family: "Anton", sans-serif;
     text-align: center;
     text-shadow: 5px 7px 4px gray;
     color: white;
+    width: 100%;
 }
 
 .menuHorizontal li {
     padding: 0;
+}
+
+@media screen and (max-width: 320px) {
+    nav {
+        font-size: 30px;
+        /* Ajusta este valor según tus necesidades */
+    }
 }
