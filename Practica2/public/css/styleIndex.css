@@ -72,10 +72,3 @@ body {
 .marcas {
     margin: 20px;
 }
-
-@media screen and (max-width: 600px) {
-    .padre {
-        width: 100%;
-        padding: 20px;
-    }
-}
