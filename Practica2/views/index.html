@@ -3,9 +3,11 @@
 
 <head>
   <title>WPS | {{title}}</title>
-  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/styleNav.css">
   <link rel="stylesheet" href="/css/styleIndex.css">
+  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -15,7 +17,7 @@
   <nav class="navPrincipal">
     <ul class="menuHorizontal">
       <li>
-        <i class="bi bi-list"><a href="#"></a></i>
+        <i id="iconoNav" class="bi bi-list"><a href="#"></a></i>
         <ul class="menuVertical">
           {{#infoMarcas}}
           <li><a href="/{{brandName}}">{{brandName}}</a></li>
@@ -54,6 +56,7 @@
           <img src="{{brandImage}}" alt="{{brandName}}" />
         </a>
       </div>
+
       {{/infoMarcas}}
 
       <div>

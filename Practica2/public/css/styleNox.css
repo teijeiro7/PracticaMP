@@ -9,13 +9,10 @@
 
 body {
   background-color: var(--color-nox);
+  padding: 0;
   margin: 0;
 }
 
-
-body {
-  margin: 0 auto;
-}
 
 /* DIV PADRE */
 .padre {
@@ -325,10 +322,9 @@ button a {
   color: #000;
 }
 
-
-
-/* @media (max-width: 600px) {
-  .contenido{
-
+@media (max-width: 400px) {
+  .divFormPala {
+    margin: 10px;
+    padding: 0;
   }
-} */
+}
