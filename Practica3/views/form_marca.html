@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/form_marca.css" />
+  <link rel="stylesheet" href="/css/styleNav.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
+  <title>WPS | {{title}}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navPrincipal">
+    <ul class="menuHorizontal">
+      <li>
+        <i class="bi bi-list" class="iconoNav"><a href="#"></a></i>
+        <ul class="menuVertical">
+          {{#values}}
+          <li><a href="/{{brandName}}">{{brandName}}</a></li>
+          {{/values}}
+        </ul>
+      </li>
+      <li>
+        <h1 class="tituloEncabezado">World Padel Store</h1>
+      </li>
+      <li>
+        <div class="navIzq">
+          <a href="/"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  {{#error}}
+  <div class="divError">
+    <h4 class="errorText">{{error}}</h4>
+  </div>
+  {{/error}}
+
+  <div class="form_container">
+    <form action="{{action}}" method="post">
+      <h4>{{title}} {{brandName}}</h4>
+      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" />
+      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" />
+      <input class="form" type="text" name="fundMarca" id="nombre" placeholder="Nombre del propietario" value="{{brandFounder}}" />
+      <input class="form" type="url" name="imgMarca" id="imagen" placeholder="Url del logo de la marca" value="{{brandImage}}" />
+      <input class="form" type="url" name="webMarca" id="web" placeholder="Url de la página de la marca" value="{{brandWeb}}" />
+      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" />
+      <div class="confirmButton">
+        <input class="botonRegistrar" type="submit" value="Registrar" />
+        <a class="botonCancelar" href="/">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
