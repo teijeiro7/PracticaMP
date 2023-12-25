@@ -17,27 +17,7 @@
 
 <body>
 
-    <nav class="navPrincipal">
-        <ul class="menuHorizontal">
-            <li>
-                <i class="bi bi-list"><a href="#"></a></i>
-                <ul class="menuVertical">
-                    {{#desplegable}}
-                    <li><a href="/{{brandName}}">{{brandName}}</a></li>
-                    {{/desplegable}}
-                </ul>
-            </li>
-            <li>
-                <h1 class="tituloEncabezado">{{brandName}}</h1>
-            </li>
-            <li>
-                <div class="navIzq">
-                    <a href="/"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a>
-                </div>
-            </li>
-        </ul>
-
-    </nav>
+    {{> nav}}
 
     <div class="padre">
         <div class="divButtonBack">
@@ -73,7 +53,12 @@
                         <div><img src="{{racketImage}}" class="imagenPala"></div>
                         <div class="textPrice">
                             <p class="parrafoPala"> {{racketName}}</p>
-                            <p class="precioPala">{{racketPrice}}€</p>
+                            <div class="divPrecioCarro">
+                                <div class="divPrecioPala">
+                                    <p class="precioPala">{{racketPrice}}€</p>
+                                </div>
+                                <p class="carritoCompra"><i class="bi bi-cart-check"></i></p>
+                            </div>
                         </div>
                     </div>
 
@@ -102,6 +87,10 @@
                         <div class="structureDiv">
                             <label class="labelStyle">Imagen</label>
                             <input class="cuadroTexto" type="text" name="imagenPala" placeholder="Escribe aqui">
+                        </div>
+                        <div class="structureDiv">
+                            <label class="labelStyle">Unidades</label>
+                            <input class="cuadroTexto" type="number" name="palaUnits" placeholder="Escribe aqui">
                         </div>
                         <div class="botonesForm">
                             <input class="divBotonesFormCrearPalaSubir" type="submit" value="Subir" />
