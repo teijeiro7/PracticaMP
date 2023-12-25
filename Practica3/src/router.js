@@ -1,8 +1,8 @@
 import express from 'express';
-import { __dirname } from './dirname.js';
-import marcas, { addBrand, brand } from "./src/brandsService.js";
-import { getBrand } from './src/brandsService.js';
-import { addRacket } from './src/brandsService.js';
+import { __dirname } from '../dirname.js';
+import marcas, { addBrand, brand } from "./brandsService.js";
+import { getBrand } from './brandsService.js';
+import { addRacket } from './brandsService.js';
 
 const router = express.Router();
 

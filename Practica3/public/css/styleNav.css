@@ -24,7 +24,6 @@ nav {
     width: 100%;
 }
 
-
 .menuHorizontal>li>a {
     display: block;
     padding: 15px 20px;
@@ -74,6 +73,142 @@ i {
     color: white;
     width: 100%;
 }
+
+#cuentaCarrito {
+    background-color: white;
+    color: black;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.leftNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.leftNav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.divCart {
+    position: relative;
+}
+
+.divCart:hover {
+    cursor: pointer;
+
+}
+
+.divCart:hover .hiddenCartElements {
+    display: block;
+}
+
+.countProducts {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    background-color: white;
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.hiddenCartElements {
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    width: 400px;
+    right: 0;
+    z-index: 1;
+    border-radius: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.iconClose {
+    width: 25px;
+    height: 25px;
+}
+
+.iconClose:hover {
+    color: red;
+}
+
+.cartProducts {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid black;
+}
+
+.infoCartProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.8;
+}
+
+.productTitleCart {
+    font-size: 20px;
+}
+
+.productPriceCart {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.productCartCount {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.cartTotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cartTotal h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.totalPayment {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hideElements {
+    display: none;
+}
+
+.divCart i {
+    font-size: 30px;
+}
+
+
 
 @media (max-width: 800px) {
     .tituloEncabezado {

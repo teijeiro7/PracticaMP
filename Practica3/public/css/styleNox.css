@@ -346,6 +346,22 @@ button a {
   margin-left: 5px;
 }
 
+.unidadOverlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  /* Cambia esto al color deseado */
+  color: #fff;
+  /* Cambia esto al color deseado */
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 2;
+}
+
+
+
 @media (max-width: 400px) {
   .divFormPala {
     margin: 10px;

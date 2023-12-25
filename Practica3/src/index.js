@@ -2,7 +2,7 @@ import express from 'express';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
 import { __dirname } from '../dirname.js';
-import router from "../router.js";
+import router from "./router.js";
 
 
 
@@ -42,3 +42,9 @@ app.listen(4000, () => {
     console.log("http://localhost:4000/");
 });
 
+const btnCart = document.querySelector(".divCart i");
+const containerCart = document.querySelector(".hiddenCartElements");
+
+btnCart.addEventListener("click", () => {
+    containerCart.classList.toggle("hideElements");
+});
