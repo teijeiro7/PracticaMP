@@ -113,8 +113,11 @@ i {
 
 }
 
-.divCart:hover .hiddenCartElements {
-    display: block;
+#buttonCart {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .countProducts {

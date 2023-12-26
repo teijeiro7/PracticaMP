@@ -6,6 +6,7 @@ import router from "./router.js";
 
 
 
+
 const app = express();
 
 // Serve static files from the "public" directory
@@ -42,9 +43,3 @@ app.listen(4000, () => {
     console.log("http://localhost:4000/");
 });
 
-const btnCart = document.querySelector(".divCart i");
-const containerCart = document.querySelector(".hiddenCartElements");
-
-btnCart.addEventListener("click", () => {
-    containerCart.classList.toggle("hideElements");
-});
