@@ -47,6 +47,25 @@ router.post('/newBrand', (req, res) => {
         addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.webMarca, req.body.plaMarca);
         res.redirect(`/${req.body.nombreMarca}`);
     }
+    router.post('/newBrand', (req, res) => {
+        // Cambia la redirección a una respuesta JSON
+        axios.post('/guardar_elemento', {
+                type: 'brand',
+                data: req.body
+            })
+            .then(response => res.json(response.data))
+            .catch(error => res.json({ success: false, error: error.message }));
+    });
+    
+    router.post('/newRacket', (req, res) => {
+        // Cambia la redirección a una respuesta JSON
+        axios.post('/guardar_elemento', {
+                type: 'racket',
+                data: req.body
+            })
+            .then(response => res.json(response.data))
+            .catch(error => res.json({ success: false, error: error.message }));
+    });
 });
 
 router.post('/newRacket', (req, res) => {

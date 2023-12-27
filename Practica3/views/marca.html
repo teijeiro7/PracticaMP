@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -50,14 +51,19 @@
                 {{#palasPrincipal}}
                 <div class="pala">
                     <div class="responsivePalas">
-                        <div><img src="{{racketImage}}" class="imagenPala"></div>
+                        <div class = "palaContainer">
+                            <div>
+                                <img src="{{racketImage}}" class="imagenPala">
+                                <div class="unitsCounter">3</div>
+                            </div>
+                        </div>
                         <div class="textPrice">
                             <p class="parrafoPala"> {{racketName}}</p>
                             <div class="divPrecioCarro">
                                 <div class="divPrecioPala">
                                     <p class="precioPala">{{racketPrice}}€</p>
                                 </div>
-                                <a class="carritoCompra"><i class="bi bi-cart-check"></i></a>
+                                <button class="carritoCompra"><i class="bi bi-cart-check"></i></button>
                             </div>
                         </div>
                     </div>
@@ -100,6 +106,50 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <script>
+        function guardarElemento(type, data) {
+            $.ajax({
+                type: 'POST',
+                url: '/guardar_elemento',
+                data: JSON.stringify({ type, data }),
+                contentType: 'application/json',
+                success: function(response) {
+                    if (response.success) {
+                        // Recargar la página o actualizar la interfaz según sea necesario
+                        location.reload();
+                    } else {
+                        alert('Error al guardar el elemento: ' + response.error);
+                    }
+                },
+                error: function(error) {
+                    alert('Error al realizar la solicitud AJAX: ' + error.responseText);
+                }
+            });
+        }
+    
+        function eliminarMarca(brandName) {
+            if (confirm('¿Estás seguro de que quieres eliminar esta marca?')) {
+                $.ajax({
+                    type: 'GET',
+                    url: `/${brandName}/deleteBrand`,
+                    success: function(response) {
+                        if (response.success) {
+                            // Redirigir a la página principal u otra acción necesaria
+                            window.location.href = '/';
+                        } else {
+                            alert('Error al eliminar la marca: ' + response.error);
+                        }
+                    },
+                    error: function(error) {
+                        alert('Error al realizar la solicitud AJAX: ' + error.responseText);
+                    }
+                });
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

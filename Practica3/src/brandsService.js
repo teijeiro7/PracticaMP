@@ -90,3 +90,25 @@ export function addBrand(brandName, brandYear, brandFounder, brandImage, brandWe
 
 
 export default marcas;
+
+import express from 'express';
+const app = express();
+app.use(express.json());
+
+app.post('/guardar_elemento', (req, res) => {
+    const { type, data } = req.body;
+
+    if (type === 'brand') {
+        addBrand(data.brandName, data.brandYear, data.brandFounder, data.brandImage, data.brandWeb, data.brandPlayers);
+    } else if (type === 'racket') {
+        addRacket(data.brandName, data.racketName, data.racketPrice, data.racketImage);
+    }
+
+    res.json({ success: true });
+});
+
+app.get('/obtener_elementos', (req, res) => {
+    // Puedes modificar esta función según tus necesidades para obtener los datos de tu aplicación.
+    const brandValues = Array.from(marcas.values());
+    res.json(brandValues);
+});
