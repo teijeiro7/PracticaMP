@@ -14,8 +14,21 @@ router.get('/', (req, res) => {
 });
 
 router.get('/formularioMarca', (req, res) => {
-    const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
-    res.render('form_marca', { title: 'Create your Own Brand', values: brandValues, action: "newBrand" }); //renderizamos el contenido necesario para el formulario
+    const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos
+    res.json(brandValues); // enviamos los datos como JSON
+});
+
+$.ajax({
+    url: '/formularioMarca',
+    type: 'GET',
+    success: function(response) {
+        // Aquí puedes manejar la respuesta del servidor
+        console.log(response);
+    },
+    error: function(error) {
+        // Aquí puedes manejar los errores
+        console.log(error);
+    }
 });
 
 
@@ -47,25 +60,6 @@ router.post('/newBrand', (req, res) => {
         addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.webMarca, req.body.plaMarca);
         res.redirect(`/${req.body.nombreMarca}`);
     }
-    router.post('/newBrand', (req, res) => {
-        // Cambia la redirección a una respuesta JSON
-        axios.post('/guardar_elemento', {
-                type: 'brand',
-                data: req.body
-            })
-            .then(response => res.json(response.data))
-            .catch(error => res.json({ success: false, error: error.message }));
-    });
-    
-    router.post('/newRacket', (req, res) => {
-        // Cambia la redirección a una respuesta JSON
-        axios.post('/guardar_elemento', {
-                type: 'racket',
-                data: req.body
-            })
-            .then(response => res.json(response.data))
-            .catch(error => res.json({ success: false, error: error.message }));
-    });
 });
 
 router.post('/newRacket', (req, res) => {
@@ -84,10 +78,13 @@ router.post('/newRacket', (req, res) => {
     if (!req.body.imagenPala) {
         errorMessage += 'Imagen de la pala no proporcionada. ';
     }
+    if (!req.body.palaUnits) {
+        errorMessage += 'Número de unidades no proporcionado. ';
+    }
     if (errorMessage) {
         res.render('marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}`, ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas })
     } else {
-        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
+        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala, req.body.palaUnits);
         res.redirect(`/${marcaPrincipal}`);
     }
 
