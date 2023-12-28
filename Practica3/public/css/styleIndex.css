@@ -81,6 +81,19 @@ body {
     padding: 0;
 }
 
+.cargarmas  {
+    width: 20px;
+    
+
+}
+
+#loadmore {
+    background-color: var(--fondo-form);
+    border-radius: 3px;
+}
+
+
+
 @media screen and (max-width: 400px) {
     .container_body {
         display: flex;
@@ -127,5 +140,4 @@ body {
         flex-wrap: wrap;
         font-size: 15px;
     }
-}
 }
