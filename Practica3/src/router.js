@@ -18,7 +18,7 @@ router.get('/formularioMarca', (req, res) => {
     res.json(brandValues); // enviamos los datos como JSON
 });
 
-$.ajax({
+/* $.ajax({
     url: '/formularioMarca',
     type: 'GET',
     success: function(response) {
@@ -29,7 +29,7 @@ $.ajax({
         // Aquí puedes manejar los errores
         console.log(error);
     }
-});
+}); */
 
 
 router.post('/newBrand', (req, res) => {
