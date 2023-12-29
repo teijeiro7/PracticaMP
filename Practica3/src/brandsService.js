@@ -60,18 +60,35 @@ marcas.set("Royal Padel", royal);
 
 
 export function getBrand(brandName) {
-    let brand = marcas.get(brandName);
-    return {
-        brandName: brand.brandName,
-        brandYear: brand.brandYear,
-        brandFounder: brand.brandFounder,
-        brandImage: brand.brandImage,
-        brandPlayers: brand.brandPlayers,
-        brandWeb: brand.brandWeb,
-        brandRackets: brand.brandRackets
-    };
+    // Realiza la petición AJAX
+    return fetch(`http://localhost:4000/getBrand?brandName=${brandName}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Devuelve los datos de la marca
+            return {
+                brandName: data.brandName,
+                brandYear: data.brandYear,
+                brandFounder: data.brandFounder,
+                brandImage: data.brandImage,
+                brandPlayers: data.brandPlayers,
+                brandWeb: data.brandWeb,
+                brandRackets: data.brandRackets
+            };
+        })
+        .catch(error => {
+            console.error('Error al obtener la marca:', error);
+        });
 }
-
 
 export function editBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers) {
     marcas.get(brandName);
@@ -81,13 +98,38 @@ export function editBrand(brandName, brandYear, brandFounder, brandImage, brandW
     marcas.brandImage = brandImage;
     marcas.brandWeb = brandWeb;
     marcas.brandPlayers = brandPlayers;
-    return brand;
+    return Brand;
 }
 
 export function addBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers) {
-    let brandInstance = new brand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers, []);
+    let brandInstance = new Brand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers, []);
+
+    // Realiza la petición AJAX
+    fetch('http://localhost:4000/formularioMarca', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            brandName,
+            brandInstance,
+        }),
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Maneja la respuesta del servidor, si es necesario
+            console.log('Marca guardada con éxito:', data);
+        })
+        .catch(error => {
+            console.error('Error al guardar la marca:', error);
+        });
+
     marcas.set(brandName, brandInstance);
 }
-
 
 export default marcas;

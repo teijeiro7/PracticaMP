@@ -43,20 +43,5 @@ app.listen(4000, () => {
     console.log("http://localhost:4000/");
 });
 
-app.post('/guardar_elemento', (req, res) => {
-    // Redirige la solicitud AJAX al servicio de marcas
-    // Puedes ajustar la URL según tu configuración
-    axios.post('http://localhost:4000/guardar_elemento', req.body)
-        .then(response => res.json(response.data))
-        .catch(error => res.json({ success: false, error: error.message }));
-});
-
-app.get('/obtener_elementos', (req, res) => {
-    // Redirige la solicitud AJAX al servicio de marcas
-    // Puedes ajustar la URL según tu configuración
-    axios.get('http://localhost:4000/obtener_elementos')
-        .then(response => res.json(response.data))
-        .catch(error => res.json({ success: false, error: error.message }));
-});
 
 
