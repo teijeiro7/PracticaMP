@@ -1,6 +1,6 @@
 import express from 'express';
 import { __dirname } from '../dirname.js';
-import marcas, { addBrand, Brand } from "./brandsService.js";
+import marcas, { addBrand, brand } from "./brandsService.js";
 import { getBrand } from './brandsService.js';
 import { addRacket } from './brandsService.js';
 
@@ -70,7 +70,6 @@ router.post('/newRacket', (req, res) => {
     } else {
         addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
         res.redirect(`/${marcaPrincipal}`);
-        res.json({ success: true, message: 'Elemento guardado con éxito' });
     }
 
 });
@@ -100,11 +99,6 @@ router.get('/:brandName', (req, res) => {
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
     res.render('marca', { ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas }); //renderizamos el contenido necesario para la marca seleccionada
-    const brandName = req.query.brandName;
-    const brand = getBrand(brandName);
-
-    // Envía una respuesta al cliente
-    res.json(brand);
 });
 
 router.get("/:brandName/confirmDelete", (req, res) => {
