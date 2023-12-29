@@ -3,8 +3,6 @@
 * {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -368,7 +366,8 @@ button a {
 
 .palaContainer {
   position: relative;
-  display: inline-block; /* Ajusta según sea necesario */
+  display: inline-block;
+  /* Ajusta según sea necesario */
 }
 
 .unitsCounter {
@@ -384,7 +383,7 @@ button a {
   width: 25px;
   height: 25px;
   font-size: 14px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 400px) {

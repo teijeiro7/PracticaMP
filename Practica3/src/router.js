@@ -1,6 +1,6 @@
 import express from 'express';
 import { __dirname } from '../dirname.js';
-import marcas, { addBrand, brand } from "./brandsService.js";
+import marcas, { addBrand, Brand } from "./brandsService.js";
 import { getBrand } from './brandsService.js';
 import { addRacket } from './brandsService.js';
 
@@ -14,22 +14,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/formularioMarca', (req, res) => {
-    const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos
-    res.json(brandValues); // enviamos los datos como JSON
+    const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
+    res.render('form_marca', { title: 'Create your Own Brand', values: brandValues, action: "newBrand" }); //renderizamos el contenido necesario para el formulario
 });
-
-/* $.ajax({
-    url: '/formularioMarca',
-    type: 'GET',
-    success: function(response) {
-        // Aquí puedes manejar la respuesta del servidor
-        console.log(response);
-    },
-    error: function(error) {
-        // Aquí puedes manejar los errores
-        console.log(error);
-    }
-}); */
 
 
 router.post('/newBrand', (req, res) => {
@@ -78,13 +65,10 @@ router.post('/newRacket', (req, res) => {
     if (!req.body.imagenPala) {
         errorMessage += 'Imagen de la pala no proporcionada. ';
     }
-    if (!req.body.palaUnits) {
-        errorMessage += 'Número de unidades no proporcionado. ';
-    }
     if (errorMessage) {
         res.render('marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}`, ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas })
     } else {
-        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala, req.body.palaUnits);
+        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
         res.redirect(`/${marcaPrincipal}`);
     }
 
