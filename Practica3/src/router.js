@@ -12,6 +12,11 @@ router.get('/', (req, res) => {
     res.render('index', { title: 'Main Page', infoMarcas: brandValues });
 });
 
+router.get('/', (req, res) => {
+    const brandValues = Array.from(marcas.values());
+    res.json({ infoMarcas: brandValues });
+});
+
 router.get('/formularioMarca', (req, res) => {
     const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     res.render('form_marca', { title: 'Create your Own Brand', values: brandValues, action: "newBrand" }); //renderizamos el contenido necesario para el formulario

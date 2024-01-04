@@ -7,3 +7,16 @@ btnCart.addEventListener("click", () => {
 });
 
 const cartInfo = document.querySelector(".cartProducts");
+async function loadBrands() {
+    try {
+        const res = fetch("/");
+        if (!res.ok) {
+            throw new Error("Could not load brands")
+        }
+        const data = await res.json();
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+loadBrands()
