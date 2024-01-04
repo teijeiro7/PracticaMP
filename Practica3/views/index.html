@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/styleNav.css">
   <link rel="stylesheet" href="/css/styleIndex.css">
-  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-    type="image/png" />
+  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -16,13 +15,12 @@
 <body>
 
 
-  {{> nav}}
+  {{> components/nav}}
 
   <div class="padre">
     <div class="container">
       <div class="tituloInicio">
-        <img src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="WPS"
-          class="imagenInicio" />
+        <img src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="WPS" class="imagenInicio" />
         <div class="textoTituloInicio">
           <h1>WPS: La mejor tienda de pádel al alcance de un click</h1>
           <h3>
@@ -34,10 +32,8 @@
     </div>
 
     <div class="container_body">
-      
-      <div class="marcas" id="marcasContainer">
-        
-      </div>
+
+      {{> components/infoMarcas}}
 
 
       <div>
@@ -46,7 +42,7 @@
         </a>
       </div>
       <div class="cargarmas">
-        <button id="loadmore" onclick="getBrand()">Load more brands</button>
+        <button id="loadmore" onclick="loadBrands()">Load more brands</button>
       </div>
     </div>
 
@@ -54,7 +50,7 @@
 
   </div>
 
-<script src="/script/script.js"></script>
+  <script src="/script/script.js"></script>
 </body>
 
 </html>

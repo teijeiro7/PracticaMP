@@ -9,12 +9,13 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     const brandValues = Array.from(marcas.values());
-    res.render('index', { title: 'Main Page', infoMarcas: brandValues });
+    const moreBrands = brandValues.slice(0, 3);
+    res.render('index', { title: 'Main Page', brandValues: moreBrands });
 });
 
 router.get('/cargarJson', (req, res) => {
     const brandValues = Array.from(marcas.values());
-    res.render({ infoMarcas: brandValues });
+    res.render("components/infoMarcas", { brandValues });
 });
 
 router.get('/formularioMarca', (req, res) => {
