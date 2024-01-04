@@ -1,23 +1,15 @@
 import express from 'express';
 import { __dirname } from '../dirname.js';
-import marcas, { addBrand, brand} from "./brandsService.js";
+import marcas, { addBrand, brand } from "./brandsService.js";
 
 import { getBrand } from './brandsService.js';
 import { addRacket } from './brandsService.js';
 
 const router = express.Router();
 
-// router.get('/', (req, res) => {
-    // const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla 
-
-    // res.render('index', { title: 'Main Page', infoMarcas: brandValues }); // renderizamos el contenido necesario para la página principal
-// });
-
 router.get('/', (req, res) => {
     const brandValues = Array.from(marcas.values());
-    const primerasTresMarcas = brandValues.slice(0, 3);
-    // cargarMas();
-    res.render('index', { title: 'Main Page', infoMarcas: primerasTresMarcas });
+    res.render('index', { title: 'Main Page', infoMarcas: brandValues });
 });
 
 router.get('/formularioMarca', (req, res) => {
