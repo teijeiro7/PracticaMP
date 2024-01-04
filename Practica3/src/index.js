@@ -23,6 +23,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(router);
 
 app.get("/", router);
+app.get("/cargarJson", router);
 app.get("/formularioMarca", router);
 app.get("/newBrand", router);
 app.post("/newRacket", router);

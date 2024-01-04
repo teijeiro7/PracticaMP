@@ -88,5 +88,26 @@ export function addBrand(brandName, brandYear, brandFounder, brandImage, brandWe
     marcas.set(brandName, brandInstance);
 }
 
+export function loadMoreBrands() {
+    fetch('/')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(brand => {
+                // Crear un nuevo elemento HTML para cada marca
+                const brandElement = document.createElement('div');
+            
+                // Agregar este elemento al contenedor en el HTML
+                document.getElementById('brandsContainer').appendChild(brandElement);
+            });
+
+            loadedBrands += data.length;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+
+
+
+
 
 export default marcas;

@@ -12,9 +12,9 @@ router.get('/', (req, res) => {
     res.render('index', { title: 'Main Page', infoMarcas: brandValues });
 });
 
-router.get('/', (req, res) => {
+router.get('/cargarJson', (req, res) => {
     const brandValues = Array.from(marcas.values());
-    res.json({ infoMarcas: brandValues });
+    res.render({ infoMarcas: brandValues });
 });
 
 router.get('/formularioMarca', (req, res) => {

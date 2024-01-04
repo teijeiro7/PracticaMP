@@ -8,15 +8,24 @@ btnCart.addEventListener("click", () => {
 
 const cartInfo = document.querySelector(".cartProducts");
 async function loadBrands() {
-    try {
-        const res = fetch("/");
+
+        const res = await fetch("/cargarJson");
         if (!res.ok) {
-            throw new Error("Could not load brands")
+            console.log("Could not load brands")
         }
-        const data = await res.json();
-    } catch (error) {
-        console.log(error.message);
-    }
+        const data = await res.text(); //texto
+            console.log(data);
+        
+        // Ahora puedes usar 'data' para actualizar el DOM.
+        // Por ejemplo, podrías crear un nuevo elemento para cada marca y añadirlo a un contenedor en tu página:
+        const container = document.getElementById('marcasContainer');
+        data.infoMarcas.forEach(marcas => {
+            const div = document.createElement('div');
+            div.textContent = marcas.brandImage;
+            container.appendChild(div);
+        });
+
+    
 }
 
 loadBrands()
