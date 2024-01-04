@@ -8,14 +8,17 @@ import { addRacket } from './brandsService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    const brandValues = Array.from(marcas.values());
-    const moreBrands = brandValues.slice(0, 3);
-    res.render('index', { title: 'Main Page', brandValues: moreBrands });
+    
+    // const moreBrands = brandValues.slice(0, 3);
+    res.render('index', { title: 'Main Page' });
 });
 
 router.get('/cargarJson', (req, res) => {
+    req.query.init = parseInt(req.query.init);
+    req.query.final = parseInt(req.query.final);
     const brandValues = Array.from(marcas.values());
-    res.render("components/infoMarcas", { brandValues });
+    const moreBrands = brandValues.slice(req.query.init, req.query.final);
+    res.render("components/infoMarcas", { brandValues: moreBrands });
 });
 
 router.get('/formularioMarca', (req, res) => {
