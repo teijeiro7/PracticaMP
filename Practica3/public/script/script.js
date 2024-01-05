@@ -30,18 +30,27 @@ loadBrands();
 document.getElementById("formularioMarca").addEventListener("submit", async function (event) {
     event.preventDefault();
 
+ document.addEventListener('DOMContentLoaded', (event) => {
     const brandName = document.getElementById("marca");
     const nameError = document.getElementById('errorNombre');
+    brandName.addEventListener('input', function() {
 
-    if (brandName.value.trim() == '') {
-        nameError.textContent = "El nombre no puede ser vacío";
-        return;
-    } else if (brandName.charAt(0) !== brandName.charAt(0).toUpperCase()) {
-        nameError.textContent = 'La primera letra del nombre tiene que ser mayúscula.';
-        return;
-    } else {
-        nameError.textContent = "";
-    }
+        if (brandName.value.trim() == '') {
+            nameError.textContent = "El nombre no puede ser vacío";
+            return;
+        } else if (brandName.charAt(0) !== brandName.charAt(0).toUpperCase()) {
+            nameError.textContent = 'La primera letra del nombre tiene que ser mayúscula.';
+            return;
+        } else {
+            nameError.textContent = "";
+        }
+
+    })
+    
+})
+    
+    
+   
 
     const brandYear = document.getElementById("año");
     const yearError = document.getElementById('errorAno');
