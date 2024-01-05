@@ -1,56 +1,26 @@
-const btnCart = document.querySelector(".containerIconCart");
-const containerCart = document.querySelector(".hiddenCartElements");
+console.log("script loaded");
+/* document.addEventListener("DOMContentLoaded", function () {
+    
+        return;
 
-btnCart.addEventListener("click", () => {
-    containerCart.classList.toggle("hideElements");
-    console.log("click");
-});
-
-const cartInfo = document.querySelector(".cartProducts");
-let init = 0;
-let final = 3; //para que llegue hasta el 3
-async function loadBrands() {
-    const res = await fetch(`/cargarJson?init=${init}&final=${final}`);
-    if (!res.ok) {
-        console.log("Could not load brands")
+} */
+const brandName = document.getElementById("marca");
+const nameError = document.getElementById('errorNombre');
+const checkBrandName = () => {
+    if (brandName.value.trim() == '') {
+        nameError.textContent = "El nombre no puede ser vacío";
     }
-    const html = await res.text(); // obtener HTML
-
-
-    const container = document.getElementById('container_body');
-
-    container.innerHTML = html + container.innerHTML;  //meter delante
-    init += 3 //este no es porque estarias repitiendo el 3
-    final += 3
-
+    if (brandName.value.charAt(0) !== brandName.value.charAt(0).toUpperCase()) {
+        nameError.textContent = 'La primera letra del nombre tiene que ser mayúscula.';
+    } else {
+        nameError.textContent = "";
+    }
 }
 
-loadBrands();
-
-document.getElementById("formularioMarca").addEventListener("submit", async function (event) {
+brandName.addEventListener('input', checkBrandName);
+document.addEventListener("submit", async function (event) {
     event.preventDefault();
-
- document.addEventListener('DOMContentLoaded', (event) => {
-    const brandName = document.getElementById("marca");
-    const nameError = document.getElementById('errorNombre');
-    brandName.addEventListener('input', function() {
-
-        if (brandName.value.trim() == '') {
-            nameError.textContent = "El nombre no puede ser vacío";
-            return;
-        } else if (brandName.charAt(0) !== brandName.charAt(0).toUpperCase()) {
-            nameError.textContent = 'La primera letra del nombre tiene que ser mayúscula.';
-            return;
-        } else {
-            nameError.textContent = "";
-        }
-
-    })
-    
-})
-    
-    
-   
+    checkBrandName();
 
     const brandYear = document.getElementById("año");
     const yearError = document.getElementById('errorAno');
@@ -108,4 +78,4 @@ document.getElementById("formularioMarca").addEventListener("submit", async func
     } else {
         errorPlayers.textContent = "";
     }
-})
+});
