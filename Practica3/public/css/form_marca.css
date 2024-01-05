@@ -90,3 +90,7 @@ body {
   padding: 10px;
   width: auto;
 }
+
+.form_container small {
+  color: white;
+}

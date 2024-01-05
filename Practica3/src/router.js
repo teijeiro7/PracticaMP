@@ -8,8 +8,6 @@ import { addRacket } from './brandsService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    
-    // const moreBrands = brandValues.slice(0, 3);
     res.render('index', { title: 'Main Page' });
 });
 
