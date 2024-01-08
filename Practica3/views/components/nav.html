@@ -1,7 +1,7 @@
 <nav class="navPrincipal">
     <ul class="menuHorizontal">
         <li>
-            <i class="bi bi-list"><a href="#"></a></i>
+            <i class="bi bi-list" id="listBrands"><a href="#"></a></i>
             <ul class="menuVertical">
                 {{#values}}
                 <li><a href="/{{brandName}}">{{brandName}}</a></li>
@@ -21,19 +21,22 @@
                 </div>
                 <div class="divCart">
                     <div class="hiddenCartElements hideElements">
-                        <div class="cartProducts">
-                            <div class="infoCartProduct">
-                                <span class="productCartCount">1</span>
-                                <p class="productTitleCart">Nox AT10</p>
-                                <span class="productPriceCart">399€</span>
+                        <div class="rowProducts hidden">
+                            <div class="cartProducts">
+                                <div class="infoCartProduct">
+                                    <span class="productCartCount"></span>
+                                    <p class="productTitleCart"></p>
+                                    <span class="productPriceCart"></span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="iconClose" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="iconClose" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                            </svg>
-                        </div>
-                        <div class="cartTotal">
-                            <h3>Total:</h3>
-                            <span class="totalPayment">399€</span>
+                            <div class="cartTotal hidden">
+                                <h3>Total:</h3>
+                                <span class="totalPayment"></span>
+                            </div>
+                            <p class="emptyCart">El carrito está vacio</p>
                         </div>
                     </div>
                 </div>

@@ -5,8 +5,7 @@
     <title id="Principal title">WPS | {{brandName}}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-        type="image/png">
+    <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png">
     <link rel="stylesheet" href="/css/styleNav.css">
     <link rel="stylesheet" href="/css/styleMarca.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
@@ -42,12 +41,9 @@
                 <p><span class="negrita"><b>Año de fundación: </b></span><span class="contenido">{{brandYear}}</span>
                 </p>
                 <p><span class="negrita"><b>Jugadores: </b><span></span>{{brandPlayers}}</span></p>
-                <p><span class="negrita"><b>Página web: </b></span><a class="contenido"
-                        href="{{brandWeb}}">{{brandWeb}}</a></p>
-                <a href="/{{brandName}}/edit?name={{brandName}}"><input class="boton_editar" type="submit"
-                        value="Editar"></a>
-                <a href="/{{brandName}}/confirmDelete?name={{brandName}}"><button class="boton_eliminar"
-                        id="eliminar">Eliminar</button></a>
+                <p><span class="negrita"><b>Página web: </b></span><a class="contenido" href="{{brandWeb}}">{{brandWeb}}</a></p>
+                <a href="/{{brandName}}/edit?name={{brandName}}"><input class="boton_editar" type="submit" value="Editar"></a>
+                <a href="/{{brandName}}/confirmDelete?name={{brandName}}"><button class="boton_eliminar" id="eliminar">Eliminar</button></a>
             </div>
         </div>
 
@@ -113,46 +109,7 @@
         </div>
     </div>
 
-    <script>
-        function guardarElemento(type, data) {
-            $.ajax({
-                type: 'POST',
-                url: '/guardar_elemento',
-                data: JSON.stringify({ type, data }),
-                contentType: 'application/json',
-                success: function (response) {
-                    if (response.success) {
-                        // Recargar la página o actualizar la interfaz según sea necesario
-                        location.reload();
-                    } else {
-                        alert('Error al guardar el elemento: ' + response.error);
-                    }
-                },
-                error: function (error) {
-                    alert('Error al realizar la solicitud AJAX: ' + error.responseText);
-                }
-            });
-        }
-
-        function eliminarMarca(brandName) {
-            if (confirm('¿Estás seguro de que quieres eliminar esta marca?')) {
-                $.ajax({
-                    type: 'GET',
-                    url: `/${brandName}/deleteBrand`,
-                    success: function (response) {
-                        if (response.success) {
-                            // Redirigir a la página principal u otra acción necesaria
-                            window.location.href = '/';
-                        } else {
-                            alert('Error al eliminar la marca: ' + response.error);
-                        }
-                    },
-                    error: function (error) {
-                        alert('Error al realizar la solicitud AJAX: ' + error.responseText);
-                    }
-                });
-            }
-        }
+    <script src="/script/scriptMarca.js">
     </script>
 
 </body>

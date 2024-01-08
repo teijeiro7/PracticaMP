@@ -1,9 +1,3 @@
-console.log("script loaded");
-/* document.addEventListener("DOMContentLoaded", function () {
-    
-        return;
-
-} */
 const brandName = document.getElementById("marca");
 const nameError = document.getElementById('errorNombre');
 const checkBrandName = () => {
