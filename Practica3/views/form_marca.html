@@ -27,24 +27,36 @@
 
   <div class="form_container">
     <form action="{{action}}" method="post" id="formularioMarca">
-      <h4>{{title}} {{brandName}}</h4>
+      <p>{{title}} {{brandName}}</p>
       <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" />
-      <small id="errorNombre" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorNombre" class="form-text text-danger"></small>
+      </div>
 
       <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" />
-      <small id="errorAno" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorAno" class="form-text text-danger"></small>
+      </div>
 
       <input class="form" type="text" name="fundMarca" id="nombre" placeholder="Nombre del propietario" value="{{brandFounder}}" />
-      <small id="errorFundador" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorFundador" class="form-text text-danger"></small>
+      </div>
 
       <input class="form" type="url" name="imgMarca" id="imagen" placeholder="Url del logo de la marca" value="{{brandImage}}" />
-      <small id="errorImagen" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorImagen" class="form-text text-danger"></small>
+      </div>
 
       <input class="form" type="url" name="webMarca" id="web" placeholder="Url de la página de la marca" value="{{brandWeb}}" />
-      <small id="errorWeb" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorWeb" class="form-text text-danger"></small>
+      </div>
 
       <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" />
-      <small id="errorPlayers" class="form-text text-danger"></small>
+      <div class="errorForm">
+        <small id="errorPlayers" class="form-text text-danger"></small>
+      </div>
 
       <div class="confirmButton">
         <input class="botonRegistrar" type="submit" value="Registrar" />
