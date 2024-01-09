@@ -124,7 +124,7 @@ body {
 
 .textPrice {
   width: 250px;
-  height: auto;
+  height: 120px;
   background-color: #e4dfdf;
   border: 2px solid black;
   text-align: center;
@@ -135,7 +135,7 @@ body {
 .parrafoPala {
   color: black;
   text-align: center;
-  padding: 5px;
+  font-size: 15px;
 }
 
 .parrafoPala p {

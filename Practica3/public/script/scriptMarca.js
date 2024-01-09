@@ -7,14 +7,11 @@ btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hideElements');
 });
 
-/* ========================= */
 const cartInfo = document.querySelector('.cartProducts');
 const rowProduct = document.querySelector('.rowProducts');
 
-// Lista de todos los contenedores de productos
 const productsList = document.querySelector('.divNox');
 
-// Variable de arreglos de Productos
 let allProducts = [];
 
 const valorTotal = document.querySelector('.totalPayment');
@@ -71,7 +68,6 @@ rowProduct.addEventListener('click', e => {
     }
 });
 
-// Funcion para mostrar  HTML
 const showHTML = () => {
     if (!allProducts.length) {
         cartEmpty.classList.remove('hidden');
@@ -83,7 +79,6 @@ const showHTML = () => {
         cartTotal.classList.remove('hidden');
     }
 
-    // Limpiar HTML
     rowProduct.innerHTML = '';
 
     let total = 0;
