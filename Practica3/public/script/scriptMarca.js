@@ -1,11 +1,11 @@
-const btnCart = document.querySelector('.containerIconCart');
+/* const btnCart = document.querySelector('.containerIconCart');
 const containerCartProducts = document.querySelector(
     'hiddenCartElements'
 );
 
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hideElements');
-});
+}); */
 
 const cartInfo = document.querySelector('.cartProducts');
 const rowProduct = document.querySelector('.rowProducts');
@@ -14,7 +14,7 @@ const productsList = document.querySelector('.divNox');
 
 let allProducts = [];
 
-const valorTotal = document.querySelector('.totalPayment');
+const valorTotal = document.getElementsByClassName('.totalPayment');
 
 const countProducts = document.querySelector('.productsCounter');
 
@@ -22,35 +22,36 @@ const cartEmpty = document.querySelector('.emptyCart');
 const cartTotal = document.querySelector('.cartTotal');
 
 productsList.addEventListener('click', e => {
-    if (e.target.classList.contains('carritoCompra')) {
-        const product = e.target.parentElement;
 
-        const infoProduct = {
-            quantity: 1,
-            title: product.querySelector('parrafoPala').textContent,
-            price: product.querySelector('precioPala').textContent,
-        };
 
-        const exits = allProducts.some(
-            product => product.title === infoProduct.title
-        );
+    const product = e.target.parentElement.parentElement.parentElement;
+    console.log(product);
 
-        if (exits) {
-            const products = allProducts.map(product => {
-                if (product.title === infoProduct.title) {
-                    product.quantity++;
-                    return product;
-                } else {
-                    return product;
-                }
-            });
-            allProducts = [...products];
-        } else {
-            allProducts = [...allProducts, infoProduct];
-        }
+    const infoProduct = {
+        quantity: 1,
+        title: product.querySelector('.parrafoPala').innerText,
+        price: product.querySelector('.precioPala').innerText,
+    };
 
-        showHTML();
+    const exits = allProducts.some(
+        product => product.title === infoProduct.title
+    );
+
+    if (exits) {
+        const products = allProducts.map(product => {
+            if (product.title === infoProduct.title) {
+                product.quantity++;
+                return product;
+            } else {
+                return product;
+            }
+        });
+        allProducts = [...products];
+    } else {
+        allProducts = [...allProducts, infoProduct];
     }
+
+    showHTML();
 });
 
 rowProduct.addEventListener('click', e => {
@@ -65,6 +66,7 @@ rowProduct.addEventListener('click', e => {
         console.log(allProducts);
 
         showHTML();
+
     }
 });
 
@@ -101,11 +103,22 @@ const showHTML = () => {
 
         rowProduct.append(containerProduct);
 
+        console.log(product.quantity);
+        console.log(parseFloat(product.price));
         total =
-            total + parseInt(product.quantity * product.price.slice(1));
+            total + (product.quantity * parseFloat(product.price));
         totalOfProducts = totalOfProducts + product.quantity;
-    });
 
-    valorTotal.innerText = `$${total}`;
-    countProducts.innerText = totalOfProducts;
+        /* const summary = document.createElement('div');
+        summary.classList.add('cartTotal hidden');
+
+        summary.innerHTML = `
+            <h3>Total: ${total}</h3>
+            <span class="totalPayment">${totalOfProducts}</span>
+        `; */
+
+    });
+    valorTotal.innerText = `${total}`;
+    countProducts.innerText = `${totalOfProducts}`;
+
 };
