@@ -65,7 +65,9 @@ rowProduct.addEventListener('click', e => {
             product => product.title !== title
         );
 
-        console.log(allProducts);
+        product.remove();
+
+        totalOfProducts = totalOfProducts - 1;
 
         showHTML();
 
