@@ -1,12 +1,3 @@
-/* const btnCart = document.querySelector('.containerIconCart');
-const containerCartProducts = document.querySelector(
-    'hiddenCartElements'
-);
-
-btnCart.addEventListener('click', () => {
-    containerCartProducts.classList.toggle('hideElements');
-}); */
-
 const cartInfo = document.querySelector('.cartProducts');
 const rowProduct = document.querySelector('.rowProducts');
 
