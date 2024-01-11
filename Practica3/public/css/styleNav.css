@@ -15,6 +15,10 @@ nav {
     background-color: black;
 }
 
+i {
+    color: white;
+}
+
 .menuHorizontal {
     list-style: none;
     display: flex;
@@ -259,6 +263,8 @@ i {
 .hidden {
     display: none;
 }
+
+
 
 @media (max-width: 800px) {
     .tituloEncabezado {
