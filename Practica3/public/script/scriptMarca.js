@@ -13,6 +13,11 @@ const countProducts = document.querySelector('.productsCounter');
 const cartEmpty = document.querySelector('.emptyCart');
 const cartTotal = document.querySelector('.cartTotal');
 
+let total = 0;
+let totalOfProducts = 0;
+
+
+
 [...productsList].map(carritoBoton => {
     carritoBoton.addEventListener('click', e => {
 
@@ -42,59 +47,27 @@ const cartTotal = document.querySelector('.cartTotal');
         } else {
             allProducts = [...allProducts, infoProduct];
         }
-
-        showHTML();
+        total = (total + (infoProduct.quantity * parseFloat(infoProduct.price)));
+        totalOfProducts = totalOfProducts + infoProduct.quantity;
+        showHTML(totalOfProducts, total);
+        establishCounts(totalOfProducts, total);
+        setTotals(totalOfProducts, total)
     });
 })
 
-rowProduct.addEventListener('click', e => {
-    if (e.target.classList.contains('iconClose')) {
-        const product = e.target.parentElement;
-        const title = product.querySelector('p').textContent;
+const showHTML = (totalOfProducts, total) => {
+    // Limpiar cartInfo antes de agregar nuevos productos
+    cartInfo.innerHTML = '';
 
-        allProducts = allProducts.filter(
-            product => product.title !== title
-        );
-
-        product.remove();
-
-        totalOfProducts = totalOfProducts - 1;
-
-        showHTML();
-
-    }
-});
-
-const showHTML = () => {
-    if (!allProducts.length) {
+    if (allProducts.length == 0) {
         cartTotal.classList.add('hidden');
-
-        console.log(rowProduct);
-        console.log("Estoy vacio");
         cartInfo.innerHTML = `
             <div class="cartEmpty">
                 <p class="emptyCart">El carrito está vacio</p>
             </div>
-        `;
-        console.log(rowProduct);
-
-        let total = 0;
-        let totalOfProducts = 0;
-        valorTotal = 0;
-
-        valorTotal.innerText = `${total}`;
-        countProducts.innerText = `${totalOfProducts}`;
-
+        `
     } else {
-
-        rowProduct.classList.remove('hidden');
-        cartTotal.classList.remove('hidden');
-
-        let total = 0;
-        let totalOfProducts = 0;
-
         allProducts.forEach(product => {
-
             const productDiv = `
             <div class="infoCartProduct">
                 <span class="productCartCount">${product.quantity}</span>
@@ -104,24 +77,61 @@ const showHTML = () => {
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </div>
-            
-        `;
+            `
 
             cartInfo.insertAdjacentHTML('beforeend', productDiv);
 
-
-            console.log(product.quantity);
-            console.log(parseFloat(product.price));
-            total =
-                total + (product.quantity * parseFloat(product.price));
-            totalOfProducts = totalOfProducts + product.quantity;
-
         });
-        valorTotal.innerText = `${total}`;
-        countProducts.innerText = `${totalOfProducts}`;
-        console.log(valorTotal);
-
     }
 
-
 };
+
+
+function setTotals(productsTotal, totalAmount) {
+    totalOfProducts = productsTotal;
+    total = totalAmount
+}
+
+function establishCounts(totalOfProducts, total) {
+    let finalTotalAmount = Math.max(0, total.toFixed(2))
+    valorTotal.innerText = `${finalTotalAmount}`;
+    countProducts.innerText = `${totalOfProducts}`;
+}
+
+
+
+rowProduct.addEventListener('click', e => {
+    if (e.target.classList.contains('iconClose')) {
+        const product = e.target.parentElement;
+        const title = product.querySelector('p').textContent;
+        const productPrice = parseFloat(product.querySelector('.productPriceCart').textContent);
+
+        let removedProduct;
+        allProducts = allProducts.filter(product => {
+            if (product.title !== title) {
+                return true;
+            } else {
+                removedProduct = product;
+                return false;
+            }
+        });
+
+        product.remove();
+
+        totalOfProducts = totalOfProducts - removedProduct.quantity;
+        total = total - (removedProduct.quantity * productPrice);
+
+        valorTotal.innerText = `${total}`;
+        countProducts.innerText = `${totalOfProducts}`;
+
+        if (allProducts.length === 0) {
+            cartInfo.innerHTML = `
+                <div class="cartEmpty">
+                    <p class="emptyCart">El carrito está vacío</p>
+                </div>
+            `;
+            cartTotal.classList.add('hidden');
+        }
+        establishCounts(totalOfProducts, total)
+    }
+});

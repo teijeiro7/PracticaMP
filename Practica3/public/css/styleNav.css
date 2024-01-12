@@ -217,6 +217,10 @@ i {
     font-weight: 700;
 }
 
+.cartTotal hidden {
+    display: none;
+}
+
 .totalPayment {
     font-size: 20px;
     font-weight: 900;
@@ -260,10 +264,6 @@ i {
     align-items: center;
 }
 
-.hidden {
-    display: none;
-}
-
 .divSearch {
     margin-left: 10px;
     display: flex;
@@ -271,6 +271,10 @@ i {
 
 .buttonSearch {
     all: initial;
+}
+
+.buttonSearch:hover {
+    cursor: pointer;
 }
 
 .divFatherSearchInput {
