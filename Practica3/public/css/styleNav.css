@@ -264,6 +264,55 @@ i {
     display: none;
 }
 
+.divSearch {
+    margin-left: 10px;
+    display: flex;
+}
+
+.buttonSearch {
+    all: initial;
+}
+
+.divFatherSearchInput {
+    width: 100%;
+    background-color: black;
+    transition: 0.7 ease;
+    -webkit-transition: 0.7 ease;
+    -moz-transition: 0.7 ease;
+    -ms-transition: 0.7 ease;
+    -o-transition: 0.7 ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput {
+    display: none;
+}
+
+.searchInput show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: black;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.searchInputText {
+    all: initial;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.show {
+    display: block;
+}
 
 
 @media (max-width: 800px) {

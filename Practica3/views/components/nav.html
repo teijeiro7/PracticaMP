@@ -12,10 +12,6 @@
             <h1 class="tituloEncabezado">World Padel Store</h1>
         </li>
         <li>
-            <i class="bi bi-search" ></i>
-            <input type="text" placeholder="Buscar" id="buscador">
-        </li>
-        <li>
             <div class="cartIconDiv">
                 <div class="containerIconCart">
                     <button id="buttonCart"><i class="bi bi-basket"></i></button>
@@ -48,13 +44,21 @@
                         </div>
                     </div>
                 </div>
-                <a href="/"><img class="logoinicio"
-                        src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
-                        alt="inicio"></a>
+                <a href="/"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a>
+                <div class="divSearch">
+                    <button class="buttonSearch"><i class="bi bi-search" id="iconSearch"></i></button>
+                </div>
             </div>
         </li>
     </ul>
 
-    <script src="/script/scriptNav.js"></script>
-    <script src="/script/scriptBarraBusqueda.js"> </script>
 </nav>
+
+<div class="divFatherSearchInput">
+    <div class="searchInput">
+        <input type="text" name="searchInput" class="searchInputText" id="buscador" placeholder="¿Qué desea buscar?" ;>
+    </div>
+</div>
+
+<script src="/script/scriptNav.js"></script>
+<script src="/script/scriptBarraBusqueda.js"> </script>
