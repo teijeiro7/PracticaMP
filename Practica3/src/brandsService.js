@@ -17,8 +17,8 @@ let tl10 = new racket("TL10 Future 2024. La pala de Tino Libaak", 244.95, "https
 let noxRackets = [at10, ml10, xOne, equation, packat, tl10];
 let brandRackets = [];
 
-export function addRacket(brandName, racketName, racketPrice, racketImage) {
-    let racketInstance = new racket(racketName, racketPrice, racketImage);
+export function addRacket(brandName, racketName, racketPrice, racketImage, racketUnits) {
+    let racketInstance = new racket(racketName, racketPrice, racketImage, racketUnits);
     let nombreMarca = marcas.get(brandName);
     nombreMarca.brandRackets.push(racketInstance);
 }

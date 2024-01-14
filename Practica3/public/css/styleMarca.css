@@ -11,9 +11,10 @@ body {
   margin: 0;
 }
 
-.filtro{
+.filtro {
   display: none;
 }
+
 /* DIV PADRE */
 .padre {
   display: flex;
@@ -111,6 +112,14 @@ body {
 }
 
 .imagenPala {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  padding: auto;
+}
+
+.divImagenPala {
   position: relative;
   width: 250px;
   height: 250px;

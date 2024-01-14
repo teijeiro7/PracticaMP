@@ -71,10 +71,13 @@ router.post('/newRacket', (req, res) => {
     if (!req.body.imagenPala) {
         errorMessage += 'Imagen de la pala no proporcionada. ';
     }
+    if (!req.body.palaUnits) {
+        errorMessage += 'Numero de palas no proporcionado.  ';
+    }
     if (errorMessage) {
         res.render('marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}`, ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas })
     } else {
-        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala);
+        addRacket(marcaPrincipal, req.body.nombrePala, req.body.precioPala, req.body.imagenPala, req.body.palaUnits);
         res.redirect(`/${marcaPrincipal}`);
     }
 

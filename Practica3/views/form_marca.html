@@ -26,7 +26,7 @@
   {{/error}}
 
   <div class="form_container">
-    <form action="{{action}}" method="post" id="formularioMarca">
+    <form id="formularioMarca" action="{{action}}" method="post">
       <p>{{title}} {{brandName}}</p>
       <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" />
       <div class="errorForm">
@@ -52,7 +52,7 @@
       <div class="errorForm">
         <small id="errorWeb" class="form-text text-danger"></small>
       </div>
-        
+
       <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" />
       <div class="errorForm">
         <small id="errorPlayers" class="form-text text-danger"></small>

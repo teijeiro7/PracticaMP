@@ -43,16 +43,27 @@ const checkBrandFounder = () => {
 
 const brandWeb = document.getElementById("web");
 const webError = document.getElementById("errorWeb");
-const checkBrandWeb = () => {
-    if (brandWeb.value.trim() == '') {
-        urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
 
-        if (!urlRegex.test(brandWeb.value.trim())) {
-            webError.textContent = 'Por favor, ingresa una URL válida.';
-            return;
-        }
+const checkBrandWeb = () => {
+    let urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+
+    if (!urlRegex.test(brandWeb.value.trim())) {
+        webError.textContent = 'Por favor, ingresa una URL válida.';
     } else {
-        nameError.textContent = "";
+        webError.textContent = "";
+    }
+}
+
+const brandImage = document.getElementById("imagen");
+const imageWebError = document.getElementById("errorImageWeb");
+
+const checkBrandImage = () => {
+    let urlImageRegex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/i;
+
+    if (!urlImageRegex.test(imageWeb.value.trim())) {
+        imageWebError.textContent = 'Por favor, ingresa una URL de imagen válida.';
+    } else {
+        imageWebError.textContent = "";
     }
 }
 
@@ -72,7 +83,8 @@ const checkBrandPlayers = () => {
 }
 
 brandName.addEventListener('input', checkBrandName);
-/* brandYear.addEventListener('input', checkBrandYear); */
+brandYear.addEventListener('input', checkBrandYear);
+brandImage.addEventListener('input', checkBrandImage)
 brandFounder.addEventListener('input', checkBrandFounder);
 brandWeb.addEventListener('input', checkBrandWeb);
 brandPlayers.addEventListener('input', checkBrandPlayers);
@@ -85,7 +97,5 @@ document.addEventListener("submit", async function (event) {
     checkBrandFounder();
     checkBrandWeb();
     checkBrandPlayers();
-
-    const brandImage = document.getElementById("imagen");
-    const imageError = document.getElementById("errorImagen");
+    checkBrandImage
 });
