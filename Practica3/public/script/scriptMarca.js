@@ -16,6 +16,11 @@ const cartTotal = document.querySelector('.cartTotal');
 let total = 0;
 let totalOfProducts = 0;
 
+cartInfo.innerHTML = `
+    <div class="cartEmpty">
+        <p class="emptyCart">El carrito está vacio</p>
+    </div>
+`;
 
 
 [...productsList].map(carritoBoton => {

@@ -15,13 +15,13 @@ const brandYear = document.getElementById("año");
 const yearError = document.getElementById('errorAno');
 const checkBrandYear = () => {
     if (brandYear.value == "") {
-        nameError.textContent = "El año de creación no puede ser vacío";
+        year.textContent = "El año de creación no puede ser vacío";
         return;
     } else if (brandYear.value < 1800 || brandYear.value > 2024) {
         yearError.textContent = "El año de creación de la marca tiene que estar comprendido entre 1800 y 2024";
     }
     else {
-        nameError.textContent = "";
+        yearError.textContent = "";
     }
 }
 
@@ -54,18 +54,18 @@ const checkBrandWeb = () => {
     }
 }
 
-const brandImage = document.getElementById("imagen");
+/* const brandImage = document.getElementById("imagen");
 const imageWebError = document.getElementById("errorImageWeb");
 
 const checkBrandImage = () => {
     let urlImageRegex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/i;
 
-    if (!urlImageRegex.test(imageWeb.value.trim())) {
+    if (!urlImageRegex.test(brandImage.value.trim())) {
         imageWebError.textContent = 'Por favor, ingresa una URL de imagen válida.';
     } else {
         imageWebError.textContent = "";
     }
-}
+} */
 
 const brandPlayers = document.getElementById("colaborators");
 const errorPlayers = document.getElementById("errorPlayers");
@@ -84,7 +84,7 @@ const checkBrandPlayers = () => {
 
 brandName.addEventListener('input', checkBrandName);
 brandYear.addEventListener('input', checkBrandYear);
-brandImage.addEventListener('input', checkBrandImage)
+/* brandImage.addEventListener('input', checkBrandImage) */
 brandFounder.addEventListener('input', checkBrandFounder);
 brandWeb.addEventListener('input', checkBrandWeb);
 brandPlayers.addEventListener('input', checkBrandPlayers);
@@ -97,5 +97,18 @@ document.addEventListener("submit", async function (event) {
     checkBrandFounder();
     checkBrandWeb();
     checkBrandPlayers();
-    checkBrandImage
+    /* checkBrandImage(); */
+
+    console.log(brandName);
+
+    fetch('/newBrand', {
+        method: 'POST',
+        body: { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers }
+    }).then(response => {
+        // Maneja la respuesta aquí
+    }).catch(error => {
+        // Maneja el error aquí
+    });
+
+
 });

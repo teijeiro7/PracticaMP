@@ -44,7 +44,7 @@ let adidas = new brand("Adidas", 2013, "Adi Dassler", "https://images-na.ssl-ima
 let starvie = new brand("Starvie", 2002, "Jorge Gómez de la Vega y Javier de la Chica", "https://www.elcorteingles.es/centroscomerciales/uploads/brand/logo/4903/STARVIE.png", "https://www.starvie.com/es/", "Javi Garrido");
 let head = new brand("Head", 1960, "Howard Head", "https://fraguru.com/mdimg/dizajneri/o.4945.jpg", "https://www.head.com/es_ES/padel.html", "Arturo Coello");
 let dunlop = new brand("Dunlop", 1909, "John Boyd Dunlop", "https://federacionnavarradepadel.com/wp-content/uploads/2022/08/485fc0213bd8b8df4ffe0264be4418a5.jpg", "https://dunlopsports.com/es/padel/", "Ramiro Moyano");
-let royal = new brand("Royal Padel", 1991, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "https://royalpadel.com/", "Fede Chingotto");
+let royal = new brand("Royal Padel", 19901, "Francisco Mendoza", "https://blog.streetpadel.com/wp-content/uploads/logo-marca-451.jpg", "https://royalpadel.com/", "Fede Chingotto");
 
 
 let marcas = new Map();
@@ -88,27 +88,5 @@ export function addBrand(brandName, brandYear, brandFounder, brandImage, brandWe
     let brandInstance = new brand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers, []);
     marcas.set(brandName, brandInstance);
 }
-
-export function loadMoreBrands() {
-    fetch('/')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(brand => {
-                // Crear un nuevo elemento HTML para cada marca
-                const brandElement = document.createElement('div');
-
-                // Agregar este elemento al contenedor en el HTML
-                document.getElementById('brandsContainer').appendChild(brandElement);
-            });
-
-            loadedBrands += data.length;
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-
-
-
-
 
 export default marcas;
