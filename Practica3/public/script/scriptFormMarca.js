@@ -1,6 +1,7 @@
 const brandName = document.getElementById("marca");
 const nameError = document.getElementById('errorNombre');
 const checkBrandName = () => {
+    nameError.textContent = "";
     if (brandName.value.trim() == '') {
         nameError.textContent = "El nombre de la marca no puede estar vacía";
     }
@@ -14,10 +15,12 @@ const checkBrandName = () => {
 const brandYear = document.getElementById("año");
 const yearError = document.getElementById('errorAno');
 const checkBrandYear = () => {
+    yearError.textContent = "";
     if (brandYear.value == "") {
-        year.textContent = "El año de creación no puede ser vacío";
+        yearError.textContent = "El año de creación no puede ser vacío";
         return;
-    } else if (brandYear.value < 1800 || brandYear.value > 2024) {
+    }
+    if (brandYear.value < 1800 || brandYear.value > 2024) {
         yearError.textContent = "El año de creación de la marca tiene que estar comprendido entre 1800 y 2024";
     }
     else {
@@ -25,17 +28,16 @@ const checkBrandYear = () => {
     }
 }
 
-const brandFounder = document.getElementById("nombre");
+const brandFounder = document.getElementById("founder");
 const founderError = document.getElementById("errorFundador");
 const checkBrandFounder = () => {
+    founderError.textContent = "";
 
     if (brandFounder.value.trim() == '') {
         founderError.textContent = "El nombre del fundador no puede ser vacío";
-        return;
     }
     if (brandFounder.value.charAt(0) !== brandFounder.value.charAt(0).toUpperCase()) {
         founderError.textContent = 'La primera letra del nombre del fundador tiene que ser mayúscula.';
-        return;
     } else {
         founderError.textContent = "";
     }
@@ -70,13 +72,18 @@ const checkBrandImage = () => {
 const brandPlayers = document.getElementById("colaborators");
 const errorPlayers = document.getElementById("errorPlayers");
 const checkBrandPlayers = () => {
+    errorPlayers.textContent = "";
 
     if (brandPlayers.value.trim() == '') {
         errorPlayers.textContent = "El nombre no puede ser vacío";
-        return;
-    } else if (brandPlayers.value.charAt(0) !== brandPlayers.value.charAt(0).toUpperCase()) {
-        errorPlayers.textContent = 'La primera letra del nombre tiene que ser mayúscula.';
-        return;
+
+    }
+    if (brandPlayers.value.length < 50 || brandPlayers.value.length > 500) {
+        errorPlayers.textContent = errorPlayers.textContent + 'El texto debe tener entre 50 y 500 caracteres.';
+    }
+    if (brandPlayers.value.charAt(0) !== brandPlayers.value.charAt(0).toUpperCase()) {
+        errorPlayers.textContent = errorPlayers.textContent + 'La primera letra del nombre tiene que ser mayúscula.';
+
     } else {
         errorPlayers.textContent = "";
     }
