@@ -308,7 +308,7 @@ i {
     all: initial;
     background-color: black;
     color: white;
-    width: 100%;
+    width: 400px;
     margin: 10px;
     padding: 10px;
     border: 1px solid white;
@@ -316,6 +316,10 @@ i {
 
 .show {
     display: block;
+}
+
+#newBrandIcon {
+    padding-left: 10px;
 }
 
 

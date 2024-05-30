@@ -11,7 +11,7 @@ async function loadBrands() {
 
     const container = document.getElementById('container_body');
 
-    container.innerHTML = html + container.innerHTML;  //meter delante
+    container.innerHTML = container.innerHTML + html;  //meter delante
     init += 3 //este no es porque estarias repitiendo el 3
     final += 3
 }

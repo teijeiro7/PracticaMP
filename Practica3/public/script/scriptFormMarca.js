@@ -1,48 +1,50 @@
+let hasError = false;
+
+// --------------------------------------------------------------------------------------------------------checkBrandName
 const brandName = document.getElementById("marca");
 const nameError = document.getElementById('errorNombre');
+
 const checkBrandName = () => {
     nameError.textContent = "";
-    if (brandName.value.trim() == '') {
-        nameError.textContent = "El nombre de la marca no puede estar vacía";
-    }
-    if (brandName.value.charAt(0) !== brandName.value.charAt(0).toUpperCase()) {
-        nameError.textContent = 'La primera letra del nombre de la marca tiene que ser mayúscula.';
-    } else {
-        nameError.textContent = "";
-    }
-}
 
+    if (brandName.value.trim() === '') { // si el valor del input está vacío
+        nameError.textContent = "El nombre de la marca no puede estar vacía";
+        hasError = true;
+    } else if (brandName.value.charAt(0) !== brandName.value.charAt(0).toUpperCase()) { // si la primera letra no es mayúscula
+        nameError.textContent = 'La primera letra del nombre de la marca tiene que ser mayúscula.';
+        hasError = true;
+    }
+};
+
+// --------------------------------------------------------------------------------------------------------checkBrandYear
 const brandYear = document.getElementById("año");
 const yearError = document.getElementById('errorAno');
+
 const checkBrandYear = () => {
     yearError.textContent = "";
     if (brandYear.value == "") {
         yearError.textContent = "El año de creación no puede ser vacío";
         return;
-    }
-    if (brandYear.value < 1800 || brandYear.value > 2024) {
+    } else if (brandYear.value < 1800 || brandYear.value > 2024) {
         yearError.textContent = "El año de creación de la marca tiene que estar comprendido entre 1800 y 2024";
-    }
-    else {
-        yearError.textContent = "";
     }
 }
 
+// --------------------------------------------------------------------------------------------------------checkBrandFounder
 const brandFounder = document.getElementById("founder");
 const founderError = document.getElementById("errorFundador");
+
 const checkBrandFounder = () => {
     founderError.textContent = "";
 
     if (brandFounder.value.trim() == '') {
         founderError.textContent = "El nombre del fundador no puede ser vacío";
-    }
-    if (brandFounder.value.charAt(0) !== brandFounder.value.charAt(0).toUpperCase()) {
+    } else if (brandFounder.value.charAt(0) !== brandFounder.value.charAt(0).toUpperCase()) {
         founderError.textContent = 'La primera letra del nombre del fundador tiene que ser mayúscula.';
-    } else {
-        founderError.textContent = "";
     }
 }
 
+// --------------------------------------------------------------------------------------------------------checkBrandWeb
 const brandWeb = document.getElementById("web");
 const webError = document.getElementById("errorWeb");
 
@@ -56,7 +58,8 @@ const checkBrandWeb = () => {
     }
 }
 
-/* const brandImage = document.getElementById("imagen");
+// --------------------------------------------------------------------------------------------------------checkBrandImage
+const brandImage = document.getElementById("imagen");
 const imageWebError = document.getElementById("errorImageWeb");
 
 const checkBrandImage = () => {
@@ -67,55 +70,60 @@ const checkBrandImage = () => {
     } else {
         imageWebError.textContent = "";
     }
-} */
+}
 
+// --------------------------------------------------------------------------------------------------------checkBrandPlayers
 const brandPlayers = document.getElementById("colaborators");
 const errorPlayers = document.getElementById("errorPlayers");
+
 const checkBrandPlayers = () => {
     errorPlayers.textContent = "";
 
     if (brandPlayers.value.trim() == '') {
         errorPlayers.textContent = "El nombre no puede ser vacío";
 
+    } else if (brandPlayers.value.length < 50 || brandPlayers.value.length > 500) {
+        errorPlayers.textContent = errorPlayers.textContent + 'El texto debe tener entre 50 y 500 caracteres. ';
     }
-    if (brandPlayers.value.length < 50 || brandPlayers.value.length > 500) {
-        errorPlayers.textContent = errorPlayers.textContent + 'El texto debe tener entre 50 y 500 caracteres.';
-    }
-    if (brandPlayers.value.charAt(0) !== brandPlayers.value.charAt(0).toUpperCase()) {
-        errorPlayers.textContent = errorPlayers.textContent + 'La primera letra del nombre tiene que ser mayúscula.';
 
-    } else {
-        errorPlayers.textContent = "";
+    if (brandPlayers.value.charAt(0) !== brandPlayers.value.charAt(0).toUpperCase()) {
+        errorPlayers.textContent = errorPlayers.textContent + 'La primera letra del nombre tiene que ser mayúscula. ';
+
     }
 }
 
+// --------------------------------------------------------------------------------------------------------EventListeners
 brandName.addEventListener('input', checkBrandName);
 brandYear.addEventListener('input', checkBrandYear);
-/* brandImage.addEventListener('input', checkBrandImage) */
+brandImage.addEventListener('input', checkBrandImage);
 brandFounder.addEventListener('input', checkBrandFounder);
 brandWeb.addEventListener('input', checkBrandWeb);
 brandPlayers.addEventListener('input', checkBrandPlayers);
 
+const botonRegistrar = document.getElementsByClassName("botonRegistrar");
 
-document.addEventListener("submit", async function (event) {
-    event.preventDefault();
+const handleButtonClick = () => {
+    hasError = false;
+
     checkBrandName();
     checkBrandYear();
     checkBrandFounder();
+    checkBrandImage();
     checkBrandWeb();
     checkBrandPlayers();
-    /* checkBrandImage(); */
 
     console.log(brandName);
 
-    fetch('/newBrand', {
-        method: 'POST',
-        body: { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers }
-    }).then(response => {
-        // Maneja la respuesta aquí
-    }).catch(error => {
-        // Maneja el error aquí
-    });
+    if (!hasError) {
+        fetch('/newBrand', {
+            method: 'POST',
+            body: { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers }
+        }).then(response => {
+            // Maneja la respuesta aquí
+        }).catch(error => {
+            // Maneja el error aquí
+        });
+    }
+};
 
-
-});
+botonRegistrar.addEventListener("click", handleButtonClick);
