@@ -1,82 +1,113 @@
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-    height: 10vh;
-}
-
-.navContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-}
-
-i {
+.header {
+    background-color: white;
+    padding: 1rem;
     color: white;
+    display: flex;
+    height: auto;
 }
 
-.menuHorizontal {
-    list-style: none;
+.left_header {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    height: 55px;
     width: 100%;
 }
 
-.menuHorizontal>li>a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     text-decoration: none;
+    color: black;
 }
 
-.menuVertical {
-    position: absolute;
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+.right_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.web_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.search_input {
     display: none;
-    list-style: none;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.menuHorizontal li:hover .menuVertical {
+.search_input_show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.search_input_text {
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 10px;
+}
+
+.logo_image {
+    width: 70px;
+    height: 70px;
+}
+
+.brands_list {
+    display: none;
+}
+
+.brands_list:hover,
+.brands_list_show {
     display: block;
-}
-
-.menuVertical li:hover {
-    background-color: #4d82bc;
-}
-
-.menuVertical li a {
-    display: block;
-    color: white;
-    padding: 10px 15px;
+    background-color: white;
+    width: 150px;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateX(-100%);
+    animation: slide-in 0.3s ease-in-out;
+    font-size: 1.2rem;
     text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 2px solid black;
 }
 
-i {
-    color: beige;
-    font-size: 30px;
-    width: 100%;
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-.logoinicio {
-    height: 50px;
-    border-radius: 30px;
-    margin-left: 5px;
+.list_brand {
+    text-decoration: none;
+    color: black;
 }
 
-.tituloEncabezado {
-    font-size: 30px;
-    font-family: "Anton", sans-serif;
-    text-align: center;
-    text-shadow: 5px 7px 4px gray;
-    color: white;
-    width: 100%;
+.list_brand:hover {
+    background-color: lightgray;
 }
 
 #cuentaCarrito {
@@ -93,20 +124,6 @@ i {
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
-}
-
-.leftNav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.leftNav a {
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
 }
 
 .divCart {
@@ -262,99 +279,4 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.divSearch {
-    margin-left: 10px;
-    display: flex;
-}
-
-.buttonSearch {
-    all: initial;
-}
-
-.buttonSearch:hover {
-    cursor: pointer;
-}
-
-.divFatherSearchInput {
-    width: 100%;
-    background-color: black;
-    transition: 0.7 ease;
-    -webkit-transition: 0.7 ease;
-    -moz-transition: 0.7 ease;
-    -ms-transition: 0.7 ease;
-    -o-transition: 0.7 ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.searchInput {
-    display: none;
-}
-
-.searchInput show {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    background-color: black;
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.searchInputText {
-    all: initial;
-    background-color: black;
-    color: white;
-    width: 400px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid white;
-}
-
-.show {
-    display: block;
-}
-
-#newBrandIcon {
-    padding-left: 10px;
-}
-
-
-@media (max-width: 800px) {
-    .tituloEncabezado {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 400px) {
-    nav {
-        width: 100%;
-    }
-
-    .menuHorizontal {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-right: 9px;
-    }
-
-    .menuHorizontal li h1 {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 20px;
-    }
-
-    #listBrands {
-        font-size: 20px;
-    }
-
-    #iconoNav {
-        font-size: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }

@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="/css/form_marca.css" />
   <link rel="stylesheet" href="/css/styleNav.css" />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" type="image/png" />
+  <link rel="icon" href="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png"
+    type="image/png" />
   <title>WPS | {{title}}</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,38 +29,44 @@
   <div class="form_container">
     <form id="formularioMarca" action="{{action}}" method="post">
       <p>{{title}} {{brandName}}</p>
-      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca " value="{{brandName}}" />
+      <input class="form" type="text" name="nombreMarca" id="marca" placeholder=" Nombre de la marca "
+        value="{{brandName}}" />
       <div class="errorForm">
         <small id="errorNombre" class="form-text text-danger"></small>
       </div>
 
-      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion" value="{{brandYear}}" />
+      <input class="form" type="number" name="anoMarca" id="año" placeholder="Inserte año de creacion"
+        value="{{brandYear}}" />
       <div class="errorForm">
         <small id="errorAno" class="form-text text-danger"></small>
       </div>
 
-      <input class="form" type="text" name="fundMarca" id="founder" placeholder="Nombre del propietario" value="{{brandFounder}}" />
+      <input class="form" type="text" name="fundMarca" id="founder" placeholder="Nombre del propietario"
+        value="{{brandFounder}}" />
       <div class="errorForm">
         <small id="errorFundador" class="form-text text-danger"></small>
       </div>
 
-      <input class="form" type="url" name="imgMarca" id="imagen" placeholder="Url del logo de la marca" value="{{brandImage}}" />
+      <input class="form" type="url" name="imgMarca" id="imagen" placeholder="Url del logo de la marca"
+        value="{{brandImage}}" />
       <div class="errorForm">
         <small id="errorImagen" class="form-text text-danger"></small>
       </div>
 
-      <input class="form" type="url" name="webMarca" id="web" placeholder="Url de la página de la marca" value="{{brandWeb}}" />
+      <input class="form" type="url" name="webMarca" id="web" placeholder="Url de la página de la marca"
+        value="{{brandWeb}}" />
       <div class="errorForm">
         <small id="errorWeb" class="form-text text-danger"></small>
       </div>
 
-      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores" value="{{brandPlayers}}" />
+      <input class="form" type="text" name="plaMarca" id="colaborators" placeholder="Ingrese sus jugadores"
+        value="{{brandPlayers}}" />
       <div class="errorForm">
         <small id="errorPlayers" class="form-text text-danger"></small>
       </div>
 
       <div class="confirmButton">
-        <input class="botonRegistrar" type="submit" value="Registrar" href="/newBrand" />
+        <input class="botonRegistrar" type="submit" value="Registrar" href="/newBrand" id="botonRegistrar" />
         <a class="botonCancelar" href="/">Cancelar</a>
       </div>
     </form>

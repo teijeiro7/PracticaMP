@@ -8,7 +8,8 @@ import { addRacket } from './brandsService.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('index', { title: 'Main Page' });
+    const infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
+    res.render('index', { title: 'Main Page', values: infoDesplegable });
 });
 
 router.get('/cargarJson', (req, res) => {
@@ -25,33 +26,15 @@ router.get('/formularioMarca', (req, res) => {
 });
 
 
-router.post('/newBrand', (req, res) => {
-    let errorMessage = '';
+router.post('/newBrand', express.json(), (req, res) => {
+    const { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers } = req.body;
+    console.log(brandName);
 
-    if (!req.body.nombreMarca) {
-        errorMessage += 'Nombre de la marca no proporcionado. ';
-    }
-    if (!req.body.anoMarca) {
-        errorMessage += 'Año de la marca no proporcionado. ';
-    }
-    if (!req.body.fundMarca) {
-        errorMessage += 'Fundación de la marca no proporcionada. ';
-    }
-    if (!req.body.imgMarca) {
-        errorMessage += 'Imagen de la marca no proporcionada. ';
-    }
-    if (!req.body.webMarca) {
-        errorMessage += 'Web de la marca no proporcionada. ';
-    }
-    if (!req.body.plaMarca) {
-        errorMessage += 'Plataforma de la marca no proporcionada. ';
-    }
-
-    if (errorMessage) {
-        res.render('form_marca', { error: `No se ha podido crear la marca por el siguiente motivo:  ${errorMessage}` })
+    if (!brandName || !brandYear || !brandFounder || !brandImage || !brandWeb || !brandPlayers) {
+        res.status(400).send('Todos los campos son requeridos');
     } else {
-        addBrand(req.body.nombreMarca, req.body.anoMarca, req.body.fundMarca, req.body.imgMarca, req.body.webMarca, req.body.plaMarca);
-        res.redirect(`/${req.body.nombreMarca}`);
+        addBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers);
+        res.redirect(`/${brandName}`);
     }
 });
 
@@ -59,7 +42,7 @@ router.post('/newRacket', (req, res) => {
     let brandValues = getBrand(req.query.name); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
-    let marcaPrincipal = req.query.name;
+    let marcaPrincipal = brandValues.brandName;
     let errorMessage = '';
 
     if (!req.body.nombrePala) {

@@ -60,17 +60,17 @@ const checkBrandWeb = () => {
 
 // --------------------------------------------------------------------------------------------------------checkBrandImage
 const brandImage = document.getElementById("imagen");
-const imageWebError = document.getElementById("errorImageWeb");
+// const imageWebError = document.getElementById("errorImageWeb");
 
-const checkBrandImage = () => {
-    let urlImageRegex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/i;
+// const checkBrandImage = () => {
+//     let urlImageRegex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/i;
 
-    if (!urlImageRegex.test(brandImage.value.trim())) {
-        imageWebError.textContent = 'Por favor, ingresa una URL de imagen válida.';
-    } else {
-        imageWebError.textContent = "";
-    }
-}
+//     if (!urlImageRegex.test(brandImage.value.trim())) {
+//         imageWebError.textContent = 'Por favor, ingresa una URL de imagen válida.';
+//     } else {
+//         imageWebError.textContent = "";
+//     }
+// }
 
 // --------------------------------------------------------------------------------------------------------checkBrandPlayers
 const brandPlayers = document.getElementById("colaborators");
@@ -95,35 +95,39 @@ const checkBrandPlayers = () => {
 // --------------------------------------------------------------------------------------------------------EventListeners
 brandName.addEventListener('input', checkBrandName);
 brandYear.addEventListener('input', checkBrandYear);
-brandImage.addEventListener('input', checkBrandImage);
+// brandImage.addEventListener('input', checkBrandImage);
 brandFounder.addEventListener('input', checkBrandFounder);
 brandWeb.addEventListener('input', checkBrandWeb);
 brandPlayers.addEventListener('input', checkBrandPlayers);
 
-const botonRegistrar = document.getElementsByClassName("botonRegistrar");
+const botonRegistrar = document.getElementById("botonRegistrar");
 
-const handleButtonClick = () => {
+botonRegistrar.addEventListener("click", function (event) {
+    event.preventDefault(); // Esto previene que el formulario se envíe automáticamente
+
+    console.log("Botón presionado");
     hasError = false;
 
     checkBrandName();
     checkBrandYear();
     checkBrandFounder();
-    checkBrandImage();
+    //checkBrandImage();
     checkBrandWeb();
     checkBrandPlayers();
-
-    console.log(brandName);
 
     if (!hasError) {
         fetch('/newBrand', {
             method: 'POST',
-            body: { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers }
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ brandName: brandName.value, brandYear: brandYear.value, brandFounder: brandFounder.value, brandImage: brandImage.value, brandWeb: brandWeb.value, brandPlayers: brandPlayers.value })
         }).then(response => {
-            // Maneja la respuesta aquí
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
         }).catch(error => {
             // Maneja el error aquí
         });
     }
-};
-
-botonRegistrar.addEventListener("click", handleButtonClick);
+});

@@ -1,54 +1,78 @@
-<nav class="navPrincipal">
-    <ul class="menuHorizontal">
-        <li>
-            <i class="bi bi-list" id="listBrands"><a href="#"></a></i>
-            <ul class="menuVertical">
-                {{#values}}
-                <li><a href="/{{brandName}}">{{brandName}}</a></li>
-                {{/values}}
-            </ul>
-        </li>
-        <li>
-            <h1 class="tituloEncabezado">World Padel Store</h1>
-        </li>
-        <li>
-            <div class="cartIconDiv">
-                <div class="containerIconCart">
-                    <button id="buttonCart"><i class="bi bi-basket"></i></button>
-                    <div class="countProducts">
-                        <span class="productsCounter">0</span>
-                    </div>
+<header class="header">
+    <div class="left_header">
+        <a href="/"><img src="/Images/logo.png" alt="logo" class="logo_image"></a>
+        <span class="web_title">
+            World Padel Store
+        </span>
+    </div>
+    <div class="right_header">
+        <button class="button">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+            </svg>
+        </button>
+        <div class="cartIconDiv">
+            <div class="containerIconCart">
+                <button id="buttonCart"><i class="bi bi-basket"></i></button>
+                <div class="countProducts">
+                    <span class="productsCounter">0</span>
                 </div>
-                <div class="divCart">
-                    <div class="hiddenCartElements hideElements">
-                        <div class="rowProducts hidden">
-                            <div class="cartTitle">
-                                <p class="titleCart">Your cart</p>
-                            </div>
-                            <div class="cartProducts">
-                            </div>
-                            <div class="cartTotal hidden">
-                                <h3>Total:</h3>
-                                <span class="totalPayment">0</span><span>€</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <a href="/"><img class="logoinicio" src="https://i.pinimg.com/originals/74/7e/55/747e55064959e576f79edb6f2b3f5179.png" alt="inicio"></a>
-                <div class="divSearch">
-                    <button class="buttonSearch"><i class="bi bi-search" id="iconSearch"></i></button>
-                </div>
-                <a href="/formularioMarca"><i id="newBrandIcon" class="bi bi-plus-square"></i></a>
             </div>
-        </li>
-    </ul>
+            <div class="divCart">
+                <div class="hiddenCartElements hideElements">
+                    <div class="rowProducts hidden">
+                        <div class="cartTitle">
+                            <p class="titleCart">Your cart</p>
+                        </div>
+                        <div class="cartProducts">
+                        </div>
+                        <div class="cartTotal hidden">
+                            <h3>Total:</h3>
+                            <span class="totalPayment">0</span><span>€</span>
+                        </div>
 
-</nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button" id="button_search">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+            </svg>
+        </button>
+        <button class="button" id="button_list">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <div class="brands_list">
+                {{#values}}
+                <div class="hover_list_brand"><a href="/{{brandName}}" class="list_brand">{{brandName}}</a></div>
+                {{/values}}
+            </div>
+        </button>
+        <button class="button">
+            <a href="/formularioMarca">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+            </a>
+        </button>
+    </div>
+</header>
 
 <div class="divFatherSearchInput">
-    <div class="searchInput">
-        <input type="text" name="searchInput" class="searchInputText" id="buscador" placeholder="Escriba para filtrar y pulse ENTER para acceder a lo buscado" ;>
+    <div class="search_input">
+        <input type="text" name="searchInput" class="search_input_text" id="buscador"
+            placeholder="Escriba para filtrar y pulse ENTER para acceder a lo buscado" ;>
     </div>
 </div>
 
