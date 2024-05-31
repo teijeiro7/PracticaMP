@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: var(--color-nox);
+  background-color: var(--color-fondo);
   padding: 0;
   margin: 0;
 }
@@ -30,9 +30,10 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid var(--color-input);
   font-family: 'Roboto', sans-serif;
   margin: 21px;
+  background-color: var(--color-nav);
 }
 
 .negrita {
@@ -50,20 +51,17 @@ body {
 
 .textoNox h1,
 .textoNox p,
-.textoNox input {
+.textoNox input,
+.textoNox a {
   margin: 8px;
+  color: white;
+  text-decoration: none;
 }
 
-.boton_editar {
-  background-color: var(--fondo-input);
-  color: var(--letra-form);
-  padding: 5px;
-  width: 45%;
-}
-
+.boton_editar,
 .boton_eliminar {
-  background-color: var(--fondo-input);
-  color: var(--letra-form);
+  background-color: var(--color-input);
+  color: white;
   padding: 5px;
   width: 45%;
 }
@@ -75,6 +73,8 @@ body {
 
 .textoNox {
   padding: 20px;
+  color: white;
+  width: 80%;
 }
 
 /* CAJA PALAS */
@@ -91,10 +91,10 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-nox);
+  background-color: var(--color-nav);
   margin: 20px;
   margin-top: 100px;
-  border: 3px solid black;
+  border: 3px solid var(--color-input);
   height: 100%;
   gap: 50px;
   padding: 50px;
@@ -280,28 +280,30 @@ button a {
 }
 
 
-.textoNox h1 {
-  color: black;
-  font-family: 'Roboto', sans-serif;
-}
-
 .cuadroTexto {
   background-color: black;
   color: white;
 }
 
-.back {
-  background-color: var(--fondo-form);
-  border: 1px solid black;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
 
 .divButtonBack {
   width: 90%;
   display: flex;
   justify-content: flex-start;
+}
+
+.back {
+  border: 1px solid var(--color-input);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: white;
+  background-color: var(--color-nav);
+}
+
+.back i {
+  font-size: 30px;
+  padding: 5px;
 }
 
 .imagenLogoNox {
@@ -324,11 +326,6 @@ button a {
   margin: 10px;
   padding: 10px;
   width: 90%;
-}
-
-.contenido {
-  text-decoration: none;
-  color: #000;
 }
 
 .divPrecioCarro {

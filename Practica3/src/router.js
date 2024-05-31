@@ -21,7 +21,7 @@ router.get('/cargarJson', (req, res) => {
 });
 
 router.get('/formularioMarca', (req, res) => {
-    const brandValues = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
+    const brandValues = Array.from(marcas.values());
     res.render('form_marca', { title: 'Create your Own Brand', values: brandValues, action: "newBrand" }); //renderizamos el contenido necesario para el formulario
 });
 
@@ -90,13 +90,13 @@ router.get('/:brandName', (req, res) => {
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
-    res.render('marca', { ...brandValues, desplegable: infoDesplegable, palasPrincipal: palas }); //renderizamos el contenido necesario para la marca seleccionada
+    res.render('marca', { ...brandValues, values: infoDesplegable, palasPrincipal: palas }); //renderizamos el contenido necesario para la marca seleccionada
 });
 
 router.get("/:brandName/confirmDelete", (req, res) => {
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
-    res.render("confirmDelete", { ...brandValues, desplegable: infoDesplegable, title: "Confirm Delete" }); //renderizamos el contenido necesario para la marca seleccionada
+    res.render("confirmDelete", { ...brandValues, values: infoDesplegable, title: "Confirm Delete" }); //renderizamos el contenido necesario para la marca seleccionada
 });
 
 router.get("/:brandName/deleteBrand", (req, res) => {

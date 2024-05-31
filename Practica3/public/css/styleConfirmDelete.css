@@ -3,13 +3,14 @@
 * {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
 body {
     background-color: var(--color-fondo);
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .padre {
@@ -26,11 +27,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    background-color: var(--color-nav);
     align-items: center;
     width: 80%;
-    background-color: var(--fondo-form);
-    border: 2px solid var(--fondo-form);
+    border: 2px solid var(--color-input);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -56,15 +56,15 @@ body {
     display: flex;
     width: 200px;
     height: 50px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 1px solid white;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    background-color: black;
+    background-color: var(--color-input);
 }
 
 .botonEliminar {

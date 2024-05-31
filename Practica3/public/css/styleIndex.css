@@ -20,7 +20,7 @@ body {
     align-items: center;
     grid-gap: 50px;
     /* Ajusta este valor según tus necesidades */
-    width: 100%;
+    width: 70%;
 }
 
 .container_body img {
@@ -34,7 +34,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid wheat;
+    background-color: var(--color-nav);
+    border: 5px solid var(--color-input);
     margin: 20px;
     width: 100%;
     height: auto;
@@ -48,7 +49,8 @@ body {
 .textoTituloInicio h1,
 .textoTituloInicio h3 {
     font-family: "Anton", sans-serif;
-    color: black;
+    color: white;
+    font-weight: 100;
 }
 
 .fotoHead {
@@ -82,19 +84,35 @@ body {
 
 }
 
-#loadmore {
+.div_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+#buttons {
     margin: 40px 10px;
     width: 250px;
     height: 250px;
     border-radius: 15px;
-    background-color: transparent;
+    background-color: var(--color-nav);
+    color: white;
+    border: 1px solid var(--color-input);
+    margin: 100px;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: white;
 }
 
 #plusButton {
     font-size: 50px;
 }
 
-.filtro{
+.filtro {
     display: none;
 }
 

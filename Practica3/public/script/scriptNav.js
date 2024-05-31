@@ -5,17 +5,19 @@
 //     containerCart.classList.toggle("hideElements");
 // });
 
+const header = document.querySelector(".header");
 const buttonSearch = document.querySelector("#button_search");
-
-buttonSearch.addEventListener("click", () => {
-    const searchInput = document.querySelector(".search_input");
-    searchInput.classList.toggle("search_input_show");
-});
+const searchInput = document.querySelector(".search_input");
 
 const buttonList = document.querySelector("#button_list");
+const brandList = document.querySelector(".brands_list");
 
+buttonSearch.addEventListener("click", () => {
+    searchInput.classList.toggle("search_input_show");
+    brandList.classList.remove("brands_list_show");
+});
 
 buttonList.addEventListener("click", () => {
-    const brandList = document.querySelector(".brands_list");
     brandList.classList.toggle("brands_list_show");
+    searchInput.classList.remove("search_input_show");
 });

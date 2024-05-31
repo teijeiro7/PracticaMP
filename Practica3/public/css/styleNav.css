@@ -1,9 +1,14 @@
 .header {
-    background-color: white;
+    background-color: var(--color-nav);
     padding: 1rem;
     color: white;
     display: flex;
     height: auto;
+    border-bottom: 2px solid white;
+}
+
+.header_extra {
+    border: none;
 }
 
 .left_header {
@@ -17,16 +22,19 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
     margin-right: 10px;
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
 }
 
 .button a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .right_header {
@@ -38,9 +46,10 @@
 }
 
 .web_title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
+    font-size: 30px;
+    font-family: "Anton", sans-serif;
+    color: white;
+    width: 100%;
 }
 
 .search_input {
@@ -53,17 +62,24 @@
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: white;
+    background-color: var(--color-nav);
     transform: translateY(0);
     transition: transform 0.3s ease-in-out;
+    border-bottom: 2px solid white;
 }
 
 .search_input_text {
     width: 60%;
     height: 30px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     margin-right: 10px;
+    background: none;
+    color: white;
+}
+
+.search_input_text::placeholder {
+    color: white;
 }
 
 .logo_image {
@@ -78,37 +94,31 @@
 .brands_list:hover,
 .brands_list_show {
     display: block;
-    background-color: white;
-    width: 150px;
-    justify-content: flex-end;
-    align-items: center;
-    transform: translateX(-100%);
-    animation: slide-in 0.3s ease-in-out;
-    font-size: 1.2rem;
+    background-color: var(--color-nav);
+    width: 100%;
+    font-size: 20px;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    border: 2px solid black;
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+    border-bottom: 2px solid white;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .list_brand {
     text-decoration: none;
-    color: black;
+    color: white;
+    margin: 10px;
+    font-family: "Anton", sans-serif;
+    font-weight: 300;
 }
 
 .list_brand:hover {
-    background-color: lightgray;
+    background-color: var(--color-input);
+    background-size: auto;
+    color: white;
 }
+
 
 /* #cuentaCarrito {
     background-color: white;
