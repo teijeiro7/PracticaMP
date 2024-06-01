@@ -59,11 +59,12 @@ body {
 }
 
 .boton_editar,
-.boton_eliminar {
+.boton_eliminar,
+.boton_crear_pala {
   background-color: var(--color-input);
   color: white;
   padding: 5px;
-  width: 45%;
+  width: 30vh;
 }
 
 .imagenLogoNox {
@@ -129,7 +130,6 @@ body {
 
 .labelStyle {
   font-weight: bold;
-  text-decoration: underline;
   padding: 5px;
 }
 
@@ -193,26 +193,16 @@ body {
   width: 100%;
 }
 
+.divBotonesFormCrearPalaCancelar,
 .divBotonesFormCrearPalaSubir {
-  background-color: #080808;
+  background-color: var(--color-input);
   border: none;
   padding: 12px;
-  color: #11fa00;
   margin: 16px 0;
   font-size: 16px;
   border-radius: 5px;
-
-}
-
-.divBotonesFormCrearPalaCancelar {
-  background-color: #080808;
-  color: #fa0000;
-  border: none;
+  color: white;
   text-decoration: none;
-  padding: 12px;
-  margin: 16px 0;
-  font-size: 16px;
-  border-radius: 5px;
 }
 
 
@@ -227,12 +217,12 @@ body {
 }
 
 .formCrearPala {
-  width: 90%;
-  background-color: var(--fondo-form);
+  width: 50%;
+  background-color: var(--color-nav);
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 20px;
-  border: 5px solid black;
+  border: 5px solid var(--color-input);
   text-align: center;
   align-items: center;
   box-shadow: 7px 13px 37px #000;
@@ -241,20 +231,7 @@ body {
 
 .formCrearPala h2 {
   font-family: 'Roboto', sans-serif;
-  color: var(--letra-form);
-}
-
-.structureDiv {
-  background-color: var(--fondo-input);
-  padding: 20px;
-  margin: 10px;
-  border-bottom: 4px solid var(--color-nox);
-  border-left: 4px solid var(--color-nox);
-  border-radius: 5px;
-  font-family: 'calibri';
-  font-size: 18px;
-  color: var(--letra-form);
-  text-align: center;
+  color: white;
 }
 
 .structureDiv label {
@@ -281,7 +258,11 @@ button a {
 
 
 .cuadroTexto {
-  background-color: black;
+  background-color: var(--color-input);
+  color: white;
+}
+
+.cuadroTexto::placeholder {
   color: white;
 }
 
@@ -325,7 +306,8 @@ button a {
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  width: 90%;
+  width: 50%;
+  text-align: center;
 }
 
 .divPrecioCarro {
@@ -399,4 +381,23 @@ button a {
     margin: 10px;
     padding: 0;
   }
+}
+
+.div_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.div_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.div_group label {
+  font-size: 15px;
+  color: white;
 }

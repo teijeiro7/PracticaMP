@@ -1,4 +1,5 @@
-/* Busca las marcas que sigan el patron de letras del input*/
+import marcas from "./brandsService.js";
+
 document.addEventListener("keyup", e => {
     if (e.target.matches("#buscador")) {
         document.querySelectorAll("img.nombreBusqueda").forEach(img => {
@@ -12,10 +13,10 @@ document.addEventListener("keyup", e => {
     }
 });
 
-document.addEventListener("keyup", e =>{
-    if (e.target.matches("#buscador")){
-        document.querySelectorAll('.pala').forEach(div =>{
-            
+document.addEventListener("keyup", e => {
+    if (e.target.matches("#buscador")) {
+        document.querySelectorAll('.pala').forEach(div => {
+
             let nombrePala = div.querySelector('.parrafoPala').textContent.toLowerCase().trim();
             if (nombrePala.toLowerCase().startsWith(e.target.value.toLowerCase())) {
                 div.style.display = '';
@@ -28,12 +29,11 @@ document.addEventListener("keyup", e =>{
 
 // en caso de que el texto que se coloque en el input = nombreMarca te redirige a la pagina de la marca
 document.addEventListener("keydown", e => {
-    if (e.target.matches("#buscador") && e.keyCode === 13) {
-        document.querySelectorAll("img.nombreBusqueda").forEach(img => {
-            if (img.alt.toLowerCase() === e.target.value.toLowerCase()) {
-                window.location.href = '/' + img.alt; // Redirige a /:brandName
-            }
-        });
-        e.preventDefault(); // Evita la acción por defecto del evento Enter
+    if (e.target.matches("#buscador")) {
+        const brandNames = marcas.map(brand => brand.name.toLowerCase());
+        if (brandNames.includes(e.target.value.toLowerCase())) {
+            window.location.href = '/' + e.target.value.toLowerCase();
+        }
+        e.preventDefault();
     }
 });
