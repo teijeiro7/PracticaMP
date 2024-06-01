@@ -23,6 +23,7 @@ cartInfo.innerHTML = `
 `;
 
 
+// ----------------- Agregar productos al carrito -----------------
 [...productsList].map(carritoBoton => {
     carritoBoton.addEventListener('click', e => {
 
@@ -60,8 +61,8 @@ cartInfo.innerHTML = `
     });
 })
 
+// ----------------- Mostrar productos en el carrito -----------------
 const showHTML = (totalOfProducts, total) => {
-    // Limpiar cartInfo antes de agregar nuevos productos
     cartInfo.innerHTML = '';
 
     if (allProducts.length == 0) {
@@ -91,12 +92,13 @@ const showHTML = (totalOfProducts, total) => {
 
 };
 
-
+// ----------------- Establecer totales -----------------
 function setTotals(productsTotal, totalAmount) {
     totalOfProducts = productsTotal;
     total = totalAmount
 }
 
+// ----------------- Establecer totales -----------------
 function establishCounts(totalOfProducts, total) {
     let finalTotalAmount = Math.max(0, total.toFixed(2))
     valorTotal.innerText = `${finalTotalAmount}`;
@@ -104,7 +106,7 @@ function establishCounts(totalOfProducts, total) {
 }
 
 
-
+// ----------------- Eliminar productos del carrito -----------------
 rowProduct.addEventListener('click', e => {
     if (e.target.classList.contains('iconClose')) {
         const product = e.target.parentElement;

@@ -1,9 +1,9 @@
-// const btnCart = document.getElementsByClassName("cart")
-// const containerCart = document.querySelector(".hiddenCartElements");
+const btnCart = document.getElementById("button_cart")
+const containerCart = document.querySelector(".hiddenCartElements");
 
-// btnCart.addEventListener("click", () => {
-//     containerCart.classList.toggle("hideElements");
-// });
+btnCart.addEventListener("click", () => {
+    containerCart.classList.toggle("hideElements");
+});
 
 const header = document.querySelector(".header");
 const buttonSearch = document.querySelector("#button_search");
