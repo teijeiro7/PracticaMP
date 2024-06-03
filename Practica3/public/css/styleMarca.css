@@ -92,7 +92,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--color-nav);
-  margin: 20px;
   margin-top: 100px;
   border: 3px solid var(--color-input);
   height: 100%;
@@ -404,5 +403,30 @@ button a {
 @media (max-width: 1025px) {
   .content {
     display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .div_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .formCrearPala {
+    width: 70%;
+  }
+
+  .cuadroTexto {
+    width: 100%;
+  }
+
+  .botonesForm {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -292,3 +292,20 @@ svg {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 2560px) {
+    .countProducts {
+        top: 3.5%;
+    }
+}
+
+@media (max-width: 420px) {
+    .right_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+}

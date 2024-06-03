@@ -27,13 +27,13 @@ document.addEventListener("keyup", e => {
     }
 })
 
-// en caso de que el texto que se coloque en el input = nombreMarca te redirige a la pagina de la marca
 document.addEventListener("keydown", e => {
     if (e.target.matches("#buscador")) {
-        const brandNames = marcas.map(brand => brand.name.toLowerCase());
-        if (brandNames.includes(e.target.value.toLowerCase())) {
-            if (e.key === "Enter") {
-                window.location.href = '/' + e.target.value.toLowerCase();
+        const brandNames = Array.from(marcas.keys()).map(brand => brand.toLowerCase());
+        if (e.key === "Enter") {
+            if (brandNames.includes(e.target.value.toLowerCase())) {
+                const location = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+                window.location.href = '/' + location;
             }
         }
     }
