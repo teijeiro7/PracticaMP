@@ -32,8 +32,9 @@ document.addEventListener("keydown", e => {
     if (e.target.matches("#buscador")) {
         const brandNames = marcas.map(brand => brand.name.toLowerCase());
         if (brandNames.includes(e.target.value.toLowerCase())) {
-            window.location.href = '/' + e.target.value.toLowerCase();
+            if (e.key === "Enter") {
+                window.location.href = '/' + e.target.value.toLowerCase();
+            }
         }
-        e.preventDefault();
     }
 });
