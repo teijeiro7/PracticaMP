@@ -1,3 +1,5 @@
+import marcas from "./brandsService.js";
+
 let hasError = false;
 
 // --------------------------------------------------------------------------------------------------------checkBrandName
@@ -12,6 +14,11 @@ const checkBrandName = () => {
         hasError = true;
     } else if (brandName.value.charAt(0) !== brandName.value.charAt(0).toUpperCase()) { // si la primera letra no es mayúscula
         nameError.textContent = 'La primera letra del nombre de la marca tiene que ser mayúscula.';
+        hasError = true;
+    }
+
+    if (marcas.has(brandName.value.trim())) {
+        nameError.textContent = 'La marca ya existe.';
         hasError = true;
     }
 };
@@ -126,7 +133,7 @@ botonRegistrar.addEventListener("click", function (event) {
             if (response.redirected) {
                 window.location.href = response.url;
             }
-        }).catch(error => {
+        }).catch(() => {
             // Maneja el error aquí
         });
     }

@@ -1,14 +1,27 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 .header {
     background-color: var(--color-nav);
-    padding: 1rem;
     color: white;
     display: flex;
     height: auto;
     border-bottom: 2px solid white;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .header_extra {
     border: none;
+}
+
+.left_header,
+.right_header {
+    padding: 5px;
 }
 
 .left_header {
@@ -42,7 +55,8 @@ svg {
     align-items: center;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: 25%;
+    gap: 3px;
 }
 
 .web_title {
@@ -161,7 +175,7 @@ svg {
 
 .countProducts {
     position: absolute;
-    top: 5.5%;
+    top: 6%;
     background-color: white;
     color: black;
     width: 20px;
@@ -293,7 +307,15 @@ svg {
     align-items: center;
 }
 
-@media (max-width: 2560px) {
+.rowProducts {
+    border-radius: 25%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+}
+
+@media (min-width: 2559px) {
     .countProducts {
         top: 3.5%;
     }
@@ -303,8 +325,12 @@ svg {
     .right_header {
         display: flex;
         flex-direction: column;
+        width: 25%;
     }
 
+    .left_header span {
+        text-align: center;
+    }
 
 
 

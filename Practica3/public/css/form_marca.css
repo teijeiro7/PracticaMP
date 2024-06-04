@@ -111,4 +111,5 @@ body {
 
 .errorForm {
   color: red;
+  font-weight: bold;
 }

@@ -12,7 +12,7 @@ let ml10 = new racket("ML10 PRO CUP Luxury 2024. La pala de Miguel Lamperti", 29
 let xOne = new racket("X-ONE 2023", 74.95, "https://noxsport.es/cdn/shop/products/x-one-2023-pxone23-8436603192774-813469.jpg?v=1689844438&width=650", 6);
 let equation = new racket("EQUATION Advanced", 149.95, "https://noxsport.es/cdn/shop/products/equation-advanced-pequadvd-8436603195928-123851.jpg?v=1695157690&width=650", 6);
 let packat = new racket("Pack AT Genius LTD 2024 - Agustín Tapia LIMITED EDITION", 399.00, "https://noxsport.es/cdn/shop/products/pack-at-genius-ltd-2024-agustin-tapia-limited-edition-packpatltdd-8436603195805-186079.jpg?v=1699437978&width=650", 6);
-let tl10 = new racket("TL10 Future 2024. La pala de Tino Libaak", 244.95, "https://noxsport.es/cdn/shop/products/tl10-future-2024-la-pala-de-tino-libaak-209699.jpg?v=1695158836&width=650", 6);
+let tl10 = new racket("TL10 Future 2024. La pala de Tino Libaak", 244.95, "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT4_h0qpQRZf9CwxOq-h13OuRPGoI-qlDfhvpKYTyyMLdbLJN7T1GNGoskzyWlqo3EGBwo-ciPGzIbY8N0QRtk6TxSESTuTc2wmZ1Mm4dr4M44cPkxdLNAOErE6UIM64C_WEPeVFB8&usqp=CAchttps://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTe-tv4lbVBWTvEcXKrHppn2IrTjm2N-JXjPT5l48190Z94I9eMpouISAJ3DDUZgcmKVa8YB_Q5JfWz0_Bx47JG5rZCIrDH4p9g1EtritB1u5OdRcMv1BozZBJ0qeEkC-0VzNu4gBs&usqp=CAchttps://noxsport.com/cdn/shop/products/tl10-future-2024-la-pala-de-tino-libaak-ptl10fut-8436603195898-707562.jpg?v=1707773049&width=700", 6);
 
 let noxRackets = [at10, ml10, xOne, equation, packat, tl10];
 let brandRackets = [];
