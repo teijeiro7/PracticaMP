@@ -1,9 +1,7 @@
 import express from 'express';
 import { __dirname } from '../dirname.js';
-import marcas, { addBrand, brand } from "../public/script/brandsService.js";
 
-import { getBrand } from '../public/script/brandsService.js';
-import { addRacket } from '../public/script/brandsService.js';
+import marcas, { addBrand, getBrand, addRacket, deleteBrand } from '../public/script/brandsService.js';
 
 const router = express.Router();
 
@@ -101,7 +99,7 @@ router.get("/:brandName/confirmDelete", (req, res) => {
 
 router.get("/:brandName/deleteBrand", (req, res) => {
     console.log(req.query.name);
-    marcas.delete(req.query.name);
+    deleteBrand(req.query.name);
     res.redirect("/");
 });
 

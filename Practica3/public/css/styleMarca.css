@@ -424,6 +424,12 @@ button a {
 }
 
 @media (max-width: 420px) {
+  body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .formCrearPala {
     width: 70%;
   }
@@ -437,15 +443,15 @@ button a {
     flex-direction: column;
   }
 
-  .textoNox {
-    width: 100%;
-  }
-
   .div_button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-direction: column;
+  }
+
+  .divNox {
+    width: 70%;
   }
 }

@@ -113,3 +113,14 @@ body {
   color: red;
   font-weight: bold;
 }
+
+@media (max-width: 350px) {
+  .form_container {
+    width: 80%;
+  }
+
+  .form_title {
+    width: 100%;
+    white-space: inherit;
+  }
+}

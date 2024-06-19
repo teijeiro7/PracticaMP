@@ -31,9 +31,13 @@ document.addEventListener("keydown", e => {
     if (e.target.matches("#buscador")) {
         const brandNames = Array.from(marcas.keys()).map(brand => brand.toLowerCase());
         if (e.key === "Enter") {
+            console.log(brandNames);
             if (brandNames.includes(e.target.value.toLowerCase())) {
                 const location = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
                 window.location.href = '/' + location;
+            } else {
+                const error_search = document.getElementsByClassName("error_search")
+                error_search.textContent = "La marca no existe";
             }
         }
     }
