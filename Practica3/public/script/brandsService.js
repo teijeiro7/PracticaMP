@@ -72,6 +72,10 @@ export function getBrand(brandName) {
     };
 }
 
+export function isBrand(brandName) {
+    return marcas.has(brandName);
+}
+
 
 export function editBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers) {
     marcas.get(brandName);

@@ -380,36 +380,50 @@ button a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 400px) {
-  .divFormPala {
-    margin: 10px;
-    padding: 0;
+
+
+@media (min-width: 2000px) {
+  .tituloCrearPala {
+    font-size: 30px;
   }
-}
 
-.div_button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-  padding-top: 7px;
-}
+  .labelStyle {
+    font-size: 20px;
+  }
 
-.div_group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 20px;
-}
+  .cuadroTexto {
+    font-size: 20px;
+  }
 
-.div_group label {
-  font-size: 15px;
-  color: white;
-}
+  .divBotonesFormCrearPalaSubir,
+  .divBotonesFormCrearPalaCancelar {
+    font-size: 20px;
+  }
 
-@media (max-width: 1025px) {
-  .content {
-    display: block;
+  .parrafoPala {
+    font-size: 20px;
+  }
+
+  .textPrice {
+    font-size: 20px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .negrita {
+    font-size: 30px;
+  }
+
+  .contenido {
+    font-size: 20px;
+  }
+
+  .boton_editar,
+  .boton_eliminar {
+    font-size: 20px;
   }
 }
 
@@ -422,6 +436,13 @@ button a {
     flex-direction: column;
   }
 }
+
+@media (max-width: 1025px) {
+  .content {
+    display: block;
+  }
+}
+
 
 @media (max-width: 420px) {
   body {
@@ -454,4 +475,31 @@ button a {
   .divNox {
     width: 70%;
   }
+}
+
+@media (max-width: 400px) {
+  .divFormPala {
+    margin: 10px;
+    padding: 0;
+  }
+}
+
+.div_button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding-top: 7px;
+}
+
+.div_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.div_group label {
+  font-size: 15px;
+  color: white;
 }

@@ -45,9 +45,10 @@
                 <p><span><b class="negrita">Página web: </b></span><a class="contenido" id="brandWeb"
                         href="{{brandWeb}}">{{brandWeb}}</a></p>
                 <div class="div_button">
-                    <a href="/{{brandName}}/edit?name={{brandName}}"><input class="boton_editar" type="submit"
-                            value="Editar"></a>
-                    <a href="/{{brandName}}/confirmDelete?name={{brandName}}"><button class="boton_eliminar"
+                    <a href=" /{{brandName}}/edit?name={{brandName}}">
+                        <button class="boton_editar" type="submit" value="Editar" id="boton_editar">Editar</button>
+                    </a>
+                    <a href=" /{{brandName}}/confirmDelete?name={{brandName}}"><button class="boton_eliminar"
                             id="eliminar">Eliminar</button></a>
                 </div>
 
@@ -62,8 +63,6 @@
                         <div class="palaContainer">
                             <div class="divImagenPala">
                                 <img src="{{racketImage}}" class="imagenPala" alt="{{racketName}}">
-                                <!-- <img src="{{racketImage}}" class="nombreBusqueda" alt="{{racketName}}" > -->
-                                <!-- adapatar scriptBarraBusqueda para que coja todo el contenedor -->
                                 <div class="unitsCounter">{{racketUnits}}</div>
                             </div>
                         </div>
@@ -125,8 +124,8 @@
         </div>
     </div>
 
+    <script src="/script/scriptFormMarca.js" type="module"></script>
     <script src="/script/scriptCarrito.js"></script>
-    <!-- <script src="/script/scriptBarraBusqueda.js"></script> -->
 </body>
 
 </html>

@@ -13,20 +13,6 @@ document.addEventListener("keyup", e => {
     }
 });
 
-document.addEventListener("keyup", e => {
-    if (e.target.matches("#buscador")) {
-        document.querySelectorAll('.pala').forEach(div => {
-
-            let nombrePala = div.querySelector('.parrafoPala').textContent.toLowerCase().trim();
-            if (nombrePala.toLowerCase().startsWith(e.target.value.toLowerCase())) {
-                div.style.display = '';
-            } else {
-                div.style.display = 'none';
-            }
-        })
-    }
-})
-
 document.addEventListener("keydown", e => {
     if (e.target.matches("#buscador")) {
         const brandNames = Array.from(marcas.keys()).map(brand => brand.toLowerCase());

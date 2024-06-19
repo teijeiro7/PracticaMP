@@ -1,3 +1,5 @@
+
+
 const cartInfo = document.querySelector(".cartProducts");
 let init = 0;
 let final = 3; //para que llegue hasta el 3

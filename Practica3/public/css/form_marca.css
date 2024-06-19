@@ -124,3 +124,28 @@ body {
     white-space: inherit;
   }
 }
+
+@media (min-width: 2000px) {
+  .form_title {
+    font-size: 2rem;
+  }
+
+  .input_title {
+    font-size: 1.5rem;
+  }
+
+  .input_text {
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+
+  .form_container {
+    max-width: 50rem;
+  }
+
+  .botonCancelar,
+  .botonRegistrar {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}

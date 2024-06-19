@@ -26,14 +26,8 @@ router.get('/formularioMarca', (req, res) => {
 
 router.post('/newBrand', express.json(), (req, res) => {
     const { brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers } = req.body;
-    console.log(brandName);
-
-    if (!brandName || !brandYear || !brandFounder || !brandImage || !brandWeb || !brandPlayers) {
-        res.status(400).send('Todos los campos son requeridos');
-    } else {
-        addBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers);
-        res.redirect(`/${brandName}`);
-    }
+    addBrand(brandName, brandYear, brandFounder, brandImage, brandWeb, brandPlayers);
+    res.redirect(`/${brandName}`);
 });
 
 router.post('/newRacket', (req, res) => {
@@ -85,6 +79,7 @@ router.get("/:brandName/edit", (req, res) => {
 
 
 router.get('/:brandName', (req, res) => {
+    console.log(marcas)
     let brandValues = getBrand(req.params.brandName); //asignamos a brandValues el valor de la marca que queremos mostrar
     let infoDesplegable = Array.from(marcas.values()); // convertimos el mapa en un array de objetos con el objetivo de renderizarlo de forma más sencilla
     let palas = brandValues.brandRackets; //asignamos a palas el valor de las palas de la marca que queremos mostrar
