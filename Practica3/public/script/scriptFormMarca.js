@@ -1,13 +1,6 @@
 import marcas, { isBrand } from "./brandsService.js";
 
 let hasError = false;
-// let edicion = false;
-
-
-// async function activarModoEdicion() {
-//     console.log("Activando modo edición");
-//     edicion = true;
-// }
 
 // --------------------------------------------------------------------------------------------------------checkBrandName
 const brandName = document.getElementById("marca");
@@ -22,15 +15,6 @@ const checkBrandName = () => {
     } else if (brandName.value.charAt(0) !== brandName.value.charAt(0).toUpperCase()) { // si la primera letra no es mayúscula
         nameError.textContent = 'La primera letra del nombre de la marca tiene que ser mayúscula.';
         hasError = true;
-    }
-};
-
-const checkIsName = () => {
-    if (!edicion) {
-        if (!isBrand(brandName.value.trim().toLowerCase())) {
-            nameError.textContent = 'La marca ya existe.';
-            hasError = true;
-        }
     }
 };
 
@@ -119,14 +103,17 @@ botonRegistrar.addEventListener("click", function (event) {
 
     console.log("Botón presionado");
     hasError = false;
-    console.log(marcas)
 
     checkBrandName();
+    console.log(hasError);
     checkBrandYear();
+    console.log(hasError);
     checkBrandFounder();
+    console.log(hasError);
     checkBrandWeb();
+    console.log(hasError);
     checkBrandPlayers();
-    checkIsName();
+    console.log(hasError);
 
     if (!hasError) {
         fetch('/newBrand', {
@@ -135,7 +122,7 @@ botonRegistrar.addEventListener("click", function (event) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                brandName: brandName.value.toLowerCase(),
+                brandName: brandName.value,
                 brandYear: brandYear.value,
                 brandFounder: brandFounder.value,
                 brandImage: brandImage.value,
