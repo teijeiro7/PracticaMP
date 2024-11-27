@@ -39,6 +39,11 @@ app.use((req, res) => {
 });
 
 
+module.exports = (req, res) => {
+    res.status(200).send('Hello, world!');
+};
+
+
 app.listen(4000, () => {
     console.log('Server is running on port 4000');
     console.log("http://localhost:4000/");
